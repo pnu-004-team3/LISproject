@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author tiznl
- *
- */
-module lisproject {
-}
