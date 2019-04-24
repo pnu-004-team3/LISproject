@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.lis.test">
+	<logger name="com.library.lis">
 		<level value="info" />
 	</logger>
 	
