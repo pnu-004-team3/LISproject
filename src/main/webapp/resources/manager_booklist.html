@@ -79,32 +79,27 @@
     <section class="static about-sec">
         <div class="container">
         <div class="relative1">
-            <h1>신규도서 등록</h1>
-                          <div class="relative2">
-                             <div class="home_search_content">
-                                <form action="#" class="search_form d-flex flex-row align-items-start justfy-content-start">
-                                   <div class="search_form_content d-flex flex-row align-items-start justfy-content-start flex-wrap">
-                                      <div>
-                                         <select class="search_form_select">
-                                            <option value>SEARCH</option>
-                                            <option value="1">사용자 이름(name)</option>
-                                            <option value="2">23232</option>
-                                            <option value="3">전자책(e-Book)</option>
-                                            <option value="4">전자저널(e-Journal)</option>
-                                            <option value="5">학술DB(Database)</option>
-                                         </select>
-                                      </div>
-                                      <input type="search" name="home_search_input" placeholder="검색어를 입력하세요" style="width:700px;height:70px;font-size:20px;" >
-                                     </div>
-                                     <button class="search_form_button ml-auto">search</button>
-                                  </form>
-                               </div>
-                            </div>
+            <h1>사용자 정보 조회</h1>
+
+                            <form class="form-inline my-2 my-lg-0 search_book">
+            						    	<div class="search_form">
+            						    		<select class="search_form_select">
+            										<option value="0"> 사용자 이름 </option>
+            										<option value="1"> 사용자 ID </option>
+            										<option value="2"> 책 제목 </option>
+            										<option value="3"> ISBN </option>
+
+            									</select>
+            							    	<input class="form-control" type="search" style="height:50px; border:none;  width:55%;" placeholder="Search here..." aria-label="Search">
+            									<button type="submit" class="fa fa-search search_button"></button>
+            								</div>
+            						    </form>
+
                           </div>
 
 
 
-
+                        <div class="relative2">
                         <div class="result_book">
                         <!--List...-->
                         <!-- 이 파트는 이렇게 java 파일안에서 생성되도록 동작 예정-->
@@ -116,6 +111,8 @@
                               <div class="book_info">
                                  <li class="item">Book_name</li>
                                  <li class="item">Author</li>
+                                 <li class="item">Publisher, Pub_year </li>
+                                 <li class="item">Publisher, Pub_year </li>
                                  <li class="item">Publisher, Pub_year </li>
                               </div>
                            </ul>
@@ -132,6 +129,7 @@
                            </ul>
                         </div>
                      </div>
+                   </div>
                    </section>
 
 
