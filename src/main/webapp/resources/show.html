@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Show</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#03a6f3">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link
+	href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="container">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<td><B>BookName</B></td>
+					<td><B>BorrowedDate</B></td>
+					<td><B>ReturnDate</B></td>
+					<td><B>Period</B></td>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- {% for candidate in candidates %} -->
+				<tr>
+					<td>{{candidate.BookName}}</td>
+					<td>{{candidate.BorrowedDate}}</td>
+					<td>{{candidate.ReturnDate}}</td>
+					<td>{{candidate.Period}}</td>
+				</tr>
+				<!-- {% endfor %} -->
+			<tbody>
+		</table>
+	</div>
+</body>
