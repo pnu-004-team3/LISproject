@@ -11,23 +11,101 @@
 /* mixin */
 @charset "utf-8";
 /* CSS Document */
-
-
 /* ------------------------------------
-          login0.hmtl의 표부분 CSS
+          manager_booklist.CSS
+------------------------------------ */
+#tblBackground {
+		/*
+				 *  화면에 보여야 할 Table의 가로크기를 잡아줍니다.
+				 */
+		width: 900px;
+		table-layout: fixed;
+
+}
+
+#divHeadScroll {
+		/*
+				 *  안의 내용이 790보다 길게 적용이 되므로 overflow-x, overflow-y를 hidden을 걸어줘서 설정한 가로너비만큼만 화면에 보이도록 잡아줍니다.
+				 */
+		width: 100%;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		border-top: 2px solid #d0d0d0;
+
+}
+
+#tblHead {
+		/*
+				 *  Table의 필드명의 너비를 여기에서 지정합니다.
+				 *  필드명을 보여줄 테이블은 body보다 하나의 td를 더 가지며 마지막 td는 아무것도 입력하지 않고 크기만 잡아줍니다.
+				 *  이렇게 하는 이유는 데이터를 보여주는 테이블은 세로 스크롤의 가로두께만큼 더 이동하기 때문입니다.
+				 */
+		table-layout: fixed;
+		background-color: #efefef;
+		padding-top: 4px;
+		width: 1117px;
+		height: 30px;
+		border-collapse: collapse;
+}
+
+#divBodyScroll {
+		/*
+				 *  overflow-x, overflow-y는 scroll로 지정하고,
+				 *  height는 테이블의 데이터가 나올 기본 크기를 잡아줍니다.
+				 *  세로길이를 잡아주지 않으면 overflow-y가 걸리지 않습니다.
+				 */
+		width: 100%;
+		height: 350px;
+		overflow-x: scroll;
+		overflow-y: scroll;
+		border-top: 1px solid #d0d0d0;
+}
+
+#tblBody {
+		/*
+				 * tblBody의 데이터는 필요한 열의 수만큼만 만드시고 헤더와 col의 width는 동일해야 합니다.
+				 */
+		width: 1100px;
+		table-layout: fixed;
+		height: 30px;
+		border-collapse: collapse;
+}
+
+/* 테이블 스타일용 */
+.title {
+		text-align: center;
+		font-weight: bold;
+}
+
+.content {
+		border-bottom: 1px solid #efefef;
+		padding: 10px 10px 10px 10px;
+		text-align: center;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+}
+/* ------------------------------------
+          manager_book_register.CSS
 ------------------------------------ */
 
 body{font-size:12px;}
 
 /*table {width:800}*/
-table, th, td {border:1px solid #333333; border-collapse:collapse; padding:5px}
+	table, th, td {
+	border:1px solid #333333;
+	border-collapse:collapse;
+
+	margin-left: auto;
+	margin-right: auto;
+	}
+
 
 /*서브타이틀*/
 .signSubTitle {color:#96C; background-color:#FC9 ; text-align:center; font-weight:700; font-size:12px}
-
 /*헤드부 */
 caption{font-size:18px; font-weight:bold; text-decoration:underline; padding:20px;}
-thead, th{ background-color:#FC6 ;}
+thead,
 
 /*바디부*/
 .toNo, .tdDate , .tdCount {text-align:center;}
@@ -209,8 +287,9 @@ section {
    border: 7px groove #487fee;
    top: 30px;
    margin-bottom: 10px;
-   border-radius: 100px;
+   border-radius: 30px;
 	 box-sizing: border-box;
+	 width : 100%;
 }
 
 
