@@ -117,10 +117,40 @@ section {
 	height: 50px;
 	border-radius : 15px;
 	width: 16%;
-	background: linear-gradient(to right, #487fee, #32fa95)
+	background: linear-gradient(to right, #487fee, #32fa95);
 }
 
+.result_container
+{
+	margin-top: 20px;
+	width: 100%;
+}
 
+.result_book
+{
+	border: 5px groove #9db7e3;
+	margin-bottom: 10px;
+	border-radius: 20px;
+}
+
+.result_book ul{
+	list-style: none;
+}
+
+.book_image{
+	position: relative;
+	float:left;
+	height: 100px;
+	verticla-align : middle;
+	width: 100px;
+	margin-top : 5px;
+}
+
+.book_info
+{
+	padding-bottom: 10px;
+	padding-top: 3px;
+}
 
 img {
   max-width: 100%; }
@@ -128,7 +158,7 @@ img {
 /* modules */
 /* layouts */
 header .header-top {
-  background: #fcba68;
+  background: #e2ded952;
   color: #fff;
   position: fixed;
   z-index: 100;
