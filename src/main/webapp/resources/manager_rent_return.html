@@ -2,450 +2,339 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Book Store</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#03a6f3">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/manager_styles.css">
+<meta charset="UTF-8">
+<title>Book Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#03a6f3">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link
+	href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/styles_search.css">
 </head>
 
 <body>
-    <header>
-        <div class="header-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3"><a href="#" class="web-url">www.bookstore.com</a></div>
-                    <div class="col-md-6">
-                        <h5>Free Shipping Over $99 + 3 Free Samples With Every Order</h5></div>
-                    <div class="col-md-3">
-                        <span class="ph-number">Call : 800 1234 5678</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="main-menu">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="navbar-item">
-                                <a href="index.html" class="nav-link">Home</a>
-                            </li>
-                            <li class="navbar-item">
-                                <a href="shop.html" class="nav-link">Shop</a>
-                            </li>
-                            <li class="navbar-item">
-                                <a href="about.html" class="nav-link">About</a>
-                            </li>
-                            <li class="navbar-item">
-                                <a href="faq.html" class="nav-link">FAQ</a>
-                            </li>
-                            <li class="navbar-item active">
-                                <a href="login.html" class="nav-link">Login</a>
-                            </li>
-                        </ul>
-                        <div class="cart my-2 my-lg-0">
-                            <span>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                            <span class="quntity">3</span>
-                        </div>
-                        <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search here..." aria-label="Search">
-                            <span class="fa fa-search"></span>
-                        </form>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <div class="breadcrumb">
-        <div class="container">
-            <a class="breadcrumb-item" href="index.html">Home</a>
-            <span class="breadcrumb-item active">Login</span>
-        </div>
-    </div>
+	<header>
+		<div class="header-top">
+			<div class="container">
+				<div class="main-menu">
+					<div class="container">
+						<nav class="navbar navbar-expand-lg navbar-light">
+							<a class="navbar-brand" href="index.html"><img
+								src="images/logo.png" alt="logo"></a>
+							<button class="navbar-toggler" type="button"
+								data-toggle="collapse" data-target="#navbarSupportedContent"
+								aria-controls="navbarSupportedContent" aria-expanded="false"
+								aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarSupportedContent">
+								<ul class="navbar-nav ml-auto">
+									<li class="navbar-item active"><a href="index.html"
+										class="nav-link">Home</a></li>
+									<li class="navbar-item"><a href="shop.html"
+										class="nav-link"> -- 로그인 --</a></li>
+									<li class="navbar-item"><a href="about.html"
+										class="nav-link">시설안내</a></li>
+									<li class="navbar-item"><a href="main_MyLib.html"
+										class="nav-link">My Library</a></li>
+									<li class="navbar-item"><a href="managerMain.html"
+										class="nav-link">관리자 페이지</a></li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="blank"></div>
+
+	<div class="breadcrumb">
+		<div class="container">
+			<a class="breadcrumb-item" href="index.html">Home</a> <span
+				class="breadcrumb-item active">Login</span>
+		</div>
+	</div>
 
 
-    <!-- 도서등록 페이지 -->
+	<!-- 도서등록 페이지 -->
 
-    <section class="static about-sec">
-        <div class="container">
-            <h1>관리자 대출 / 반납</h1>
-            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-            <html xmlns="http://www.w3.org/1999/xhtml">
-            <head>
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            <link href="manager_styles.css" rel="stylesheet" type="text/css" />
-            </head>
+	<section class="static about-sec">
+		<div class="container">
+			<h1>관리자 대출 / 반납</h1>
+			<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+			<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="manager_styles.css" rel="stylesheet" type="text/css" />
+</head>
 
-            <form>
-            <table>
-            	<!-- 헤드부 -->
-                <thead>
-                    <colgroup>
-                    	<col width="120" />
-                        <!-- <col width="500" /> -->
-                    </colgroup>
-                </thead>
+<form>
+	<table>
+		<!-- 헤드부 -->
+		<thead>
+		<colgroup>
+			<col width="120" />
+			<!-- <col width="500" /> -->
+		</colgroup>
+		</thead>
 
 
 
-                <!-- 바디부 -->
-                <tbody>
+		<!-- 바디부 -->
+		<tbody>
 
-                    <tr>
-                        <td colspan="2" class="signSubTitle">
-                        	필수입력사항
-                        </td>
-                	</tr>
-                    <!-- 이름 -->
-                    <tr>
-                    	<th>도서 이름 </th>
-                        <td>
-                        	<input type="text" name="inName" class="inBorder"/>
-                         </td>
-                    </tr>
-                    <!-- 저자 -->
-                    <tr>
-                    	<th>저자 </th>
-                        <td>
-                        	<input type="text" name="inName" class="inBorder"/>
-                         </td>
-                    </tr>
-                    <!-- 발행처명 -->
-                    <tr>
-                    	<th>발행처명 </th>
-                        <td>
-                        	<input type="text" name="inName" class="inBorder"/>
-                         </td>
-                    </tr>
-                    <!-- ISBN 번호 -->
-                     <tr>
-                    	<th>ISBN 번호 </th>
-                        <td>
-                        	<input type="text" name="inJumin1" class="inBorder" />
-                            <!-- - <input type="password" name="inJumin2" class="inBorder" /> -->
-                            <div>※ ISBN number만 입력해주세요</div>
-                         </td>
-                    </tr>
+			<tr>
+				<td colspan="2" class="signSubTitle">필수입력사항</td>
+			</tr>
+			<!-- 이름 -->
+			<tr>
+				<th>도서 이름</th>
+				<td><input type="text" name="inName" class="inBorder" /></td>
+			</tr>
+			<!-- 저자 -->
+			<tr>
+				<th>저자</th>
+				<td><input type="text" name="inName" class="inBorder" /></td>
+			</tr>
+			<!-- 발행처명 -->
+			<tr>
+				<th>발행처명</th>
+				<td><input type="text" name="inName" class="inBorder" /></td>
+			</tr>
+			<!-- ISBN 번호 -->
+			<tr>
+				<th>ISBN 번호</th>
+				<td><input type="text" name="inJumin1" class="inBorder" /> <!-- - <input type="password" name="inJumin2" class="inBorder" /> -->
+					<div>※ ISBN number만 입력해주세요</div></td>
+			</tr>
 
-                    <!-- 아이디 -->
-                    <tr>
-                    	<th>도서 아이디</th>
-                        <td>
-                        	<input type="text" name="inId" class="inBorder" />
-                         </td>
-                    </tr>
-                    <!-- 비밀번호 -->
-                    <tr>
-                    	<th>전체 페이지수</th>
-                        <td>
-                        	<input type="password" name="inId" class="inBorder"/>
-                         </td>
-                    </tr>
-                    <!-- 비밀번호확인-->
-                     <tr>
-                    	<th>인증키</th>
-                        <td>
-                        	<input type="password" name="inIdr" class="inBorder" />
-                         </td>
-                    </tr>
-                    <!-- 입고날짜 -->
-                    <tr>
-                    	<th>입고날짜</th>
-                        <td>
-                        	<input type="text" name="inyear" size="5" class="inBorder" />년
-                        	<select class="inBorder">
-                            	<option value="1">1
-                              	<option value="2">2
-            			        <option value="3">3
-                          		<option value="4">4
-                              	<option value="5">5
-            			        <option value="6">6
-                                <option value="7">7
-                              	<option value="8">8
-            			        <option value="9">9
-                                <option value="10">10
-                              	<option value="11">11
-            			        <option value="12">12
-                            </select> 월
-                            <select class="inBorder">
-                            	<option value="1">1
-                              	<option value="2">2
-            			        <option value="3">3
-                          		<option value="4">4
-                              	<option value="5">5
-            			        <option value="6">6
-                                <option value="7">7
-                              	<option value="8">8
-            			        <option value="9">9
-                                <option value="10">10
-                              	<option value="11">11
-            			        <option value="12">12
-                              	<option value="13">13
-                              	<option value="14">14
-            			        <option value="15">15
-                          		<option value="16">16
-                              	<option value="17">17
-            			        <option value="18">18
-                                <option value="19">19
-                              	<option value="20">20
-            			        <option value="21">21
-                                <option value="22">22
-                              	<option value="23">23
-            			        <option value="24">24
-                               	<option value="25">25
-                              	<option value="26">26
-            			        <option value="27">27
-                          		<option value="28">28
-                              	<option value="29">29
-            			        <option value="30">30
-                                <option value="31">31
-                            </select> 일
-                            &nbsp;
+			<!-- 아이디 -->
+			<tr>
+				<th>도서 아이디</th>
+				<td><input type="text" name="inId" class="inBorder" /></td>
+			</tr>
+			<!-- 비밀번호 -->
+			<tr>
+				<th>전체 페이지수</th>
+				<td><input type="password" name="inId" class="inBorder" /></td>
+			</tr>
+			<!-- 비밀번호확인-->
+			<tr>
+				<th>인증키</th>
+				<td><input type="password" name="inIdr" class="inBorder" /></td>
+			</tr>
+			<!-- 입고날짜 -->
+			<tr>
+				<th>입고날짜</th>
+				<td><input type="text" name="inyear" size="5" class="inBorder" />년
+					<select class="inBorder">
+						<option value="1">1
+						<option value="2">2
+						<option value="3">3
+						<option value="4">4
+						<option value="5">5
+						<option value="6">6
+						<option value="7">7
+						<option value="8">8
+						<option value="9">9
+						<option value="10">10
+						<option value="11">11
+						<option value="12">12
+				</select> 월 <select class="inBorder">
+						<option value="1">1
+						<option value="2">2
+						<option value="3">3
+						<option value="4">4
+						<option value="5">5
+						<option value="6">6
+						<option value="7">7
+						<option value="8">8
+						<option value="9">9
+						<option value="10">10
+						<option value="11">11
+						<option value="12">12
+						<option value="13">13
+						<option value="14">14
+						<option value="15">15
+						<option value="16">16
+						<option value="17">17
+						<option value="18">18
+						<option value="19">19
+						<option value="20">20
+						<option value="21">21
+						<option value="22">22
+						<option value="23">23
+						<option value="24">24
+						<option value="25">25
+						<option value="26">26
+						<option value="27">27
+						<option value="28">28
+						<option value="29">29
+						<option value="30">30
+						<option value="31">31
+				</select> 일 &nbsp;</td>
+			</tr>
+			<!-- 이메일 -->
+			<tr>
+				<th>담당자 E-Mail</th>
+				<td><input type="text" name="inEmail1" class="inBorder" />@ <input
+					type="text" name="inEmail2" class="inBorder" /> <select
+					class="inBorder">
+						<option value="0">==직접입력==
+						<option value="daum.net">daum.net
+						<option value="naver.com">naver.com
+						<option value="nate.com">nate.com
+				</select></td>
+			</tr>
+			<!-- 이메일 수신여부-->
+			<tr>
+				<th>전자책 발행여부</th>
+				<td><input type="radio" name="emailSend" /> 예 <input
+					type="radio" name="emailSend" /> 아니오</td>
+			</tr>
 
-                         </td>
-                    </tr>
-                    <!-- 이메일 -->
-                    <tr>
-                    	<th>담당자 E-Mail</th>
-                        <td>
-                        	<input type="text" name="inEmail1" class="inBorder" />@
-                            <input type="text" name="inEmail2" class="inBorder" />
-                            <select class="inBorder">
-                            	<option value="0">==직접입력==
-                              	<option value="daum.net">daum.net
-            			        <option value="naver.com">naver.com
-                          		<option value="nate.com">nate.com
-                            </select>
+			<!-- 우편번호-->
+			<tr>
+				<th>등록하는 도서관 위치</th>
+				<td><input type="text" name="inZip1" size="7" class="inBorder" />-
+					<input type="text" name="inZip2" size="7" class="inBorder" /> <input
+					type="button" value="우편번호찾기" class="inBorder" /></td>
+			</tr>
+			<!-- 주소 -->
+			<tr>
+				<th>주소</th>
+				<td><input type="text" size="70" name="inAddr1"
+					class="inBorder" /><br /> <input type="text" size="70"
+					name="inAddr2" class="inBorder" /></td>
+			</tr>
+			<!-- 전화번호 -->
+			<tr>
+				<th>전화번호</th>
+				<td><select name="inPhone1" class="inBorder">
+						<option value="02">02
+						<option value="061">061
+						<option value="063">063
+						<option value="070">070
+						<option value="추가">추가
+				</select> <input type="text" size="5" name="inPhone2" class="inBorder" />- <input
+					type="text" size="5" name="inPhone3" class="inBorder" /></td>
+			</tr>
 
-                         </td>
-                    </tr>
-                       <!-- 이메일 수신여부-->
-                    <tr>
-                    	<th>전자책 발행여부</th>
-                        <td>
-                              <input type="radio" name="emailSend" /> 예
-                              <input type="radio" name="emailSend" /> 아니오
-                        </td>
-                    </tr>
+			<!-- 휴대전화번호 -->
+			<tr>
+				<th>핸드폰번호</th>
+				<td><select name="inHphone1" class="inBorder">
+						<option value="010">010
+						<option value="016">061
+						<option value="017">063
+						<option value="018">063
+						<option value="019">추가
+				</select> <input type="text" size="5" name="inHphone2" class="inBorder" />-
+					<input type="text" size="5" name="inHphone3" class="inBorder" /></td>
+			</tr>
 
-                    <!-- 우편번호-->
-                    <tr>
-                    	<th>등록하는 도서관 위치</th>
-                        <td>
-                        	<input type="text" name="inZip1" size="7" class="inBorder"/>-
-                            <input type="text" name="inZip2" size="7" class="inBorder"/>
-                          	<input type="button" value="우편번호찾기" class="inBorder"/>
-                         </td>
-                    </tr>
-                    <!-- 주소 -->
-                     <tr>
-                    	<th>주소</th>
-                        <td>
-                        	<input type="text" size="70" name="inAddr1" class="inBorder"/><br/>
-                            <input type="text" size="70" name="inAddr2" class="inBorder"/>
-                         </td>
-                    </tr>
-                    <!-- 전화번호 -->
-                    <tr>
-                    	<th>전화번호</th>
-                        <td>
-                            <select name="inPhone1" class="inBorder">
-                            	<option value="02">02
-                              	<option value="061">061
-            			        <option value="063">063
-                                 <option value="070">070
-                          		<option value="추가">추가
-                            </select>
-                        	<input type="text" size="5" name="inPhone2" class="inBorder"/>-
-                            <input type="text" size="5" name="inPhone3" class="inBorder"/>
-                         </td>
-                    </tr>
-
-                    <!-- 휴대전화번호 -->
-                    <tr>
-                    	<th>핸드폰번호</th>
-                        <td>
-                            <select name="inHphone1" class="inBorder">
-                            	<option value="010">010
-                              	<option value="016">061
-            			        <option value="017">063
-                                <option value="018">063
-                          		<option value="019">추가
-                            </select>
-                        	<input type="text" size="5" name="inHphone2" class="inBorder" />-
-                            <input type="text" size="5" name="inHphone3" class="inBorder" />
-                         </td>
-                    </tr>
-
-                    <!-- 선택입력사항 타이틀 -->
-                    <tr>
-              			<td colspan="2" class="signSubTitle">
-                        	선택입력사항
-                        </td>
-                    </tr>
-                    <!-- 가입경로 -->
-                     <tr>
-                    	<th>들어오게된 경로</th>
-                        <td>
-                            <select class="inBorder">
-                            	<option value="0">== 경로 ==
-                      	        <option value="포탈사이트검색">포탈사이트검색
-                                <option value="블로그">블로그
-                                <option value="주위소개">주위소개
-                                <option value="etc">기타
-
-                            </select>
-
-                         </td>
-                    </tr>
-                    <!-- 결혼여부 -->
-                    <tr>
-                    	<th>CIP 신청여부</th>
-                        <td>
-                              <input type="radio" name="marriage" /> 네
-                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <input type="radio" name="marriage" /> 아니오
-                        </td>
-                    </tr>
-                    <!-- 직업 -->
-                      <tr>
-                    	<th>직업</th>
-                        <td>
-                            <select name="inJob" class="inBorder">
-                            	<option value="0">== 직업선택 ==
-                              	<option value="학생">학생
-            			        <option value="주부">주부
-                          		<option value="프로그래머">프로그래머
-                           		<option value="PC정비사">PC정비사
-                                <option value="none">없음
-                                <option value="서비스없">서비스업
-                                <option value="서비스없">제조업
-
-                            </select>
-
-                         </td>
-                    </tr>
+			<!-- 선택입력사항 타이틀 -->
+			<tr>
+				<td colspan="2" class="signSubTitle">선택입력사항</td>
+			</tr>
+			<!-- 가입경로 -->
+			<tr>
+				<th>들어오게된 경로</th>
+				<td><select class="inBorder">
+						<option value="0">== 경로 ==
+						<option value="포탈사이트검색">포탈사이트검색
+						<option value="블로그">블로그
+						<option value="주위소개">주위소개
+						<option value="etc">기타
+				</select></td>
+			</tr>
+			<!-- 결혼여부 -->
+			<tr>
+				<th>CIP 신청여부</th>
+				<td><input type="radio" name="marriage" /> 네
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="marriage" />
+					아니오</td>
+			</tr>
+			<!-- 직업 -->
+			<tr>
+				<th>직업</th>
+				<td><select name="inJob" class="inBorder">
+						<option value="0">== 직업선택 ==
+						<option value="학생">학생
+						<option value="주부">주부
+						<option value="프로그래머">프로그래머
+						<option value="PC정비사">PC정비사
+						<option value="none">없음
+						<option value="서비스없">서비스업
+						<option value="서비스없">제조업
+				</select></td>
+			</tr>
 
 
-                </tbody>
+		</tbody>
 
 
 
-                <!-- 버텀부 -->
-            	<tfoot>
-                	<tr>
-              			<td colspan="2">
-                        	<input type="button" value="등록" class="inBorder" />
-                            <input type="reset" value="취소" class="inBorder"/>
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
-            </form>
+		<!-- 버텀부 -->
+		<tfoot>
+			<tr>
+				<td colspan="2"><input type="button" value="등록"
+					class="inBorder" /> <input type="reset" value="취소"
+					class="inBorder" /></td>
+			</tr>
+		</tfoot>
+	</table>
+</form>
 
-            <body>
-            </body>
-            </html>
+<body>
+</body>
+			</html>
 
 
-        </div>
-    </section>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="address">
-                        <h4>Our Address</h4>
-                        <h6>The BookStore Theme, 4th Store
-                        Beside that building, USA</h6>
-                        <h6>Call : 800 1234 5678</h6>
-                        <h6>Email : info@bookstore.com</h6>
-                    </div>
-                    <div class="timing">
-                        <h4>Timing</h4>
-                        <h6>Mon - Fri: 7am - 10pm</h6>
-                        <h6>​​Saturday: 8am - 10pm</h6>
-                        <h6>​Sunday: 8am - 11pm</h6>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="navigation">
-                        <h4>Navigation</h4>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                            <li><a href="terms-conditions.html">Terms</a></li>
-                            <li><a href="products.html">Products</a></li>
-                        </ul>
-                    </div>
-                    <div class="navigation">
-                        <h4>Help</h4>
-                        <ul>
-                            <li><a href="">Shipping & Returns</a></li>
-                            <li><a href="privacy-policy.html">Privacy</a></li>
-                            <li><a href="faq.html">FAQ’s</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="form">
-                        <h3>Quick Contact us</h3>
-                        <h6>We are now offering some good discount
-                            on selected books go and shop them</h6>
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input placeholder="Name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email" placeholder="Email" required>
-                                </div>
-                                <div class="col-md-12">
-                                    <textarea placeholder="Messege"></textarea>
-                                </div>
-                                <div class="col-md-12">
-                                    <button class="btn black">Alright, Submit</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copy-right">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h5>(C) 2017. All Rights Reserved. BookStore Wordpress Theme</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="share align-middle">
-                            <span class="fb"><i class="fa fa-facebook-official"></i></span>
-                            <span class="instagram"><i class="fa fa-instagram"></i></span>
-                            <span class="twitter"><i class="fa fa-twitter"></i></span>
-                            <span class="pinterest"><i class="fa fa-pinterest"></i></span>
-                            <span class="google"><i class="fa fa-google-plus"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-    <script src="js/custom.js"></script>
+		</div>
+	</section>
+	
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="address">
+						<h4>Footer ..</h4>
+						<h6>LIS</h6>
+						<h6>- blank -</h6>
+						<h6>- blank -</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copy-right">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h5>(C) 2017. All Rights Reserved. BookStore Wordpress Theme</h5>
+					</div>
+					<div class="col-md-6">
+						<div class="share align-middle">
+							<span class="fb"><i class="fa fa-facebook-official"></i></span> <span
+								class="instagram"><i class="fa fa-instagram"></i></span> <span
+								class="twitter"><i class="fa fa-twitter"></i></span> <span
+								class="pinterest"><i class="fa fa-pinterest"></i></span> <span
+								class="google"><i class="fa fa-google-plus"></i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script src="js/custom.js"></script>
 </body>
 
 </html>

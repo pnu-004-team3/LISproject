@@ -1,630 +1,574 @@
-  <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Book Store</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#03a6f3">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/manager_styles.css">
+<meta charset="UTF-8">
+<title>Book Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#03a6f3">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link
+	href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/styles_search.css">
 </head>
 
 <body>
-    <header>
-        <div class="header-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3"><a href="#" class="web-url">www.bookstore.com</a></div>
-                    <div class="col-md-6">
-                        <h5>Free Shipping Over $99 + 3 Free Samples With Every Order</h5></div>
-                    <div class="col-md-3">
-                        <span class="ph-number">Call : 800 1234 5678</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="main-menu">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="navbar-item">
-                                <a href="index.html" class="nav-link">Home</a>
-                            </li>
-                            <li class="navbar-item">
-                                <a href="shop.html" class="nav-link">Shop</a>
-                            </li>
-                            <li class="navbar-item">
-                                <a href="about.html" class="nav-link">About</a>
-                            </li>
-                            <li class="navbar-item">
-                                <a href="faq.html" class="nav-link">FAQ</a>
-                            </li>
-                            <li class="navbar-item active">
-                                <a href="login.html" class="nav-link">Login</a>
-                            </li>
-                        </ul>
-                        <div class="cart my-2 my-lg-0">
-                            <span>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                            <span class="quntity">3</span>
-                        </div>
-                        <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search here..." aria-label="Search">
-                            <span class="fa fa-search"></span>
-                        </form>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <div class="breadcrumb">
-        <div class="container">
-            <a class="breadcrumb-item" href="index.html">Home</a>
-            <span class="breadcrumb-item active">Login</span>
-        </div>
-    </div>
+	<header>
+		<div class="header-top">
+			<div class="container">
+				<div class="main-menu">
+					<div class="container">
+						<nav class="navbar navbar-expand-lg navbar-light">
+							<a class="navbar-brand" href="index.html"><img
+								src="images/logo.png" alt="logo"></a>
+							<button class="navbar-toggler" type="button"
+								data-toggle="collapse" data-target="#navbarSupportedContent"
+								aria-controls="navbarSupportedContent" aria-expanded="false"
+								aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarSupportedContent">
+								<ul class="navbar-nav ml-auto">
+									<li class="navbar-item active"><a href="index.html"
+										class="nav-link">Home</a></li>
+									<li class="navbar-item"><a href="shop.html"
+										class="nav-link"> -- 로그인 --</a></li>
+									<li class="navbar-item"><a href="about.html"
+										class="nav-link">시설안내</a></li>
+									<li class="navbar-item"><a href="main_MyLib.html"
+										class="nav-link">My Library</a></li>
+									<li class="navbar-item"><a href="managerMain.html"
+										class="nav-link">관리자 페이지</a></li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="blank"></div>
+
+	<div class="breadcrumb">
+		<div class="container">
+			<a class="breadcrumb-item" href="index.html">Home</a> <span
+				class="breadcrumb-item active">Login</span>
+		</div>
+	</div>
 
 
-    <!-- 도서등록 페이지 -->
+	<!-- 도서등록 페이지 -->
 
-    <section class="static about-sec">
-        <div class="container">
-        <div class="relative1">
-            <h1>소장 도서 관리</h1>
+	<section class="static about-sec">
+		<div class="container">
+			<div class="relative1">
+				<h1>소장 도서 관리</h1>
 
-                            <form class="form-inline my-2 my-lg-0 search_book">
-            						    	<div class="search_form">
-            						    		<select class="search_form_select">
-            										<option value="0"> 도서 제목 </option>
-            										<option value="1"> 도서 ISBN </option>
-            										<option value="2"> 도서 저자 </option>
-            										<option value="3"> 출판사 </option>
+				<form class="form-inline my-2 my-lg-0 search_book">
+					<div class="search_form">
+						<select class="search_form_select">
+							<option value="0">도서 제목</option>
+							<option value="1">도서 ISBN</option>
+							<option value="2">도서 저자</option>
+							<option value="3">출판사</option>
 
-            									</select>
-            							    	<input class="form-control" type="search" style="height:50px; border:none;  width:55%;" placeholder="Search here..." aria-label="Search">
-            									<button type="submit" class="fa fa-search search_button"></button>
-            								</div>
-            						    </form>
+						</select> <input class="form-control" type="search"
+							style="height: 50px; border: none; width: 55%;"
+							placeholder="Search here..." aria-label="Search">
+						<button type="submit" class="fa fa-search search_button"></button>
+					</div>
+				</form>
 
-                          </div>
+			</div>
 
 
 
-                        <div class="relative2">
-                        <div class="result_book" >
-            <html>
-            <head>
-                    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-                    <script type="text/javascript">
-                        $(function () {
-                            // divBodyScroll의 스크롤이 동작할때에 함수를 불러옵니다.
-                            $('#divBodyScroll').scroll(function () {
-                                // divBodyScroll의 x좌표가 움직인 거리를 가져옵니다.
-                                var xPoint = $('#divBodyScroll').scrollLeft();
+			<div class="relative2">
+				<div class="result_book">
+					<html>
+<head>
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// divBodyScroll의 스크롤이 동작할때에 함수를 불러옵니다.
+		$('#divBodyScroll').scroll(function() {
+			// divBodyScroll의 x좌표가 움직인 거리를 가져옵니다.
+			var xPoint = $('#divBodyScroll').scrollLeft();
 
-                                // 가져온 x좌표를 divHeadScroll에 적용시켜 같이 움직일수 있도록 합니다.
-                                $('#divHeadScroll').scrollLeft(xPoint);
-                            });
+			// 가져온 x좌표를 divHeadScroll에 적용시켜 같이 움직일수 있도록 합니다.
+			$('#divHeadScroll').scrollLeft(xPoint);
+		});
 
-                            // 처음에 divBodyScroll의 세로스크롤 너비를 알수 없기 때문에
-                            // 스크롤을 우측으로 최대한 움직인 후 버튼을 눌러 두 스크롤의 차이를 찾아서 그 크기 만큼 tblHead의 공백 Column의 width를 지정해줍니다.
-                            $('#btnCheck').click(function () {
-                                var headMaximum = $('#divHeadScroll').scrollLeft();
-                                var bodyMaximum = $('#divBodyScroll').scrollLeft();
+		// 처음에 divBodyScroll의 세로스크롤 너비를 알수 없기 때문에
+		// 스크롤을 우측으로 최대한 움직인 후 버튼을 눌러 두 스크롤의 차이를 찾아서 그 크기 만큼 tblHead의 공백 Column의 width를 지정해줍니다.
+		$('#btnCheck').click(function() {
+			var headMaximum = $('#divHeadScroll').scrollLeft();
+			var bodyMaximum = $('#divBodyScroll').scrollLeft();
 
-                                alert('head: ' + headMaximum + '\nbody: ' + bodyMaximum);
-                            });
-                        });
-                    </script>
-                </head>
-                <body>
-                    <table id="tblBackground" cellspacing="0">
-                        <tbody><tr>
-                            <td>
-                                <div id="divHeadScroll">
-                                    <table id="tblHead" border="0">
-                                        <colgroup>
-                                            <col style="width:100px;">
-                                            <col style="width:100px;">
-                                            <col style="width:100px;">
-                                            <col style="width:100px;">
-                                            <col style="width:100px;">
-                                            <col style="width:100px;">
-                                            <col style="width:100px;">
-                                            <col style="width:100px;">
-                                            <col style="width:100px;">
-                                            <col style="width:100px;">
-                                            <col style="width:100px;">
-                                            <col style="width:15px;">
-                                        </colgroup>
-                                        <tbody><tr>
-                                            <td class="title">NO. </td>
-                                            <td class="title">등록번호</td>
-                                            <td class="title">도서명</td>
-                                            <td class="title">저자</td>
-                                            <td class="title">출판사</td>
-                                            <td class="title">출판년</td>
-                                            <td class="title">별치기호</td>
-                                            <td class="title">청구기호</td>
-                                            <td class="title">권.연차</td>
-                                            <td class="title">복본기호</td>
-                                            <td class="title">소장처</td>
-                                            
-                                            <td></td>
-                                        </tr>
-                                    </tbody></table>
-                                </div>
-                                <div id="divBodyScroll">
-                                    <table id="tblBody" border="0">
-                                        <colgroup>
-                                            <col style="width:100px;" class="right_border">
-                                            <col style="width:100px;" class="right_border">
-                                            <col style="width:100px;" class="right_border">
-                                            <col style="width:100px;" class="right_border">
-                                            <col style="width:100px;" class="right_border">
-                                            <col style="width:100px;" class="right_border">
-                                            <col style="width:100px;" class="right_border">
-                                            <col style="width:100px;" class="right_border">
-                                            <col style="width:100px;" class="right_border">
-                                            <col style="width:100px;" class="right_border">
-                                            <col style="width:100px;" class="right_border">
-                                        </colgroup>
-                                        <tbody>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="content right_border">20062022</td>
-                                            <td class="content right_border">홍길동</td>
-                                            <td class="content right_border">공학대학</td>
-                                            <td class="content right_border">컴퓨터공학</td>
-                                            <td class="content right_border">A / B</td>
-                                            <td class="content right_border">A+ / A</td>
-                                            <td class="content right_border">B / B</td>
-                                            <td class="content right_border">B / A</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                            <td class="content right_border">없음</td>
-                                        </tr>
-                                    </tbody>
-                                  </table>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody></table>
-                    <input type="button" id="btnCheck" value="Click">
+			alert('head: ' + headMaximum + '\nbody: ' + bodyMaximum);
+		});
+	});
+</script>
+</head>
+<body>
+	<table id="tblBackground" cellspacing="0">
+		<tbody>
+			<tr>
+				<td>
+					<div id="divHeadScroll">
+						<table id="tblHead" border="0">
+							<colgroup>
+								<col style="width: 100px;">
+								<col style="width: 100px;">
+								<col style="width: 100px;">
+								<col style="width: 100px;">
+								<col style="width: 100px;">
+								<col style="width: 100px;">
+								<col style="width: 100px;">
+								<col style="width: 100px;">
+								<col style="width: 100px;">
+								<col style="width: 100px;">
+								<col style="width: 100px;">
+								<col style="width: 15px;">
+							</colgroup>
+							<tbody>
+								<tr>
+									<td class="title">NO.</td>
+									<td class="title">등록번호</td>
+									<td class="title">도서명</td>
+									<td class="title">저자</td>
+									<td class="title">출판사</td>
+									<td class="title">출판년</td>
+									<td class="title">별치기호</td>
+									<td class="title">청구기호</td>
+									<td class="title">권.연차</td>
+									<td class="title">복본기호</td>
+									<td class="title">소장처</td>
 
-            </body></html>
-                        <!--List...-->
-                        <!-- 이 파트는 이렇게 java 파일안에서 생성되도록 동작 예정-->
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="divBodyScroll">
+						<table id="tblBody" border="0">
+							<colgroup>
+								<col style="width: 100px;" class="right_border">
+								<col style="width: 100px;" class="right_border">
+								<col style="width: 100px;" class="right_border">
+								<col style="width: 100px;" class="right_border">
+								<col style="width: 100px;" class="right_border">
+								<col style="width: 100px;" class="right_border">
+								<col style="width: 100px;" class="right_border">
+								<col style="width: 100px;" class="right_border">
+								<col style="width: 100px;" class="right_border">
+								<col style="width: 100px;" class="right_border">
+								<col style="width: 100px;" class="right_border">
+							</colgroup>
+							<tbody>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+								<tr>
+									<td class="content right_border">20062022</td>
+									<td class="content right_border">홍길동</td>
+									<td class="content right_border">공학대학</td>
+									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">A / B</td>
+									<td class="content right_border">A+ / A</td>
+									<td class="content right_border">B / B</td>
+									<td class="content right_border">B / A</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+									<td class="content right_border">없음</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<input type="button" id="btnCheck" value="Click">
 
-            <script src="js/jquery-3.2.1.min.js"></script>
-            <script src="styles/bootstrap4/popper.js"></script>
-            <script src="styles/bootstrap4/bootstrap.min.js"></script>
-            <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-            <script src="plugins/easing/easing.js"></script>
-            <script src="plugins/parallax-js-master/parallax.min.js"></script>
-            <script src="js/custom.js"></script>
+</body>
+					</html>
+					<!--List...-->
+					<!-- 이 파트는 이렇게 java 파일안에서 생성되도록 동작 예정-->
 
-            </html>
+					<script src="js/jquery-3.2.1.min.js"></script>
+					<script src="styles/bootstrap4/popper.js"></script>
+					<script src="styles/bootstrap4/bootstrap.min.js"></script>
+					<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+					<script src="plugins/easing/easing.js"></script>
+					<script src="plugins/parallax-js-master/parallax.min.js"></script>
+					<script src="js/custom.js"></script>
+</html>
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="address">
-                        <h4>Our Address</h4>
-                        <h6>The BookStore Theme, 4th Store
-                        Beside that building, USA</h6>
-                        <h6>Call : 800 1234 5678</h6>
-                        <h6>Email : info@bookstore.com</h6>
-                    </div>
-                    <div class="timing">
-                        <h4>Timing</h4>
-                        <h6>Mon - Fri: 7am - 10pm</h6>
-                        <h6>​​Saturday: 8am - 10pm</h6>
-                        <h6>​Sunday: 8am - 11pm</h6>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="navigation">
-                        <h4>Navigation</h4>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                            <li><a href="terms-conditions.html">Terms</a></li>
-                            <li><a href="products.html">Products</a></li>
-                        </ul>
-                    </div>
-                    <div class="navigation">
-                        <h4>Help</h4>
-                        <ul>
-                            <li><a href="">Shipping & Returns</a></li>
-                            <li><a href="privacy-policy.html">Privacy</a></li>
-                            <li><a href="faq.html">FAQ’s</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="form">
-                        <h3>Quick Contact us</h3>
-                        <h6>We are now offering some good discount
-                            on selected books go and shop them</h6>
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input placeholder="Name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email" placeholder="Email" required>
-                                </div>
-                                <div class="col-md-12">
-                                    <textarea placeholder="Messege"></textarea>
-                                </div>
-                                <div class="col-md-12">
-                                    <button class="btn black">Alright, Submit</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copy-right">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h5>(C) 2017. All Rights Reserved. BookStore Wordpress Theme</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="share align-middle">
-                            <span class="fb"><i class="fa fa-facebook-official"></i></span>
-                            <span class="instagram"><i class="fa fa-instagram"></i></span>
-                            <span class="twitter"><i class="fa fa-twitter"></i></span>
-                            <span class="pinterest"><i class="fa fa-pinterest"></i></span>
-                            <span class="google"><i class="fa fa-google-plus"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-    <script src="js/custom.js"></script>
+<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="address">
+						<h4>Footer ..</h4>
+						<h6>LIS</h6>
+						<h6>- blank -</h6>
+						<h6>- blank -</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copy-right">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h5>(C) 2017. All Rights Reserved. BookStore Wordpress Theme</h5>
+					</div>
+					<div class="col-md-6">
+						<div class="share align-middle">
+							<span class="fb"><i class="fa fa-facebook-official"></i></span> <span
+								class="instagram"><i class="fa fa-instagram"></i></span> <span
+								class="twitter"><i class="fa fa-twitter"></i></span> <span
+								class="pinterest"><i class="fa fa-pinterest"></i></span> <span
+								class="google"><i class="fa fa-google-plus"></i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script src="js/custom.js"></script>
 </body>
 
 </html>
