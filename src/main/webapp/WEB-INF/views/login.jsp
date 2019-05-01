@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+	String cp = request.getContextPath();
+	request.setCharacterEncoding("UTF-8");
+%>
+
 <!DOCTYPE html>
 <html lang="ko-KR">
 
@@ -36,13 +43,13 @@
 									<li class="navbar-item active"><a href="index.html"
 										class="nav-link">Home</a></li>
 									<li class="navbar-item"><a href="shop.html"
-										class="nav-link"> -- 로그인 --</a></li>
+										class="nav-link"> -- ë¡ê·¸ì¸ --</a></li>
 									<li class="navbar-item"><a href="about.html"
-										class="nav-link">시설안내</a></li>
+										class="nav-link">ìì¤ìë´</a></li>
 									<li class="navbar-item"><a href="main_MyLib.html"
 										class="nav-link">My Library</a></li>
 									<li class="navbar-item"><a href="managerMain.html"
-										class="nav-link">관리자 페이지</a></li>
+										class="nav-link">ê´ë¦¬ì íì´ì§</a></li>
 								</ul>
 							</div>
 						</nav>
@@ -70,14 +77,14 @@
                         <form action="../member/login.do" method="post">
                             <p>
                                 <label>ID</label>
-                                <span class="w3-right w3-button w3-hover-white" title="아이디 찾기" id="find_id_btn">
+                                <span class="w3-right w3-button w3-hover-white" title="ìì´ë ì°¾ê¸°" id="find_id_btn">
                                     <i class="fa fa-exclamation-triangle w3-hover-text-red w3-large"></i>
                                 </span>
                                 <input class="w3-input" id="id" name="id" type="text" required>
                             </p>
                             <p>
                                 <label>Password</label>
-                                <span class="w3-right w3-button w3-hover-white" title="비밀번호 찾기" id="find_pw_btn">
+                                <span class="w3-right w3-button w3-hover-white" title="ë¹ë°ë²í¸ ì°¾ê¸°" id="find_pw_btn">
                                     <i class="fa fa-exclamation-triangle w3-hover-text-red w3-large"></i>
                                 </span>
                                 <input class="w3-input" id="pw" name="pw" type="password" required>

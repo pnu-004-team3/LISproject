@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+	String cp = request.getContextPath();
+	request.setCharacterEncoding("UTF-8");
+%>
+
 <!DOCTYPE html>
 <html lang="ko-KR">
 
@@ -34,13 +41,13 @@
 									<li class="navbar-item active"><a href="index.html"
 										class="nav-link">Home</a></li>
 									<li class="navbar-item"><a href="shop.html"
-										class="nav-link"> -- 로그인 --</a></li>
+										class="nav-link"> -- ë¡ê·¸ì¸ --</a></li>
 									<li class="navbar-item"><a href="about.html"
-										class="nav-link">시설안내</a></li>
+										class="nav-link">ìì¤ìë´</a></li>
 									<li class="navbar-item"><a href="main_MyLib.html"
 										class="nav-link">My Library</a></li>
 									<li class="navbar-item"><a href="managerMain.html"
-										class="nav-link">관리자 페이지</a></li>
+										class="nav-link">ê´ë¦¬ì íì´ì§</a></li>
 								</ul>
 							</div>
 						</nav>
@@ -59,43 +66,43 @@
   </div>
   <section class="static about-sec">
     <div class="container">
-      <h1>관리자 메인 페이지</h1>
+      <h1>ê´ë¦¬ì ë©ì¸ íì´ì§</h1>
       <header class="section-title">
-        <h3><a href="">관리자 정보수정</a></h3>
+        <h3><a href="">ê´ë¦¬ì ì ë³´ìì </a></h3>
       </header>
       <div class="section-body">
-        <p>관리자가 자신의 정보를 수정할 수 있다.</p>
+        <p>ê´ë¦¬ìê° ìì ì ì ë³´ë¥¼ ìì í  ì ìë¤.</p>
       </div>
       <header class="section-title">
-        <h3><a href="">회원 정보수정</a></h3>
+        <h3><a href="">íì ì ë³´ìì </a></h3>
       </header>
       <div class="section-body">
-        <p>관리자가 회원 정보를 검색하고 확인할 수 있다.</p>
+        <p>ê´ë¦¬ìê° íì ì ë³´ë¥¼ ê²ìíê³  íì¸í  ì ìë¤.</p>
       </div>
       <header class="section-title">
-        <h3><a href="manager_rent_return.html">대출/반납/예약 관리</a></h3>
+        <h3><a href="manager_rent_return.html">ëì¶/ë°ë©/ìì½ ê´ë¦¬</a></h3>
       </header>
       <div class="section-body">
-        <p>대출/반납 현황을 조회하 예약자를 확인할 수 있다.</p>
-        <p>대출 정지 이용자를 확인할 수 있고, 연체 및 미납자를 검색할 수 있다.</p>
+        <p>ëì¶/ë°ë© íí©ì ì¡°íí ìì½ìë¥¼ íì¸í  ì ìë¤.</p>
+        <p>ëì¶ ì ì§ ì´ì©ìë¥¼ íì¸í  ì ìê³ , ì°ì²´ ë° ë¯¸ë©ìë¥¼ ê²ìí  ì ìë¤.</p>
       </div>
       <header class="section-title">
-        <h3><a href="manager_booklist.html">소장 도서 관리</a></h3>
+        <h3><a href="manager_booklist.html">ìì¥ ëì ê´ë¦¬</a></h3>
       </header>
       <div class="section-body">
-        <p>현재 도서관에서 소장하고 있는 도서를 관리한다.</p>
+        <p>íì¬ ëìê´ìì ìì¥íê³  ìë ëìë¥¼ ê´ë¦¬íë¤.</p>
       </div>
       <header class="section-title">
-        <h3><a href="manager_book_register.html">신규도서 등록</a></h3>
+        <h3><a href="manager_book_register.html">ì ê·ëì ë±ë¡</a></h3>
       </header>
       <div class="section-body">
-        <p>Database에 새로운 도서를 추가할 수 있다.</p>
+        <p>Databaseì ìë¡ì´ ëìë¥¼ ì¶ê°í  ì ìë¤.</p>
       </div>
       <header class="section-title">
-        <h3><a href="manager_monitoring.html">관리자 모니터링</a></h3>
+        <h3><a href="manager_monitoring.html">ê´ë¦¬ì ëª¨ëí°ë§</a></h3>
       </header>
       <div class="section-body">
-        <p>관리자가 인포그래픽을 통한 이용자 통계를 확인할 수 있다.</p>
+        <p>ê´ë¦¬ìê° ì¸í¬ê·¸ëí½ì íµí ì´ì©ì íµê³ë¥¼ íì¸í  ì ìë¤.</p>
       </div>
 
     </div>
@@ -114,8 +121,8 @@
           <div class="timing">
             <h4>Timing</h4>
             <h6>Mon - Fri: 7am - 10pm</h6>
-            <h6>​​Saturday: 8am - 10pm</h6>
-            <h6>​Sunday: 8am - 11pm</h6>
+            <h6>ââSaturday: 8am - 10pm</h6>
+            <h6>âSunday: 8am - 11pm</h6>
           </div>
         </div>
         <div class="col-md-3">
@@ -134,7 +141,7 @@
             <ul>
               <li><a href="">Shipping & Returns</a></li>
               <li><a href="privacy-policy.html">Privacy</a></li>
-              <li><a href="faq.html">FAQ’s</a></li>
+              <li><a href="faq.html">FAQâs</a></li>
             </ul>
           </div>
         </div>
@@ -205,8 +212,8 @@
         <div class="timing">
           <h4>Timing</h4>
           <h6>Mon - Fri: 7am - 10pm</h6>
-          <h6>​​Saturday: 8am - 10pm</h6>
-          <h6>​Sunday: 8am - 11pm</h6>
+          <h6>ââSaturday: 8am - 10pm</h6>
+          <h6>âSunday: 8am - 11pm</h6>
         </div>
       </div>
       <div class="col-md-3">
@@ -225,7 +232,7 @@
           <ul>
             <li><a href="">Shipping & Returns</a></li>
             <li><a href="privacy-policy.html">Privacy</a></li>
-            <li><a href="faq.html">FAQ’s</a></li>
+            <li><a href="faq.html">FAQâs</a></li>
           </ul>
         </div>
       </div>

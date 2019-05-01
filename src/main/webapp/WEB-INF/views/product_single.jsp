@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+	String cp = request.getContextPath();
+	request.setCharacterEncoding("UTF-8");
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,13 +43,13 @@
 									<li class="navbar-item active"><a href="index.html"
 										class="nav-link">Home</a></li>
 									<li class="navbar-item"><a href="shop.html"
-										class="nav-link"> -- 로그인 --</a></li>
+										class="nav-link"> -- ë¡ê·¸ì¸ --</a></li>
 									<li class="navbar-item"><a href="about.html"
-										class="nav-link">시설안내</a></li>
+										class="nav-link">ìì¤ìë´</a></li>
 									<li class="navbar-item"><a href="main_MyLib.html"
 										class="nav-link">My Library</a></li>
 									<li class="navbar-item"><a href="managerMain.html"
-										class="nav-link">관리자 페이지</a></li>
+										class="nav-link">ê´ë¦¬ì íì´ì§</a></li>
 								</ul>
 							</div>
 						</nav>
@@ -56,12 +63,12 @@
 	<div class="breadcrumb">
 		<div class="container">
 			<a class="breadcrumb-item" href="index.html">Home</a> <span
-				class="breadcrumb-item active"> 도서 정보</span>
+				class="breadcrumb-item active"> ëì ì ë³´</span>
 		</div>
 	</div>
 	<section class="product-sec">
 		<div class="container">
-			<h1>--- 가져 올 책 제목 ---</h1>
+			<h1>--- ê°ì ¸ ì¬ ì± ì ëª© ---</h1>
 			<div class="row">
 				<div class="col-md-6 slider-sec">
 					<!-- main slider carousel -->
@@ -84,23 +91,23 @@
 				</div>
 				<div class="col-md-6 slider-content">
 					<ul>
-						<li><span class="name"> 도서 명</span><span class="clm">:</span>
-							<span class="book_name book_info"> -- 책 제목 가져오기 -- </span></li>
-						<li><span class="name"> 도서 유형 </span><span class="clm">:</span>
-							<span class="book_type book_info"> -- 도서 유형 가져오기 -- </span></li>
-						<li><span class="name"> 저자 </span><span class="clm">:</span>
-							<span class="book_author book_info"> -- 저자 가져오기 -- </span></li>
-						<li><span class="name"> 출판사 </span><span class="clm">:</span>
-							<span class="book_publish book_info"> -- 출판사 가져오기 -- </span></li>
+						<li><span class="name"> ëì ëª</span><span class="clm">:</span>
+							<span class="book_name book_info"> -- ì± ì ëª© ê°ì ¸ì¤ê¸° -- </span></li>
+						<li><span class="name"> ëì ì í </span><span class="clm">:</span>
+							<span class="book_type book_info"> -- ëì ì í ê°ì ¸ì¤ê¸° -- </span></li>
+						<li><span class="name"> ì ì </span><span class="clm">:</span>
+							<span class="book_author book_info"> -- ì ì ê°ì ¸ì¤ê¸° -- </span></li>
+						<li><span class="name"> ì¶íì¬ </span><span class="clm">:</span>
+							<span class="book_publish book_info"> -- ì¶íì¬ ê°ì ¸ì¤ê¸° -- </span></li>
 						<li><span class="name"> ISBN </span><span class="clm">:</span>
-							<span class="book_state book_info"> ISBN 번호 </span></li>
+							<span class="book_state book_info"> ISBN ë²í¸ </span></li>
 
-						<li><span class="name"> 대출 현황 </span><span class="clm">:</span>
-							<span class="book_state book_info"> -- 도서 현재 상황 -- </span></li>
+						<li><span class="name"> ëì¶ íí© </span><span class="clm">:</span>
+							<span class="book_state book_info"> -- ëì íì¬ ìí© -- </span></li>
 					</ul>
 					<div class="btn-sec">
-						<button class="btn ">대출 신청</button>
-						<button class="btn black">예약 신청</button>
+						<button class="btn ">ëì¶ ì ì²­</button>
+						<button class="btn black">ìì½ ì ì²­</button>
 					</div>
 				</div>
 			</div>
@@ -173,8 +180,8 @@
                     <div class="timing">
                         <h4>Timing</h4>
                         <h6>Mon - Fri: 7am - 10pm</h6>
-                        <h6>​​Saturday: 8am - 10pm</h6>
-                        <h6>​Sunday: 8am - 11pm</h6>
+                        <h6>ââSaturday: 8am - 10pm</h6>
+                        <h6>âSunday: 8am - 11pm</h6>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -193,7 +200,7 @@
                         <ul>
                             <li><a href="">Shipping & Returns</a></li>
                             <li><a href="privacy-policy.html">Privacy</a></li>
-                            <li><a href="faq.html">FAQ’s</a></li>
+                            <li><a href="faq.html">FAQâs</a></li>
                         </ul>
                     </div>
                 </div>

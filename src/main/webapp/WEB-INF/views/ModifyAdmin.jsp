@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+	String cp = request.getContextPath();
+	request.setCharacterEncoding("UTF-8");
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,13 +43,13 @@
 									<li class="navbar-item active"><a href="index.html"
 										class="nav-link">Home</a></li>
 									<li class="navbar-item"><a href="shop.html"
-										class="nav-link"> -- 로그인 --</a></li>
+										class="nav-link"> -- ë¡ê·¸ì¸ --</a></li>
 									<li class="navbar-item"><a href="about.html"
-										class="nav-link">시설안내</a></li>
+										class="nav-link">ìì¤ìë´</a></li>
 									<li class="navbar-item"><a href="main_MyLib.html"
 										class="nav-link">My Library</a></li>
 									<li class="navbar-item"><a href="managerMain.html"
-										class="nav-link">관리자 페이지</a></li>
+										class="nav-link">ê´ë¦¬ì íì´ì§</a></li>
 								</ul>
 							</div>
 						</nav>
@@ -52,38 +59,48 @@
 		</div>
 	</header>
 	<div class="blank"></div>
-
+	
 	<div class="breadcrumb">
 		<div class="container">
 			<a class="breadcrumb-item" href="index.html">Admin</a> <span
-				class="breadcrumb-item active">Modify User</span>
+				class="breadcrumb-item active">Modify Admin</span>
 		</div>
 	</div>
 	<section class="static about-sec">
 		<div class="container">
-			<h1>ADMIN / Modify User</h1>
-			<p>Please insert User information you want to change.</p>
+			<h1>ADMIN / Modify Account</h1>
+			<p>Please insert information you want to change. Blank includes
+				star is required</p>
 			<div class="form">
 				<form>
-					<div class="row">
-						<div class="col-md-10">
-							<input placeholder="Enter User Name" required> <span
-								class="required-star">*</span>
-						</div>
 
-
-
-						<div class="col-lg-8 col-md-12">
-							<button class="btn black" style="margin-right: 20px;">Delete</button>
-							<button class="btn black" style="margin-right: 20px;"
-								onclick="location.href = 'ModifyUser.html'">Modify</button>
-							<button class="btn black" onclick="location.href = 'Show.html'">List</button>
-
-						</div>
-
+					<div class="col-md-10">
+						<input type="email" placeholder="Password" required> <span
+							class="required-star">*</span>
 					</div>
-				</form>
+					<div class="col-md-10">
+						<input type="email" placeholder="New Password" required> <span
+							class="required-star">*</span>
+					</div>
+					<div class="col-md-10">
+						<input type="email" placeholder="Repeat New Password" required>
+						<span class="required-star">*</span>
+					</div>
+
+					<div class="col-md-10">
+						<input type="email" placeholder="E-mail">
+					</div>
+
+					<div class="col-md-10">
+						<input type="email" placeholder="New Email">
+					</div>
+
+					<div class="col-lg-8 col-md-12">
+						<button class="btn black">Submit</button>
+					</div>
 			</div>
+			</form>
+		</div>
 		</div>
 	</section>
 	

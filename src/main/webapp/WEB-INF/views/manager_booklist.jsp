@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+	String cp = request.getContextPath();
+	request.setCharacterEncoding("UTF-8");
+%>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,13 +44,13 @@
 									<li class="navbar-item active"><a href="index.html"
 										class="nav-link">Home</a></li>
 									<li class="navbar-item"><a href="shop.html"
-										class="nav-link"> -- 로그인 --</a></li>
+										class="nav-link"> -- ë¡ê·¸ì¸ --</a></li>
 									<li class="navbar-item"><a href="about.html"
-										class="nav-link">시설안내</a></li>
+										class="nav-link">ìì¤ìë´</a></li>
 									<li class="navbar-item"><a href="main_MyLib.html"
 										class="nav-link">My Library</a></li>
 									<li class="navbar-item"><a href="managerMain.html"
-										class="nav-link">관리자 페이지</a></li>
+										class="nav-link">ê´ë¦¬ì íì´ì§</a></li>
 								</ul>
 							</div>
 						</nav>
@@ -62,20 +69,20 @@
 	</div>
 
 
-	<!-- 도서등록 페이지 -->
+	<!-- ëìë±ë¡ íì´ì§ -->
 
 	<section class="static about-sec">
 		<div class="container">
 			<div class="relative1">
-				<h1>소장 도서 관리</h1>
+				<h1>ìì¥ ëì ê´ë¦¬</h1>
 
 				<form class="form-inline my-2 my-lg-0 search_book">
 					<div class="search_form">
 						<select class="search_form_select">
-							<option value="0">도서 제목</option>
-							<option value="1">도서 ISBN</option>
-							<option value="2">도서 저자</option>
-							<option value="3">출판사</option>
+							<option value="0">ëì ì ëª©</option>
+							<option value="1">ëì ISBN</option>
+							<option value="2">ëì ì ì</option>
+							<option value="3">ì¶íì¬</option>
 
 						</select> <input class="form-control" type="search"
 							style="height: 50px; border: none; width: 55%;"
@@ -96,17 +103,17 @@
 	src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script type="text/javascript">
 	$(function() {
-		// divBodyScroll의 스크롤이 동작할때에 함수를 불러옵니다.
+		// divBodyScrollì ì¤í¬ë¡¤ì´ ëìí ëì í¨ìë¥¼ ë¶ë¬ìµëë¤.
 		$('#divBodyScroll').scroll(function() {
-			// divBodyScroll의 x좌표가 움직인 거리를 가져옵니다.
+			// divBodyScrollì xì¢íê° ìì§ì¸ ê±°ë¦¬ë¥¼ ê°ì ¸ìµëë¤.
 			var xPoint = $('#divBodyScroll').scrollLeft();
 
-			// 가져온 x좌표를 divHeadScroll에 적용시켜 같이 움직일수 있도록 합니다.
+			// ê°ì ¸ì¨ xì¢íë¥¼ divHeadScrollì ì ì©ìì¼ ê°ì´ ìì§ì¼ì ìëë¡ í©ëë¤.
 			$('#divHeadScroll').scrollLeft(xPoint);
 		});
 
-		// 처음에 divBodyScroll의 세로스크롤 너비를 알수 없기 때문에
-		// 스크롤을 우측으로 최대한 움직인 후 버튼을 눌러 두 스크롤의 차이를 찾아서 그 크기 만큼 tblHead의 공백 Column의 width를 지정해줍니다.
+		// ì²ìì divBodyScrollì ì¸ë¡ì¤í¬ë¡¤ ëë¹ë¥¼ ìì ìê¸° ëë¬¸ì
+		// ì¤í¬ë¡¤ì ì°ì¸¡ì¼ë¡ ìµëí ìì§ì¸ í ë²í¼ì ëë¬ ë ì¤í¬ë¡¤ì ì°¨ì´ë¥¼ ì°¾ìì ê·¸ í¬ê¸° ë§í¼ tblHeadì ê³µë°± Columnì widthë¥¼ ì§ì í´ì¤ëë¤.
 		$('#btnCheck').click(function() {
 			var headMaximum = $('#divHeadScroll').scrollLeft();
 			var bodyMaximum = $('#divBodyScroll').scrollLeft();
@@ -140,16 +147,16 @@
 							<tbody>
 								<tr>
 									<td class="title">NO.</td>
-									<td class="title">등록번호</td>
-									<td class="title">도서명</td>
-									<td class="title">저자</td>
-									<td class="title">출판사</td>
-									<td class="title">출판년</td>
-									<td class="title">별치기호</td>
-									<td class="title">청구기호</td>
-									<td class="title">권.연차</td>
-									<td class="title">복본기호</td>
-									<td class="title">소장처</td>
+									<td class="title">ë±ë¡ë²í¸</td>
+									<td class="title">ëìëª</td>
+									<td class="title">ì ì</td>
+									<td class="title">ì¶íì¬</td>
+									<td class="title">ì¶íë</td>
+									<td class="title">ë³ì¹ê¸°í¸</td>
+									<td class="title">ì²­êµ¬ê¸°í¸</td>
+									<td class="title">ê¶.ì°ì°¨</td>
+									<td class="title">ë³µë³¸ê¸°í¸</td>
+									<td class="title">ìì¥ì²</td>
 
 									<td></td>
 								</tr>
@@ -174,341 +181,341 @@
 							<tbody>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 								<tr>
 									<td class="content right_border">20062022</td>
-									<td class="content right_border">홍길동</td>
-									<td class="content right_border">공학대학</td>
-									<td class="content right_border">컴퓨터공학</td>
+									<td class="content right_border">íê¸¸ë</td>
+									<td class="content right_border">ê³µíëí</td>
+									<td class="content right_border">ì»´í¨í°ê³µí</td>
 									<td class="content right_border">A / B</td>
 									<td class="content right_border">A+ / A</td>
 									<td class="content right_border">B / B</td>
 									<td class="content right_border">B / A</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
-									<td class="content right_border">없음</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
+									<td class="content right_border">ìì</td>
 								</tr>
 							</tbody>
 						</table>
@@ -522,7 +529,7 @@
 </body>
 					</html>
 					<!--List...-->
-					<!-- 이 파트는 이렇게 java 파일안에서 생성되도록 동작 예정-->
+					<!-- ì´ íí¸ë ì´ë ê² java íì¼ììì ìì±ëëë¡ ëì ìì -->
 
 					<script src="js/jquery-3.2.1.min.js"></script>
 					<script src="styles/bootstrap4/popper.js"></script>

@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+	String cp = request.getContextPath();
+	request.setCharacterEncoding("UTF-8");
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,9 +81,9 @@
     </div>
     <section class="static about-sec">
         <div class="container">
-            <h1>관리자 모니터링</h1>
+            <h1>ê´ë¦¬ì ëª¨ëí°ë§</h1>
             <div class="milestones">
-  <div class="elements_title">대출/연체/예약/연장 현황</div>
+  <div class="elements_title">ëì¶/ì°ì²´/ìì½/ì°ì¥ íí©</div>
   <div class="row milestones_row">
 
     <!-- Milestone -->
@@ -85,7 +92,7 @@
         <div class="milestone_icon d-flex flex-column align-items-center justify-content-center"><img src="images/milestones_1.png" alt=""></div>
         <div class="milestone_content">
           <div class="milestone_counter" data-end-value="651">0</div>
-          <div class="milestone_text">대출현황</div>
+          <div class="milestone_text">ëì¶íí©</div>
         </div>
       </div>
     </div>
@@ -96,7 +103,7 @@
         <div class="milestone_icon d-flex flex-column align-items-center justify-content-center"><img src="images/milestones_2.png" alt=""></div>
         <div class="milestone_content">
           <div class="milestone_counter" data-end-value="1256">0</div>
-          <div class="milestone_text">연체현황</div>
+          <div class="milestone_text">ì°ì²´íí©</div>
         </div>
       </div>
     </div>
@@ -107,7 +114,7 @@
         <div class="milestone_icon d-flex flex-column align-items-center justify-content-center"><img src="images/milestones_3.png" alt=""></div>
         <div class="milestone_content">
           <div class="milestone_counter" data-end-value="124">0</div>
-          <div class="milestone_text">예약현황</div>
+          <div class="milestone_text">ìì½íí©</div>
         </div>
       </div>
     </div>
@@ -118,7 +125,7 @@
         <div class="milestone_icon d-flex flex-column align-items-center justify-content-center"><img src="images/milestones_4.png" alt=""></div>
         <div class="milestone_content">
           <div class="milestone_counter" data-end-value="25">0</div>
-          <div class="milestone_text">연장현황</div>
+          <div class="milestone_text">ì°ì¥íí©</div>
         </div>
       </div>
     </div>
@@ -130,33 +137,33 @@
 <!-- Loaders -->
 
 <div class="loaders">
-  <div class="elements_title">통계</div>
+  <div class="elements_title">íµê³</div>
   <div class="loaders_container">
     <div class="row elements_loaders_container">
       <div class="col-lg-3 loader_col">
         <!-- Loader -->
         <div class="circle loader" data-value="1.0">
           <strong><i></i></strong>
-          <span>월별 대출률</span>
+          <span>ìë³ ëì¶ë¥ </span>
         </div>
       </div>
       <div class="col-lg-3 loader_col">
         <!-- Loader -->
         <div class="circle loader" data-value="0.80">
           <strong><i></i></strong>
-          <span>월별 반납률</span>
+          <span>ìë³ ë°ë©ë¥ </span>
         </div>
       </div>
       <div class="col-lg-3 loader_col">
         <div class="circle loader" data-value="0.70">
           <strong><i></i></strong>
-          <span>월별 연체률</span>
+          <span>ìë³ ì°ì²´ë¥ </span>
         </div>
       </div>
       <div class="col-lg-3 loader_col">
         <div class="circle loader" data-value="0.65">
           <strong><i></i></strong>
-          <span>월별 연장률</span>
+          <span>ìë³ ì°ì¥ë¥ </span>
         </div>
       </div>
     </div>
@@ -178,8 +185,8 @@
                     <div class="timing">
                         <h4>Timing</h4>
                         <h6>Mon - Fri: 7am - 10pm</h6>
-                        <h6>​​Saturday: 8am - 10pm</h6>
-                        <h6>​Sunday: 8am - 11pm</h6>
+                        <h6>ââSaturday: 8am - 10pm</h6>
+                        <h6>âSunday: 8am - 11pm</h6>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -198,7 +205,7 @@
                         <ul>
                             <li><a href="">Shipping & Returns</a></li>
                             <li><a href="privacy-policy.html">Privacy</a></li>
-                            <li><a href="faq.html">FAQ’s</a></li>
+                            <li><a href="faq.html">FAQâs</a></li>
                         </ul>
                     </div>
                 </div>

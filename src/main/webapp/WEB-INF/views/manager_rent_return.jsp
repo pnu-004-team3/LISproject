@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+	String cp = request.getContextPath();
+	request.setCharacterEncoding("UTF-8");
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,13 +40,13 @@
 									<li class="navbar-item active"><a href="index.html"
 										class="nav-link">Home</a></li>
 									<li class="navbar-item"><a href="shop.html"
-										class="nav-link"> -- 로그인 --</a></li>
+										class="nav-link"> -- ë¡ê·¸ì¸ --</a></li>
 									<li class="navbar-item"><a href="about.html"
-										class="nav-link">시설안내</a></li>
+										class="nav-link">ìì¤ìë´</a></li>
 									<li class="navbar-item"><a href="main_MyLib.html"
 										class="nav-link">My Library</a></li>
 									<li class="navbar-item"><a href="managerMain.html"
-										class="nav-link">관리자 페이지</a></li>
+										class="nav-link">ê´ë¦¬ì íì´ì§</a></li>
 								</ul>
 							</div>
 						</nav>
@@ -56,11 +63,11 @@
     </div>
 
 
-    <!-- 도서등록 페이지 -->
+    <!-- ëìë±ë¡ íì´ì§ -->
 
     <section class="static about-sec">
         <div class="container">
-            <h1>관리자 대출 / 반납</h1>
+            <h1>ê´ë¦¬ì ëì¶ / ë°ë©</h1>
             <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
             <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
@@ -71,8 +78,8 @@
                                         <form class="form-inline my-2 my-lg-0 search_book">
                         						    	<div class="search_form">
                         						    		<select class="search_form_select">
-                        										<option value="0"> 회원 번호 </option>
-                        										<option value="1"> 회원 이름 </option>
+                        										<option value="0"> íì ë²í¸ </option>
+                        										<option value="1"> íì ì´ë¦ </option>
                         										<option value="2">  </option>
                         										<option value="3">  </option>
 
@@ -88,23 +95,23 @@
               <table class="rd-table th-bg gray line responsive">
         <tbody>
             <tr>
-                <th scope="row" class="col-2">아이디(학번/교번)</th>
+                <th scope="row" class="col-2">ìì´ë(íë²/êµë²)</th>
                 <td>201424451</td>
             </tr>
             <tr>
-                <th scope="row">이름</th>
-                <td>문혁준</td>
+                <th scope="row">ì´ë¦</th>
+                <td>ë¬¸íì¤</td>
             </tr>
             <tr>
-                <th scope="row">소속</th>
-                <td>공과대학/전기컴퓨터공학부/정보컴퓨터공학전공</td>
+                <th scope="row">ìì</th>
+                <td>ê³µê³¼ëí/ì ê¸°ì»´í¨í°ê³µíë¶/ì ë³´ì»´í¨í°ê³µíì ê³µ</td>
             </tr>
             <tr>
-                <th scope="row">이동전화</th>
+                <th scope="row">ì´ëì í</th>
                 <td><input type="text" id="phone_number" name="phone_number" value="010-9863-1881" class="rd-form"></td>
             </td></tr>
             <tr>
-                <th scope="row">이메일</th>
+                <th scope="row">ì´ë©ì¼</th>
                 <td><input type="text" id="user_email" name="user_email" value="mon6972@naver.com" class="rd-form width-md"></td>
             </tr>
         </tbody>
