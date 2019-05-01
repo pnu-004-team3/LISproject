@@ -19,43 +19,43 @@
   </div>
   <section class="static about-sec">
     <div class="container">
-      <h1>ê´ë¦¬ì ë©ì¸ íì´ì§</h1>
+      <h1>관리자 메인 페이지</h1>
       <header class="section-title">
-        <h3><a href="<%=cp%>/">ê´ë¦¬ì ì ë³´ìì </a></h3>
+        <h3><a href="<%=cp%>/">관리자 정보수정</a></h3>
       </header>
       <div class="section-body">
-        <p>ê´ë¦¬ìê° ìì ì ì ë³´ë¥¼ ìì í  ì ìë¤.</p>
+        <p>관리자가 자신의 정보를 수정할 수 있다.</p>
       </div>
       <header class="section-title">
-        <h3><a href="<%=cp%>/">íì ì ë³´ìì </a></h3>
+        <h3><a href="<%=cp%>/">회원 정보수정</a></h3>
       </header>
       <div class="section-body">
-        <p>ê´ë¦¬ìê° íì ì ë³´ë¥¼ ê²ìíê³  íì¸í  ì ìë¤.</p>
+        <p>관리자가 회원 정보를 검색하고 확인할 수 있다.</p>
       </div>
       <header class="section-title">
-        <h3><a href="<%=cp%>/manager_rent_return">ëì¶/ë°ë©/ìì½ ê´ë¦¬</a></h3>
+        <h3><a href="<%=cp%>/manager_rent_return">대출/반납/예약 관리</a></h3>
       </header>
       <div class="section-body">
-        <p>ëì¶/ë°ë© íí©ì ì¡°íí ìì½ìë¥¼ íì¸í  ì ìë¤.</p>
-        <p>ëì¶ ì ì§ ì´ì©ìë¥¼ íì¸í  ì ìê³ , ì°ì²´ ë° ë¯¸ë©ìë¥¼ ê²ìí  ì ìë¤.</p>
+        <p>대출/반납 현황을 조회하고 예약자를 확인할 수 있다.</p>
+        <p>대출 정지 이용자를 확인할 수 있고, 연체 및 미납자를 검색할 수 있다.</p>
       </div>
       <header class="section-title">
-        <h3><a href="<%=cp%>/manager_booklist">ìì¥ ëì ê´ë¦¬</a></h3>
+        <h3><a href="<%=cp%>/manager_booklist">소장 도서 관리</a></h3>
       </header>
       <div class="section-body">
-        <p>íì¬ ëìê´ìì ìì¥íê³  ìë ëìë¥¼ ê´ë¦¬íë¤.</p>
+        <p>현재 도서관에서 소장하고 있는 도서를 관리한다</p>
       </div>
       <header class="section-title">
-        <h3><a href="<%=cp%>/manager_book_register">ì ê·ëì ë±ë¡</a></h3>
+        <h3><a href="<%=cp%>/manager_book_register">신규도서 등록</a></h3>
       </header>
       <div class="section-body">
-        <p>Databaseì ìë¡ì´ ëìë¥¼ ì¶ê°í  ì ìë¤.</p>
+        <p>Database에 새로운 도서를 추가할 수 있다.</p>
       </div>
       <header class="section-title">
-        <h3><a href="<%=cp%>/manager_monitoring">ê´ë¦¬ì ëª¨ëí°ë§</a></h3>
+        <h3><a href="<%=cp%>/manager_monitoring">관리자 모니터링</a></h3>
       </header>
       <div class="section-body">
-        <p>ê´ë¦¬ìê° ì¸í¬ê·¸ëí½ì íµí ì´ì©ì íµê³ë¥¼ íì¸í  ì ìë¤.</p>
+        <p>관리자가 인포그래픽을 통한 이용자 통계를 확인할 수 있다.</p>
       </div>
 
     </div>

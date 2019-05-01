@@ -22,19 +22,19 @@
 			<h1>My Library</h1>
 			<header class="section-title">
 				<h3>
-					<a href="<%=cp%>/UserInfo_manage">íìì ë³´ ê´ë¦¬</a>
+					<a href="<%=cp%>/UserInfo_manage">회원정보 관리</a>
 				</h3>
 			</header>
 			<div class="section-body">
-				<p>ì ë³´ìì , ê°ì¸ì ë³´íì©ëì, ìë¦¼ì¤ì , ê°ì¸ê³µì§ì¬í­, ë´ìì¬</p>
+				<p>정보수정, 개인정보활용동의, 알림설정, 개인공지사항, 내서재</p>
 			</div>
 			<header class="section-title">
 				<h3>
-					<a href="<%=cp%>/loan">ëì¶/ì°ì¥/ìì½ ì¡°í</a>
+					<a href="<%=cp%>/loan">대출/연장/예약 조회</a>
 				</h3>
 			</header>
 			<div class="section-body">
-				<p>ëì¶/ìì½ ìí©, ëì¶/ë°ë©ê¸°ë¡, ë¶ì¤ê¸°ë¡, ì°ì²´ë£ë´ì­</p>
+				<p>대출/예약 상황, 대출/반납기록, 분실기록, 연체료내역</p>
 			</div>
 		</div>
 	</section>

@@ -765,8 +765,13 @@ h1, h2, h3, h4, h5, h6, ul {
   padding: 0px;
 }
 
+.up-bar{
+  padding: 8px;
+  margin: 30px;
+}
+
 li {
-  font-size: 16px;
+  font-size: 23px;
   float: left;
   padding: 40px;
 }

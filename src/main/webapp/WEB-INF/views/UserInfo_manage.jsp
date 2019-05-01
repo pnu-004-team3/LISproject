@@ -14,20 +14,16 @@
 		<div class="container">
 			<a class="breadcrumb-item" href="<%=cp%>/index">Home</a> <span
 				class="breadcrumb-item active">My Library</span> <span
-				class="breadcrumb-item active">íìì ë³´ ê´ë¦¬</span>
+				class="breadcrumb-item active">회원정보 관리</span>
 		</div>
 	</div>
 	<section class="static about-sec">
 		<div class="container">
-			<h1>íìì ë³´ ê´ë¦¬</h1>
-			<div class="">
+			<h1>회원정보 관리</h1>
+			<div class="up-bar">
 				<ul>
-					<a
-						href="<%=cp%>/C:\Users\kin4u\Desktop\4íë ì¤í\book-store_Html\book-store\UserInfo_manage"><span>ì ë³´
-							ìì </span></a>
-				</ul>
-				<ul id="" class="">
-					<a href="<%=cp%>/"><span>ë´ ê²ìë¬¼ íì¸</span></a>
+					<li><a href="<%=cp%>/UserInfo_manage.html"><span>정보 수정</span></a></li>
+					<li><a href="<%=cp%>/UserInfo_manage.html"><span>내 게시물 확인</span></a></li>
 				</ul>
 
 			</div>
@@ -36,29 +32,29 @@
 					<div id="sr_my_profile" class="solars profile editor ">
 						<form action="" id="" class="solars-form" method="post">
 							<input type="hidden" name="mod" value="update">
-
-							<h2 class="off-screen">ì¬ì©ì ì ë³´</h2>
-							<table class="rd-table th-bg gray line responsive">
+							<br><br><br><br><br><br>
+							<h2 class="off-screen">사용자 정보</h2>
+							<table class="signSubTitle">
 								<tbody>
 									<tr>
-										<th scope="row" class="col-2">ìì´ë(íë²/êµë²)</th>
-										<td>DBìì ìì´ë ë°ìì¤ë ê³³</td>
+										<th scope="row" class="col-2">아이디(학번/교번)</th>
+										<td>DB에서 아이디 받아오는 곳</td>
 									</tr>
 									<tr>
-										<th scope="row">ì´ë¦</th>
-										<td>DBìì ì´ë¦ ë°ìì¤ë ê³³</td>
+										<th scope="row">이름</th>
+										<td>DB에서 이름 받아오는 곳</td>
 									</tr>
 									<tr>
-										<th scope="row">ìì</th>
-										<td>DBìì ìì ë°ìì¤ë ê³³</td>
+										<th scope="row">소속</th>
+										<td>DB에서 소속 받아오는 곳</td>
 									</tr>
 									<tr>
-										<th scope="row">ì´ëì í</th>
+										<th scope="row">이동전화</th>
 										<td><input type="text" id="phone_number"
 											name="phone_number" value="" class=""></td>
 									</tr>
 									<tr>
-										<th scope="row">ì´ë©ì¼</th>
+										<th scope="row">이메일</th>
 										<td><input type="text" id="user_email" name="user_email"
 											value="" class=""></td>
 									</tr>

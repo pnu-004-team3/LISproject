@@ -10,7 +10,7 @@
 <body>
 	<jsp:include page="/WEB-INF/views/header/main_nav.jsp"></jsp:include>
 	
-
+<div class="container">
 	<div class="breadcrumb">
 		<div class="container">
 			<a class="breadcrumb-item" href="<%=cp%>/index">Home</a> <span
@@ -30,8 +30,8 @@
 			</ul>
 
 		</div>
-		<div class="">
-			<table class="">
+		<div class="slider">
+			<table class="signSubTitle">
 				<thead>
 					<tr>
 						<th scope="col" class="col-no">번호</th>
@@ -56,6 +56,7 @@
 		</div>
 		<!-- //List -->
 	</section>
+</div>
 	
 	<jsp:include page="/WEB-INF/views/footer/main_footer.jsp"></jsp:include>
 </body>

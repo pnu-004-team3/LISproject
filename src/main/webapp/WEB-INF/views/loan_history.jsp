@@ -10,54 +10,55 @@
 <body>
 	<jsp:include page="/WEB-INF/views/header/main_nav.jsp"></jsp:include>
 	
-
+<div class="container">
 	<div class="breadcrumb">
 		<div class="container">
 			<a class="breadcrumb-item" href="<%=cp%>/index">Home</a> <span
 				class="breadcrumb-item active">My Library</span> <span
-				class="breadcrumb-item active">ëì¶/ìì½/ì°ì¥</span>
+				class="breadcrumb-item active">대출/예약/연장</span>
 		</div>
 	</div>
 	<section class="static about-sec">
 		<div class="container">
-			<h1>ëì¶/ìì½/ì°ì¥</h1>
+			<h1>대출/예약/연장</h1>
 			<ul>
-				<li class="menu_item"><a href="<%=cp%>/loan">ëì¶íí©</a></li>
-				<li class="menu_item"><a href="<%=cp%>/reservation">ìì½íí©</a></li>
-				<li class="menu_item"><a href="<%=cp%>/loan-history">ëì¶/ë°ë© ê¸°ë¡</a></li>
-				<li class="menu_item"><a href="<%=cp%>/lost">ë¶ì¤ ê¸°ë¡</a></li>
-				<li class="menu_item"><a href="<%=cp%>/late-fee">ì°ì²´ ë´ì­</a></li>
+				<li class="menu_item"><a href="<%=cp%>/loan">대출현황</a></li>
+				<li class="menu_item"><a href="<%=cp%>/reservation">예약현황</a></li>
+				<li class="menu_item"><a href="<%=cp%>/loan-history">대출/반납 기록</a></li>
+				<li class="menu_item"><a href="<%=cp%>/lost">분실 기록</a></li>
+				<li class="menu_item"><a href="<%=cp%>/late-fee">연체 내역</a></li>
 			</ul>
 
 		</div>
-		<div class="">
-			<table class="">
+		<div class="slider">
+			<table class="signSubTitle">
 				<thead>
 					<tr>
-						<th scope="col" class="col-no">ë²í¸</th>
-						<th scope="col" class="col-auto">ìëª/ì ì</th>
-						<th scope="col" class="col-1e">ìì¥ì²</th>
-						<th scope="col" class="col-1">ëì¶ì¼</th>
-						<th scope="col" class="col-1">ë°ë©ì¼</th>
-						<th scope="col" class="col-1">ë°ë©ì í</th>
+						<th scope="col" class="col-no">번호</th>
+						<th scope="col" class="col-auto">서명/저자</th>
+						<th scope="col" class="col-1e">소장처</th>
+						<th scope="col" class="col-1">대출일</th>
+						<th scope="col" class="col-1">반납일</th>
+						<th scope="col" class="col-1">반납유형</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="col-no" data-th="ë²í¸"></td>
-						<td class="left" data-th="ìëª/ì ì"><a href="<%=cp%>/"></a></td>
-						<td class="" data-th="ìì¥ì²">ì¤ìëìê´</td>
-						<td class="loan-date" data-th="ëì¶ì¼">2019-00-00</td>
-						<td class="expiry-date" data-th="ë°ë©ì¼">2019-00-00</td>
-						<td class="overdays" data-th="ë°ë©ì í">0</td>
+						<td class="col-no" data-th="번호"></td>
+						<td class="left" data-th="서명/저자"><a href="<%=cp%>/"></a></td>
+						<td class="" data-th="소장처">중앙도서관</td>
+						<td class="loan-date" data-th="대출일">2019-00-00</td>
+						<td class="expiry-date" data-th="반납일">2019-00-00</td>
+						<td class="overdays" data-th="반납유형">0</td>
 					</tr>
 
 				</tbody>
 			</table>
-			<input type="hidden" id="i18n_modal_title" value="ëì¶ëì ì°ì¥">
+			<input type="hidden" id="i18n_modal_title" value="대출도서 연장">
 		</div>
 		<!-- //List -->
 	</section>
+</div>	
 	
 	<jsp:include page="/WEB-INF/views/footer/main_footer.jsp"></jsp:include>
 </body>
