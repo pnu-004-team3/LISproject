@@ -24,13 +24,13 @@
 								<li class="navbar-item active"><a href="<%=cp%>/"
 									class="nav-link">Home</a></li>
 								<li class="navbar-item"><a href="<%=cp%>/login"
-									class="nav-link">ë¡ê·¸ì¸</a></li>
+									class="nav-link">로그인</a></li>
 								<li class="navbar-item"><a href="<%=cp%>/about"
-									class="nav-link">ìì¤ìë´</a></li>
+									class="nav-link">시설안내</a></li>
 								<li class="navbar-item"><a href="<%=cp%>/main_MyLib"
 									class="nav-link">My Library</a></li>
 								<li class="navbar-item"><a href="<%=cp%>/managerMain"
-									class="nav-link">ê´ë¦¬ì íì´ì§</a></li>
+									class="nav-link">관리자 페이지</a></li>
 							</ul>
 						</div>
 					</nav>

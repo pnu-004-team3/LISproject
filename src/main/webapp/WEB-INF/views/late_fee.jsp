@@ -5,77 +5,28 @@
 	request.setCharacterEncoding("UTF-8");
 %>
 
-<!DOCTYPE html>
-<html lang="ko-KR">
-
-<head>
-<meta charset="UTF-8">
-<title>Book Store</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#03a6f3">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link
-	href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900"
-	rel="stylesheet">
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-<link rel="stylesheet" href="css/styles_search.css">
-</head>
+<jsp:include page="/WEB-INF/views/header/home_header.jsp"></jsp:include>
 
 <body>
-	<header>
-		<div class="header-top">
-			<div class="container">
-				<div class="main-menu">
-					<div class="container">
-						<nav class="navbar navbar-expand-lg navbar-light">
-							<a class="navbar-brand" href="index.html"><img
-								src="images/logo.png" alt="logo"></a>
-							<button class="navbar-toggler" type="button"
-								data-toggle="collapse" data-target="#navbarSupportedContent"
-								aria-controls="navbarSupportedContent" aria-expanded="false"
-								aria-label="Toggle navigation">
-								<span class="navbar-toggler-icon"></span>
-							</button>
-							<div class="collapse navbar-collapse" id="navbarSupportedContent">
-								<ul class="navbar-nav ml-auto">
-									<li class="navbar-item active"><a href="index.html"
-										class="nav-link">Home</a></li>
-									<li class="navbar-item"><a href="shop.html"
-										class="nav-link"> -- ë¡ê·¸ì¸ --</a></li>
-									<li class="navbar-item"><a href="about.html"
-										class="nav-link">ìì¤ìë´</a></li>
-									<li class="navbar-item"><a href="main_MyLib.html"
-										class="nav-link">My Library</a></li>
-									<li class="navbar-item"><a href="managerMain.html"
-										class="nav-link">ê´ë¦¬ì íì´ì§</a></li>
-								</ul>
-							</div>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-	<div class="blank"></div>
+	<jsp:include page="/WEB-INF/views/header/main_nav.jsp"></jsp:include>
+	
 
 	<div class="breadcrumb">
 		<div class="container">
-			<a class="breadcrumb-item" href="index.html">Home</a> <span
+			<a class="breadcrumb-item" href="<%=cp%>/index">Home</a> <span
 				class="breadcrumb-item active">My Library</span> <span
-				class="breadcrumb-item active">ëì¶/ìì½/ì°ì¥</span>
+				class="breadcrumb-item active">대출/예약/연장</span>
 		</div>
 	</div>
 	<section class="static about-sec">
 		<div class="container">
-			<h1>ëì¶/ìì½/ì°ì¥</h1>
+			<h1>대출/예약/연장</h1>
 			<ul>
-				<li class="menu_item"><a href="loan.html">ëì¶íí©</a></li>
-				<li class="menu_item"><a href="reservation.html">ìì½íí©</a></li>
-				<li class="menu_item"><a href="loan-history.html">ëì¶/ë°ë© ê¸°ë¡</a></li>
-				<li class="menu_item"><a href="lost.html">ë¶ì¤ ê¸°ë¡</a></li>
-				<li class="menu_item"><a href="late-fee.html">ì°ì²´ ë´ì­</a></li>
+				<li class="menu_item"><a href="<%=cp%>/loan">대출현황</a></li>
+				<li class="menu_item"><a href="<%=cp%>/reservation">예약현황</a></li>
+				<li class="menu_item"><a href="<%=cp%>/loan-history">대출/반납 기록</a></li>
+				<li class="menu_item"><a href="<%=cp%>/lost">분실 기록</a></li>
+				<li class="menu_item"><a href="<%=cp%>/late-fee">연체 내역</a></li>
 			</ul>
 
 		</div>
@@ -83,65 +34,30 @@
 			<table class="">
 				<thead>
 					<tr>
-						<th scope="col" class="col-no">ë²í¸</th>
-						<th scope="col" class="col-auto">ìëª/ì ì</th>
-						<th scope="col" class="col-1e">ì²ë¦¬ì¼</th>
-						<th scope="col" class="col-1">ì°ì²´ì¼ì</th>
-						<th scope="col" class="col-1">ì°ì²´ê¸ì¡</th>
+						<th scope="col" class="col-no">번호</th>
+						<th scope="col" class="col-auto">서명/저자</th>
+						<th scope="col" class="col-1e">처리일</th>
+						<th scope="col" class="col-1">연체일수</th>
+						<th scope="col" class="col-1">연체금액</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="col-no" data-th="ë²í¸"></td>
-						<td class="left" data-th="ìëª/ì ì"><a href=""></a></td>
-						<td class="loan-date" data-th="ì²ë¦¬ì¼">2019-00-00</td>
-						<td class="expiry-date" data-th="ì°ì²´ì¼ì">-00</td>
-						<td class="overdays" data-th="ì°ì²´ê¸ì¡">0</td>
+						<td class="col-no" data-th="번호"></td>
+						<td class="left" data-th="서명/저자"><a href="<%=cp%>/"></a></td>
+						<td class="loan-date" data-th="처리일">2019-00-00</td>
+						<td class="expiry-date" data-th="연체일수">-00</td>
+						<td class="overdays" data-th="연체금액">0</td>
 					</tr>
 
 				</tbody>
 			</table>
-			<input type="hidden" id="i18n_modal_title" value="ëì¶ëì ì°ì¥">
+			<input type="hidden" id="i18n_modal_title" value="대출도서 연장">
 		</div>
 		<!-- //List -->
 	</section>
 	
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="address">
-						<h4>Footer ..</h4>
-						<h6>LIS</h6>
-						<h6>- blank -</h6>
-						<h6>- blank -</h6>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="copy-right">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<h5>(C) 2017. All Rights Reserved. BookStore Wordpress Theme</h5>
-					</div>
-					<div class="col-md-6">
-						<div class="share align-middle">
-							<span class="fb"><i class="fa fa-facebook-official"></i></span> <span
-								class="instagram"><i class="fa fa-instagram"></i></span> <span
-								class="twitter"><i class="fa fa-twitter"></i></span> <span
-								class="pinterest"><i class="fa fa-pinterest"></i></span> <span
-								class="google"><i class="fa fa-google-plus"></i></span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
-	<script src="js/custom.js"></script>
+	<jsp:include page="/WEB-INF/views/footer/main_footer.jsp"></jsp:include>
 </body>
 
 </html>

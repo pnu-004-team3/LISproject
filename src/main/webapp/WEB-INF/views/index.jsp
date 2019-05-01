@@ -41,7 +41,7 @@
 											.getElementById("search_input");
 									sh.value = sh.options[sh.selectedIndex].value;
 
-									location.href = ("search.html?type:"
+									location.href = ("search?type:"
 											+ sh.value + "&input:" + tt.value);
 								}
 							</script>
@@ -67,7 +67,7 @@
 						<img src="<%=cp%>/resources/images/img1.jpg" alt="img">
 						<h3>how to be a bwase</h3>
 						<div class="hover">
-							<a href="product-single.html"> <span><i
+							<a href="<%=cp%>/product_single"> <span><i
 									class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
 							</a>
 						</div>
@@ -78,7 +78,7 @@
 						<img src="<%=cp%>/resources/images/img2.jpg" alt="img">
 						<h3>How to write a book...</h3>
 						<div class="hover">
-							<a href="product-single.html"> <span><i
+							<a href="<%=cp%>/product_single"> <span><i
 									class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
 							</a>
 						</div>
@@ -89,7 +89,7 @@
 						<img src="<%=cp%>/resources/images/img3.jpg" alt="img">
 						<h3>7-day self publish...</h3>
 						<div class="hover">
-							<a href="product-single.html"> <span><i
+							<a href="<%=cp%>/product_single"> <span><i
 									class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
 							</a>
 						</div>
@@ -100,7 +100,7 @@
 						<img src="<%=cp%>/resources/images/img4.jpg" alt="img">
 						<h3>wendy doniger</h3>
 						<div class="hover">
-							<a href="product-single.html"> <span><i
+							<a href="<%=cp%>/product_single"> <span><i
 									class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
 							</a>
 						</div>
@@ -110,38 +110,7 @@
 		</div>
 	</section>
 
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="address">
-						<h4>Footer ..</h4>
-						<h6>LIS</h6>
-						<h6>- blank -</h6>
-						<h6>- blank -</h6>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="copy-right">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<h5>(C) 2017. All Rights Reserved. BookStore Wordpress Theme</h5>
-					</div>
-					<div class="col-md-6">
-						<div class="share align-middle">
-							<span class="fb"><i class="fa fa-facebook-official"></i></span> <span
-								class="instagram"><i class="fa fa-instagram"></i></span> <span
-								class="twitter"><i class="fa fa-twitter"></i></span> <span
-								class="pinterest"><i class="fa fa-pinterest"></i></span> <span
-								class="google"><i class="fa fa-google-plus"></i></span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<jsp:include page="/WEB-INF/views/footer/main_footer.jsp"></jsp:include>
 
 </body>
 

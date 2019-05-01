@@ -13,7 +13,7 @@
 
 	<div class="breadcrumb">
 		<div class="container">
-			<a class="breadcrumb-item" href="index.html">Admin</a> <span
+			<a class="breadcrumb-item" href="<%=cp%>/index.html">Admin</a> <span
 				class="breadcrumb-item active">Modify User</span>
 		</div>
 	</div>
