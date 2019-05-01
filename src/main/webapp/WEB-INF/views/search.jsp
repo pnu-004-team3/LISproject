@@ -14,7 +14,7 @@
 	<div class="breadcrumb">
 		<div class="container">
 			<a class="breadcrumb-item" href="<%=cp%>/index">Home</a> <span
-				class="breadcrumb-item active"> ê²ì ê²°ê³¼</span>
+				class="breadcrumb-item active">검색 결과</span>
 		</div>
 	</div>
 
@@ -22,16 +22,15 @@
 		<form class="form-inline my-2 my-lg-0 search_book">
 			<div class="search_form">
 				<select id="select_type" class="search_form_select">
-					<option value="0">íµí© ê²ì</option>
-					<option value="1">ì ëª©</option>
-					<option value="2">ì ì</option>
-					<option value="3">ì¶íì¬</option>
+					<option value="0">통합검색</option>
+					<option value="1">제목</option>
+					<option value="2">저자</option>
+					<option value="3">출판사</option>
 					<option value="4">ISBN</option>
 				</select> <input class="form-control" id="search_input" type="search"
 					style="height: 50px; border: none; width: 55%;"
 					placeholder="Search here..." aria-label="Search">
 				<script>
-					// ì´ ë¶ë¶ë jsp ì¬ì©ì ìì  íìí¨..
 					var temp = location.href.split("?");
 					var data = temp[1].split(":");
 					document.getElementById("select_type").value = data[0];
@@ -39,7 +38,6 @@
 				</script>
 				<button type="button submit" class="fa fa-search search_button"
 					onclick="location.href='search'"></button>
-				<!-- íì js ëë jsp íì¼ë¡ ì°ê²° ì type=submit onclick="location.href='ì£¼ì'" ì¶ê°í´ì¼í¨. -->
 			</div>
 		</form>
 	</div>
@@ -47,17 +45,16 @@
 	<div class="container">
 		<div class="result_container result_book">
 			<!--List...-->
-			<!-- ì´ íí¸ë ì´ë ê² java íì¼ììì ìì±ëëë¡ ëì ìì -->
 			<ul>
-				<a href="<%=cp%>/product-single">
+				<a href="<%=cp%>/product_single">
 					<div class="book_image">
 					<img src="<%=cp%>/resources/images/product1.jpg">
 					</div>
 					<div class="book_info">
 						<li class="item">Book_name</li>
 						<li class="item">Author</li>
-						<li class="item">íì¤í¸</li>
-						<li class="item">ëì¶ê°ë¥ì¬ë¶</li>
+						<li class="item">Publisher, Pub_Year</li>
+						<li class="item">대출 가능 여부</li>
 					</div>
 				</a>
 			</ul>
@@ -67,7 +64,7 @@
 					<li class="item">Book_name</li>
 					<li class="item">Author</li>
 					<li class="item">Publisher, Pub_year</li>
-					<li class="item">ëì¶ê°ë¥ì¬ë¶</li>
+					<li class="item">대출 가능 여부</li>
 				</div>
 			</ul>
 			<ul>
@@ -76,7 +73,7 @@
 					<li class="item">Book_name</li>
 					<li class="item">Author</li>
 					<li class="item">Publisher, Pub_year</li>
-					<li class="item">ëì¶ê°ë¥ì¬ë¶</li>
+					<li class="item">대출 가능 여부</li>
 				</div>
 			</ul>
 			<ul>
@@ -85,7 +82,7 @@
 					<li class="item">Book_name</li>
 					<li class="item">Author</li>
 					<li class="item">Publisher, Pub_year</li>
-					<li class="item">ëì¶ê°ë¥ì¬ë¶</li>
+					<li class="item">대출 가능 여부</li>
 				</div>
 			</ul>
 			<ul>
@@ -94,7 +91,7 @@
 					<li class="item">Book_name</li>
 					<li class="item">Author</li>
 					<li class="item">Publisher, Pub_year</li>
-					<li class="item">ëì¶ê°ë¥ì¬ë¶</li>
+					<li class="item">대출 가능 여부</li>
 				</div>
 			</ul>
 			<ul>
@@ -103,7 +100,7 @@
 					<li class="item">Book_name</li>
 					<li class="item">Author</li>
 					<li class="item">Publisher, Pub_year</li>
-					<li class="item">ëì¶ê°ë¥ì¬ë¶</li>
+					<li class="item">대출 가능 여부</li>
 				</div>
 			</ul>
 			<ul>
@@ -112,7 +109,7 @@
 					<li class="item">Book_name</li>
 					<li class="item">Author</li>
 					<li class="item">Publisher, Pub_year</li>
-					<li class="item">ëì¶ê°ë¥ì¬ë¶</li>
+					<li class="item">대출 가능 여부</li>
 				</div>
 			</ul>
 			<ul>
@@ -121,27 +118,10 @@
 					<li class="item">Book_name</li>
 					<li class="item">Author</li>
 					<li class="item">Publisher, Pub_year</li>
-					<li class="item">ëì¶ê°ë¥ì¬ë¶</li>
+					<li class="item">대출 가능 여부</li>
 				</div>
 			</ul>
-			<ul>
-				<div class="book_image"></div>
-				<div class="book_info">
-					<li class="item">Book_name</li>
-					<li class="item">Author</li>
-					<li class="item">Publisher, Pub_year</li>
-					<li class="item">ëì¶ê°ë¥ì¬ë¶</li>
-				</div>
-			</ul>
-			<ul>
-				<div class="book_image"></div>
-				<div class="book_info">
-					<li class="item">Book_name</li>
-					<li class="item">Author</li>
-					<li class="item">Publisher, Pub_year</li>
-					<li class="item">ëì¶ê°ë¥ì¬ë¶</li>
-				</div>
-			</ul>
+			
 		</div>
 	</div>
 

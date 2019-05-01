@@ -23,10 +23,10 @@
 					<form class="form-inline my-2 my-lg-0 search_book">
 						<div class="search_form">
 							<select id="select_type" class="search_form_select">
-								<option value="0">íµí© ê²ì</option>
-								<option value="1">ì ëª©</option>
-								<option value="2">ì ì</option>
-								<option value="3">ì¶íì¬</option>
+								<option value="0">통합검색</option>
+								<option value="1">제목</option>
+								<option value="2">저자</option>
+								<option value="3">출판사</option>
 								<option value="4">ISBN</option>
 							</select> <input class="form-control" id="search_input" type="text"
 								style="height: 50px; border: none; width: 55%;"
@@ -45,7 +45,6 @@
 											+ sh.value + "&input:" + tt.value);
 								}
 							</script>
-							<!-- íì js ëë jsp íì¼ë¡ ì°ê²° ì type=submit onclick="location.href='ì£¼ì'" ì¶ê°í´ì¼í¨. -->
 						</div>
 					</form>
 				</div>
@@ -58,7 +57,7 @@
 	<section class="recomended-sec">
 		<div class="container">
 			<div class="title">
-				<h2>ì´ ë¬ì ì¶ì² ëì</h2>
+				<h2>이 달의 추천 도서</h2>
 				<hr>
 			</div>
 			<div class="row">

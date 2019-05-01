@@ -14,12 +14,12 @@
 	<div class="breadcrumb">
 		<div class="container">
 			<a class="breadcrumb-item" href="<%=cp%>/index">Home</a> <span
-				class="breadcrumb-item active"> ëì ì ë³´</span>
+				class="breadcrumb-item active"> 도서 상세 정보 </span>
 		</div>
 	</div>
 	<section class="product-sec">
 		<div class="container">
-			<h1>--- ê°ì ¸ ì¬ ì± ì ëª© ---</h1>
+			<h1>--- 가져올 도서 명 ---</h1>
 			<div class="row">
 				<div class="col-md-6 slider-sec">
 					<!-- main slider carousel -->
@@ -42,25 +42,37 @@
 				</div>
 				<div class="col-md-6 slider-content">
 					<ul>
-						<li><span class="name"> ëì ëª</span><span class="clm">:</span>
-							<span class="book_name book_info"> -- ì± ì ëª© ê°ì ¸ì¤ê¸° -- </span></li>
-						<li><span class="name"> ëì ì í </span><span class="clm">:</span>
-							<span class="book_type book_info"> -- ëì ì í ê°ì ¸ì¤ê¸° -- </span></li>
-						<li><span class="name"> ì ì </span><span class="clm">:</span>
-							<span class="book_author book_info"> -- ì ì ê°ì ¸ì¤ê¸° -- </span></li>
-						<li><span class="name"> ì¶íì¬ </span><span class="clm">:</span>
-							<span class="book_publish book_info"> -- ì¶íì¬ ê°ì ¸ì¤ê¸° -- </span></li>
-						<li><span class="name"> ISBN </span><span class="clm">:</span>
-							<span class="book_state book_info"> ISBN ë²í¸ </span></li>
-
-						<li><span class="name"> ëì¶ íí© </span><span class="clm">:</span>
-							<span class="book_state book_info"> -- ëì íì¬ ìí© -- </span></li>
-					</ul>
-					<div class="btn-sec">
-						<button class="btn ">ëì¶ ì ì²­</button>
-						<button class="btn black">ìì½ ì ì²­</button>
-					</div>
-				</div>
+                        <li>
+                            <span class="name"> 도서 명</span><span class="clm">:</span>
+                            <span class="book_name book_info"> -- 책 제목 가져오기 -- </span>
+                        </li>
+                        <li>
+                            <span class="name"> 도서 유형 </span><span class="clm">:</span>
+                            <span class="book_type book_info"> -- 도서 유형 가져오기 -- </span>
+                        </li>
+                        <li>
+                            <span class="name"> 저자 </span><span class="clm">:</span>
+                            <span class="book_author book_info"> -- 저자 가져오기 -- </span>
+                        </li>
+                        <li>
+                            <span class="name"> 출판사 </span><span class="clm">:</span>
+                            <span class="book_publish book_info"> -- 출판사 가져오기 -- </span>
+                        </li>
+                        <li>
+                            <span class="name"> ISBN </span><span class="clm">:</span>
+                            <span class="book_state book_info"> ISBN 번호 </span>
+                        </li>
+                        
+                        <li>
+                            <span class="name"> 대출 현황 </span><span class="clm">:</span>
+                            <span class="book_state book_info"> -- 도서 현재 상황 -- </span>
+                        </li>
+                    </ul>
+                    <div class="btn-sec">
+                        <button class="btn "> 대출 신청 </button>
+                        <button class="btn black">예약 신청</button>
+                    </div>
+                </div>
 			</div>
 		</div>
 	</section>
