@@ -34,8 +34,8 @@
 						<div class="col-lg-8 col-md-12">
 							<button class="btn black" style="margin-right: 20px;">Delete</button>
 							<button class="btn black" style="margin-right: 20px;"
-								onclick="location.href = 'ModifyUser.html'">Modify</button>
-							<button class="btn black" onclick="location.href = 'Show.html'">List</button>
+								onclick="location.href = <%=cp%>/ModifyUser">Modify</button>
+							<button class="btn black" onclick="location.href = <%=cp%>/show">Show</button>
 
 						</div>
 

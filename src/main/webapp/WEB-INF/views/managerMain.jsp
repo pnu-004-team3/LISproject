@@ -21,13 +21,13 @@
     <div class="container">
       <h1>관리자 메인 페이지</h1>
       <header class="section-title">
-        <h3><a href="<%=cp%>/">관리자 정보수정</a></h3>
+        <h3><a href="<%=cp%>/ModifyAdmin">관리자 정보수정</a></h3>
       </header>
       <div class="section-body">
         <p>관리자가 자신의 정보를 수정할 수 있다.</p>
       </div>
       <header class="section-title">
-        <h3><a href="<%=cp%>/">회원 정보수정</a></h3>
+        <h3><a href="<%=cp%>/AdminUser">회원 정보수정</a></h3>
       </header>
       <div class="section-body">
         <p>관리자가 회원 정보를 검색하고 확인할 수 있다.</p>
