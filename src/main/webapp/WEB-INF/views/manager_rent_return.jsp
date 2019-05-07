@@ -5,7 +5,7 @@
 	request.setCharacterEncoding("UTF-8");
 %>
 
-<jsp:include page="/WEB-INF/views/header/home_header.jsp"></jsp:include>
+<jsp:include page="/WEB-INF/views/header/manager_header.jsp"></jsp:include>
 
 <body>
 	<jsp:include page="/WEB-INF/views/header/main_nav.jsp"></jsp:include>

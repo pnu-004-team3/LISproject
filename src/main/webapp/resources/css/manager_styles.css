@@ -13,152 +13,6 @@
 /* CSS Document */
 
 
-
-/*********************************
-          Header
-*********************************/
-
-header .header-top {
-  background: #f7b905;
-  color: #fff;
-  position: fixed;
-  z-index: 100;
-  width: 100%;
-  font-size : 18px;
-  line-height: 0.75;
-   }
-  header .header-top .web-url {
-    font-size: 12px;
-    border-bottom: 1px solid;
-    color: #fff;
-    line-height: 11px;
-    display: inline-block;
-    font-style: italic; }
-    header .header-top .web-url:hover {
-      text-decoration: none;
-      border: 0; }
-  header .header-top h5 {
-    font-size: 22px;
-    font-weight: 300; }
-  header .header-top .ph-number {
-    float: right; }
-  header .header-top .row {
-    align-items: center; }
-header .main-menu {
-  padding: 40px 0; }
-  header .main-menu .navbar {
-    padding: 0; }
-  header .main-menu .navbar-brand {
-    padding: 0;
-    margin-top: -10px; }
-  header .main-menu .navbar-light .navbar-nav .navbar-item {
-    padding: 0 15px;
-    position: relative;
-     }
-
-    header .main-menu .navbar-light .navbar-nav .navbar-item:after {
-      content: '';
-      width: 1px;
-      height: 18px;
-      float: right;
-      background: #a3a3a3;
-      position: absolute;
-      right: 0;
-      top: 2px; }
-    header .main-menu .navbar-light .navbar-nav .navbar-item:last-child:after {
-      display: none; }
-    header .main-menu .navbar-light .navbar-nav .navbar-item.active {
-      color: #000; }
-      header .main-menu .navbar-light .navbar-nav .navbar-item.active:after {
-        background: #000; }
-  header .main-menu .navbar-light .navbar-nav .nav-link {
-    padding: 12px;
-    font-weight: bolder;
-    border-radius : 15px;
-    border : none;
-    
-    }
-  header .main-menu .navbar-light .navbar-nav .nav-link:hover{
-    color : white;
-    background : black;
-  }
-    
-  header .main-menu .form-inline {
-    border: 1px solid #e7e7e7;
-    padding-right: 10px; }
-    header .main-menu .form-inline input {
-      border: 0;
-      font-size: 12px;
-      height: 32px;
-      outline: 0; }
-      header .main-menu .form-inline input:focus {
-        outline: 0;
-        box-shadow: none; }
-    header .main-menu .form-inline .fa {
-      color: #e7e7e7;
-      font-size: 12px; }
-header .cart {
-  padding: 0 10px;
-  margin-right: 10px;
-  position: relative;
-  margin-top: 2px !important; }
-  header .cart .quntity {
-    font-size: 9px;
-    position: absolute;
-    top: -3px;
-    right: 0;
-    background: red;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    text-align: center;
-    color: #fff;
-    padding: 1px 0; }
-
-.slider {
-  float: left;
-  width: 100%;
-  margin-bottom: 50px; }
-  .slider .slide {
-    position: relative; }
-    .slider .slide .content {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      height: 100%;
-      color: #fff;
-      text-align: center;
-      display: flex;
-      align-items: center; }
-      .slider .slide .content .title {
-        margin: 0 auto;
-        text-align: center;
-        width: 100%; }
-        .slider .slide .content .title h3 {
-          font-size: 30px;
-          text-transform: uppercase;
-          font-weight: 300;
-          margin-bottom: 15px; }
-        .slider .slide .content .title h5 {
-          font-size: 24px;
-          text-transform: uppercase;
-          font-weight: 300;
-          margin-bottom: 40px; }
-  .slider .owl-dots {
-    position: absolute;
-    bottom: 30px;
-    width: 100%;
-    text-align: center; }
-  .slider button.owl-dot {
-    width: 10px;
-    height: 10px;
-    background: #fff;
-    border-radius: 50%;
-    margin: 0 5px; }
-    .slider button.owl-dot.active {
-      background: #ff9700; }
-
 /*********************************
            Table
 *********************************/
@@ -484,7 +338,7 @@ table.rd-table.gray::before {
 ------------------------------------ */
 #tblBackground {
 		/*
-				 *  화면에 보여야 할 Table의 가로크기를 잡아줍니다.
+				 *  �솕硫댁뿉 蹂댁뿬�빞 �븷 Table�쓽 媛�濡쒗겕湲곕�� �옟�븘以띾땲�떎.
 				 */
 		width: 900px;
 		table-layout: fixed;
@@ -493,7 +347,7 @@ table.rd-table.gray::before {
 
 #divHeadScroll {
 		/*
-				 *  안의 내용이 790보다 길게 적용이 되므로 overflow-x, overflow-y를 hidden을 걸어줘서 설정한 가로너비만큼만 화면에 보이도록 잡아줍니다.
+				 *  �븞�쓽 �궡�슜�씠 790蹂대떎 湲멸쾶 �쟻�슜�씠 �릺誘�濡� overflow-x, overflow-y瑜� hidden�쓣 嫄몄뼱以섏꽌 �꽕�젙�븳 媛�濡쒕꼫鍮꾨쭔�겮留� �솕硫댁뿉 蹂댁씠�룄濡� �옟�븘以띾땲�떎.
 				 */
 		width: 100%;
 		overflow-x: hidden;
@@ -504,9 +358,9 @@ table.rd-table.gray::before {
 
 #tblHead {
 		/*
-				 *  Table의 필드명의 너비를 여기에서 지정합니다.
-				 *  필드명을 보여줄 테이블은 body보다 하나의 td를 더 가지며 마지막 td는 아무것도 입력하지 않고 크기만 잡아줍니다.
-				 *  이렇게 하는 이유는 데이터를 보여주는 테이블은 세로 스크롤의 가로두께만큼 더 이동하기 때문입니다.
+				 *  Table�쓽 �븘�뱶紐낆쓽 �꼫鍮꾨�� �뿬湲곗뿉�꽌 吏��젙�빀�땲�떎.
+				 *  �븘�뱶紐낆쓣 蹂댁뿬以� �뀒�씠釉붿� body蹂대떎 �븯�굹�쓽 td瑜� �뜑 媛�吏�硫� 留덉�留� td�뒗 �븘臾닿쾬�룄 �엯�젰�븯吏� �븡怨� �겕湲곕쭔 �옟�븘以띾땲�떎.
+				 *  �씠�젃寃� �븯�뒗 �씠�쑀�뒗 �뜲�씠�꽣瑜� 蹂댁뿬二쇰뒗 �뀒�씠釉붿� �꽭濡� �뒪�겕濡ㅼ쓽 媛�濡쒕몢猿섎쭔�겮 �뜑 �씠�룞�븯湲� �븣臾몄엯�땲�떎.
 				 */
 		table-layout: fixed;
 		background-color: #efefef;
@@ -518,9 +372,9 @@ table.rd-table.gray::before {
 
 #divBodyScroll {
 		/*
-				 *  overflow-x, overflow-y는 scroll로 지정하고,
-				 *  height는 테이블의 데이터가 나올 기본 크기를 잡아줍니다.
-				 *  세로길이를 잡아주지 않으면 overflow-y가 걸리지 않습니다.
+				 *  overflow-x, overflow-y�뒗 scroll濡� 吏��젙�븯怨�,
+				 *  height�뒗 �뀒�씠釉붿쓽 �뜲�씠�꽣媛� �굹�삱 湲곕낯 �겕湲곕�� �옟�븘以띾땲�떎.
+				 *  �꽭濡쒓만�씠瑜� �옟�븘二쇱� �븡�쑝硫� overflow-y媛� 嫄몃━吏� �븡�뒿�땲�떎.
 				 */
 		width: 100%;
 		height: 350px;
@@ -531,7 +385,7 @@ table.rd-table.gray::before {
 
 #tblBody {
 		/*
-				 * tblBody의 데이터는 필요한 열의 수만큼만 만드시고 헤더와 col의 width는 동일해야 합니다.
+				 * tblBody�쓽 �뜲�씠�꽣�뒗 �븘�슂�븳 �뿴�쓽 �닔留뚰겮留� 留뚮뱶�떆怨� �뿤�뜑�� col�쓽 width�뒗 �룞�씪�빐�빞 �빀�땲�떎.
 				 */
 		width: 1100px;
 		table-layout: fixed;
@@ -539,7 +393,7 @@ table.rd-table.gray::before {
 		border-collapse: collapse;
 }
 
-/* 테이블 스타일용 */
+/* �뀒�씠釉� �뒪���씪�슜 */
 .title {
 		text-align: center;
 		font-weight: bold;
@@ -569,17 +423,17 @@ body{font-size:12px;}
 	}
 
 
-/*서브타이틀*/
+/*�꽌釉뚰��씠��*/
 .signSubTitle {color:#96C; background-color:#FC9 ; text-align:center; font-weight:700; font-size:12px}
-/*헤드부 */
+/*�뿤�뱶遺� */
 caption{font-size:18px; font-weight:bold; text-decoration:underline; padding:20px;}
 thead,
 
-/*바디부*/
+/*諛붾뵒遺�*/
 .toNo, .tdDate , .tdCount {text-align:center;}
 .inBorder {border:solid 1px #CCCCCC ; }
 
-/*버텀부*/
+/*踰꾪�遺�*/
 tfoot { text-align:center; }
 
 /*link*/
@@ -589,19 +443,19 @@ tbody a{ color:#333; }
 
 tbody a:link{
 	font-size:12px;
-	font-family:굴림;
+	font-family:援대┝;
 	text-decoration:none;
  }
 
 tbody a:visited{
 	font-size:12px;
 	color:#333;
-	font-family:굴림;
+	font-family:援대┝;
 	text-decoration:none;
 
  }
 tbody a:hover{ text-decoration:underline;}
-tbody a:active { font-size:13px; font-family:궁서;}
+tbody a:active { font-size:13px; font-family:沅곸꽌;}
 
  /*tfoot*/
 
@@ -609,18 +463,18 @@ tbody a:active { font-size:13px; font-family:궁서;}
 
  tfoot a:link{
 	font-size:10pt;
-	font-family:굴림;
+	font-family:援대┝;
 	text-decoration:none;
  }
 
  tfoot a:visited{
 	font-size:12px;
-	font-family:굴림;
+	font-family:援대┝;
 	text-decoration:none;
 
  }
  tfoot a:hover{ text-decoration:underline;}
- tfoot a:active { font-size:13px; font-family:궁서;}
+ tfoot a:active { font-size:13px; font-family:沅곸꽌;}
 
 /* ------------------------------------
           SEARCH_BOX
@@ -764,7 +618,7 @@ section {
 
 
 /* ------------------------------------
-          원래 style.css 시작
+          �썝�옒 style.css �떆�옉
 ------------------------------------ */
 body {
   margin: 0px;
