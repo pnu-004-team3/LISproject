@@ -163,7 +163,7 @@ public class HomeController {
 	public String show(Locale locale, Model model) {
 		logger.info("open show.jsp", locale);
 		
-		return "product_single";
+		return "show";
 	}
 	
 	@RequestMapping(value = "/UserInfo_manage", method = RequestMethod.GET)
