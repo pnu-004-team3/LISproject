@@ -264,6 +264,11 @@ header .cart {
     color: #fff;
     padding: 1px 0; }
 
+.navbar-nav li{
+	font-size: 18px;
+	ling-height: 0.75;
+}
+
 .slider {
   float: left;
   width: 100%;
@@ -310,7 +315,8 @@ header .cart {
 
 .recomended-sec {
   text-align: center;
-  margin-bottom: 80px; }
+  margin-bottom: 80px;
+  margin-top: 30px; }
   .recomended-sec h2 {
     display: inline-block;
     font-size: 30px;

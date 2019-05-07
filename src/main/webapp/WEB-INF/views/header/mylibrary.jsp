@@ -23,7 +23,6 @@
 
 <link rel="stylesheet" href="<%=cp%>/resources/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="<%=cp%>/resources/css/owl.carousel.min.css">
-<link rel="stylesheet" href="<%=cp%>/resources/css/styles_search.css">
 <link rel="stylesheet" href="<%=cp%>/resources/css/mylibrary.css">
 <script src="<%=cp%>/resources/js/jquery.min.js"></script>
 <script src="<%=cp%>/resources/js/bootstrap.min.js"></script>
