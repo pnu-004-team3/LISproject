@@ -5,7 +5,7 @@
 	request.setCharacterEncoding("UTF-8");
 %>
 
-<jsp:include page="/WEB-INF/views/header/home_header.jsp"></jsp:include>
+<jsp:include page="/WEB-INF/views/header/mylibrary.jsp"></jsp:include>
 
 <body>
 	<jsp:include page="/WEB-INF/views/header/main_nav.jsp"></jsp:include>
@@ -25,9 +25,9 @@
 			<ul>
 				<li class="menu_item"><a href="<%=cp%>/loan">대출현황</a></li>
 				<li class="menu_item"><a href="<%=cp%>/reservation">예약현황</a></li>
-				<li class="menu_item"><a href="<%=cp%>/loan-history">대출/반납 기록</a></li>
+				<li class="menu_item"><a href="<%=cp%>/loan_history">대출/반납 기록</a></li>
 				<li class="menu_item"><a href="<%=cp%>/lost">분실 기록</a></li>
-				<li class="menu_item"><a href="<%=cp%>/late-fee">연체 내역</a></li>
+				<li class="menu_item"><a href="<%=cp%>/late_fee">연체 내역</a></li>
 			</ul>
 
 		</div>

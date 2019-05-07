@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Built-By: CSE_USER
-Build-Jdk: 10.0.2
+Built-By: kin4u
+Build-Jdk: 1.8.0_151
 Created-By: Maven Integration for Eclipse
 
