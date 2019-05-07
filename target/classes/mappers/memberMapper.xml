@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.lis.mapper.memberMapper">
+ 
+ 	<select id="register" resultType="memberVO">
+ 		INSERT INTO USER  (User_key, Name, Phone_No, NO_of_Book_Borrowed, User_type, City, District, User_Status, User_PW)
+ VALUES ( #{userEmail}, #{userName}, #{userPhone}, #{No_of_Book_Borrowd}, #{userType}, #{userCity}, #{userDistrict}, #{user_Status}, #{userPwd}, #{userRegDate})
+ 	</select>
+ 	
+ 	<select id="selectMember" resultType="memberVO">
+ 		SELECT User_key, Name FROM USER
+ 	</select>
+    
+</mapper>
+

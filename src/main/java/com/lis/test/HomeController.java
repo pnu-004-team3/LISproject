@@ -2,7 +2,10 @@ package com.lis.test;
 
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
+
+import javax.inject.Inject;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +13,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.lis.dto.MemberVO;
+import com.lis.service.MemberService;
 
 /**
  * Handles requests for the application home page.
@@ -19,9 +25,48 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
+	
+	@Inject
+	private MemberService service;
+	
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
+	/* 회원가입 Controller */
+	
+	/* test */
+    @RequestMapping(value = "/selectTest", method = RequestMethod.GET)
+    public String home(Locale locale, Model model) throws Exception{
+ 
+        logger.info("selectTest");
+        
+        List<MemberVO> memberList = service.selectMember();
+        
+        model.addAttribute("memberList", memberList);
+        for(int i = 0; i< memberList.size(); i++) {
+        	System.out.println(memberList.get(i).getUser_key());
+        }
+        return "/dbtest/selectTest";
+    }
+
+
+	
+	@RequestMapping(value = "/registration", method = RequestMethod.GET)
+	public String registration(Locale locale, Model model) {
+		logger.info("open registration.jsp", locale);
+		
+		return "registration";
+	}
+		
+	
+	
+	@RequestMapping(value = "/registPost", method = RequestMethod.POST)
+	public String register(Model model, MemberVO member) throws Exception {
+		//System.out.println(member.getUserName());
+		service.register(member);
+		return "redirect:/login";
+	}
+	
 	
 	/* URL 맵핑 */
 	
