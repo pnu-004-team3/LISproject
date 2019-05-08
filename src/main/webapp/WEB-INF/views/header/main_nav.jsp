@@ -5,6 +5,8 @@
 	request.setCharacterEncoding("UTF-8");
 %>
 
+<jsp:include page="/WEB-INF/views/header/home_header.jsp"></jsp:include>
+
 <header>
 	<div class="header-top">
 		<div class="container">

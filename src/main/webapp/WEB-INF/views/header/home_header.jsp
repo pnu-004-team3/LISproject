@@ -29,4 +29,5 @@
 <script type="text/javascript"
 	src="<%=cp%>/resources/js/owl.carousel.min.js"></script>
 <script src="<%=cp%>/resources/js/custom.js"></script>
+
 </head>

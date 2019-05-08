@@ -2,8 +2,10 @@ package com.lis.test;
 
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -11,8 +13,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.lis.dto.MemberVO;
 import com.lis.service.MemberService;
@@ -32,7 +37,7 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	/* È¸¿ø°¡ÀÔ Controller */
+	/* È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Controller */
 	
 	/* test */
     @RequestMapping(value = "/selectTest", method = RequestMethod.GET)
@@ -62,13 +67,20 @@ public class HomeController {
 	
 	@RequestMapping(value = "/registPost", method = RequestMethod.POST)
 	public String register(Model model, MemberVO member) throws Exception {
-		//System.out.println(member.getUserName());
+		
+
+		System.out.println(member.getName());
 		service.register(member);
-		return "redirect:/login";
+		
+		return "login";
 	}
 	
+
+
 	
-	/* URL ¸ÊÇÎ */
+	
+	
+	/* URL ï¿½ï¿½ï¿½ï¿½ */
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String root(Locale locale, Model model) {
@@ -208,7 +220,7 @@ public class HomeController {
 	public String show(Locale locale, Model model) {
 		logger.info("open show.jsp", locale);
 		
-		return "product_single";
+		return "show";
 	}
 	
 	@RequestMapping(value = "/UserInfo_manage", method = RequestMethod.GET)

@@ -60,8 +60,12 @@
 									</tr>
 								</tbody>
 							</table>
-	</section>
-	
+					</section>
+				</form>
+				</div>
+			</div>
+		</div>
+		</div>
 	<jsp:include page="/WEB-INF/views/footer/main_footer.jsp"></jsp:include>
 </body>
 

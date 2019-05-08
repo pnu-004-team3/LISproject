@@ -6,13 +6,21 @@
 <mapper namespace="com.lis.mapper.memberMapper">
  
  	<select id="register" resultType="memberVO">
- 		INSERT INTO USER  (User_key, Name, Phone_No, NO_of_Book_Borrowed, User_type, City, District, User_Status, User_PW)
- VALUES ( #{userEmail}, #{userName}, #{userPhone}, #{No_of_Book_Borrowd}, #{userType}, #{userCity}, #{userDistrict}, #{user_Status}, #{userPwd}, #{userRegDate})
+ 	INSERT INTO USER (User_key, Name, User_PW, User_type, Phone_NO, NO_of_Book_Borrowed, User_Status) VALUES (#{User_key}, #{Name}, password(#{User_PW}), #{User_type}, #{Phone_NO}, #{NO_of_Book_Borrowed}, #{User_Status})
+ 	<!--
+ 	INSERT INTO USER  (User_key, Name, Phone_No, NO_of_Book_Borrowed, User_type, City, District, User_Status, User_PW)
+ VALUES ( #{userEmail}, #{userName}, #{userPhone}, #{NO_of_Book_Borrowed}, #{userType}, #{userCity}, #{userDistrict}, #{user_Status}, #{userPwd}, #{userRegDate})
+ 	  -->
+ 		
  	</select>
  	
  	<select id="selectMember" resultType="memberVO">
  		SELECT User_key, Name FROM USER
  	</select>
+    
+    <select id="checkUserEmail" parameterType="String" resultType="memberVO">
+      	SELECT User_key FROM USER WHERE User_key = #{User_key}
+	</select>
     
 </mapper>
 

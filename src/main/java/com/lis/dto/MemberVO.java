@@ -6,7 +6,7 @@ public class MemberVO {
 	private String User_key;
 	private String Name;
 	private String Phone_NO;
-	private int No_of_Book_Borrowd;
+	private int NO_of_Book_Borrowed;
 	private String User_type;
 	private String City;
 	private String District;
@@ -33,11 +33,11 @@ public class MemberVO {
 	public void setPhone_NO(String phone_NO) {
 		Phone_NO = phone_NO;
 	}
-	public int getNo_of_Book_Borrowd() {
-		return No_of_Book_Borrowd;
+	public int getNO_of_Book_Borrowed() {
+		return NO_of_Book_Borrowed;
 	}
-	public void setNo_of_Book_Borrowd(int no_of_Book_Borrowd) {
-		No_of_Book_Borrowd = no_of_Book_Borrowd;
+	public void setNO_of_Book_Borrowed(int no_of_Book_Borrowed) {
+		NO_of_Book_Borrowed = no_of_Book_Borrowed;
 	}
 	public String getUser_type() {
 		return User_type;

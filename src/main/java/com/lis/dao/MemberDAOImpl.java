@@ -33,7 +33,14 @@ public class MemberDAOImpl implements MemberDAO {
     public List<MemberVO> selectMember() throws Exception {
  
         return sqlSession.selectList(Namespace+".selectMember");
+
     }
+	
+	@Override
+	public MemberVO emailCheck(String Useremail) throws Exception{
+		
+		return sqlSession.selectOne(Namespace+".checkUserEmail", Useremail);
+	}
 
 
 }
