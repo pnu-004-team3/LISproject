@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.lis.mapper.managerMapper">
+ 
+ 	<select id="bookRegister" resultType="bookVO">
+ 	INSERT INTO Book (
+ 	ISBN_ISSN, 
+	SCHOOL_CODE, 
+	CENTER_CONTROL_NO, 
+	CONTROL_NO, 
+	HOLDING_SEQ, 
+	BARCODE_STRING, 
+	BARCODE_NUMBER, 
+	BARCODE, 
+	PRINT_BARCODE, 
+	TITLE, 
+	AUTHOR, 
+	PUBLISHER, 
+	PUBBLISHER_YEAR, 
+	CALL_NO, 
+	APART_CODE, 
+	CLASSIFY_NO, 
+	AUTHOR_NO, 
+	VOLUME, 
+	COPY_NO, 
+	LOCATION_SEQ, 
+	DATA_GROUP_SEQ, 
+	ACQUISITION_TYPE, 
+	DATA_STATE, 
+	INVENTORY_STATE, 
+	DONOR_NAME, 
+	CHECKIN_SEQ, 
+	INPUT_DATE, 
+	INPUT_NAME, 
+	UPDATE_DATE, 
+	UPDATE_NAME, 
+	DISCARD_DATE, 
+	DATA_TYPE, 
+	VOLUME_TITLE, 
+	BOOK_STATUS)
+	VALUES (
+	#{isbn1},
+	null,
+	null,
+	null,
+	null,
+	#{BARCODE_STRING},
+	#{BARCODE_NUMBER},
+	null,
+	null,
+	#{TITLE1},
+	#{AUTHOR1},
+	#{PUBLISHER1},
+	#{PUBBLISHER_YEAR1},
+	null,
+	#{APART_CODE},
+	#{CLASSIFY_NO},
+	#{AUTHOR_NO},
+	#{VOLUME},
+	#{COPY_NO},
+	null,
+	null,
+	null,
+	null,
+	null,
+	#{DONOR_NAME},
+	null,
+	now(),
+	#{INPUT_NAME},
+	now(),
+	#{UPDATE_NAME},
+	null,
+	null,
+	null,
+	null)
+
+ 	</select>
+
+</mapper>
+
