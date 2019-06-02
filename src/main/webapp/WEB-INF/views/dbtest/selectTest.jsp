@@ -24,6 +24,15 @@
                     <td></td>
                 </tr>
             </c:forEach>
+            
+            <c:forEach items="${bookList}" var="book">
+                <tr>
+                <!-- 소문자로 할것 User_key 안됨. user_key ok -->
+                    <td>${book.title}</td>
+                    <td></td>
+                </tr>
+            </c:forEach>
+            
         </tbody>
     </table>
  

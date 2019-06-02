@@ -23,7 +23,7 @@
  	
  	
  	<select id="selectMember" resultType="memberVO">
- 		SELECT User_key, Name FROM USER
+ 		SELECT User_key Name FROM USER
  	</select>
     
     
