@@ -6,7 +6,8 @@
 %>
 
 <jsp:include page="/WEB-INF/views/header/home_header.jsp"></jsp:include>
-
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 	<jsp:include page="/WEB-INF/views/header/main_nav.jsp"></jsp:include>
 	
@@ -25,24 +26,18 @@
                         <h3>Log In</h3>
                     </div>
                     <div>
-                        <form action="../member/login.do" method="post">
+                        <form action="<%=cp%>/loginPost" method="post">
                             <p>
-                                <label>ID</label>
-                                <span class="w3-right w3-button w3-hover-white" title="ìì´ë ì°¾ê¸°" id="find_id_btn">
-                                    <i class="fa fa-exclamation-triangle w3-hover-text-red w3-large"></i>
-                                </span>
-                                <input class="w3-input" id="id" name="id" type="text" required>
+                               
+                                <input class="w3-input" id="useremail" name="User_key" type="text" placeholder="아이디" required>
                             </p>
                             <p>
-                                <label>Password</label>
-                                <span class="w3-right w3-button w3-hover-white" title="ë¹ë°ë²í¸ ì°¾ê¸°" id="find_pw_btn">
-                                    <i class="fa fa-exclamation-triangle w3-hover-text-red w3-large"></i>
-                                </span>
-                                <input class="w3-input" id="pw" name="pw" type="password" required>
+                                <input class="w3-input" id="userpw" name="User_PW" type="password" placeholder="비밀번호" required>
                             </p>
                             <p class="w3-center">
                                 <button type="submit" class="w3-button w3-block w3-black w3-ripple w3-margin-top w3-round">Log in</button>
-                                <button type="button" class="w3-button w3-block w3-black w3-ripple w3-margin-top w3-margin-bottom w3-round" onclick="location.href='<%=cp%>/registration'">Sign in</button>
+                                <button type="button" class="w3-button w3-block w3-black w3-ripple w3-margin-top w3-margin-bottom w3-round" onclick="location.href='register'">Sign in</button>
+                            
                             </p>
                         </form>
                     </div>

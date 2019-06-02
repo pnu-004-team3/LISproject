@@ -4,6 +4,8 @@
 	String cp = request.getContextPath();
 	request.setCharacterEncoding("UTF-8");
 %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 <jsp:include page="/WEB-INF/views/header/home_header.jsp"></jsp:include>
 
@@ -25,8 +27,15 @@
 							<ul class="navbar-nav ml-auto">
 								<li class="navbar-item active"><a href="<%=cp%>/"
 									class="nav-link">Home</a></li>
-								<li class="navbar-item"><a href="<%=cp%>/login"
-									class="nav-link">로그인</a></li>
+								<li class="navbar-item">
+								<c:if test="${empty member}">
+									<a href="<%=cp%>/login"	class="nav-link">로그인</a>
+								</c:if>
+								<c:if test="${not empty member }">
+									<a href="<%=cp%>/login"	class="nav-link">로그아웃</a>
+								</c:if>
+								</li>
+								
 								<li class="navbar-item"><a href="<%=cp%>/about"
 									class="nav-link">시설안내</a></li>
 								<li class="navbar-item"><a href="<%=cp%>/main_MyLib"

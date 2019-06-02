@@ -150,7 +150,14 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-
+		
+		<!-- commons-dbcp -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+		
 		<!-- Spring-test -->
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
 		<dependency>
@@ -163,6 +170,13 @@
 			<groupId>org.bgee.log4jdbc-log4j2</groupId>
 			<artifactId>log4jdbc-log4j2-jdbc4</artifactId>
 			<version>1.16</version>
+		</dependency>
+		
+		<!-- Mybatis 로그 -->
+		<dependency> 
+			<groupId>org.lazyluke</groupId> 
+			<artifactId>log4jdbc-remix</artifactId> 
+			<version>0.2.7</version> 
 		</dependency>
 
 		<!--스프링시큐리티 web 라이브러리 -->
@@ -183,15 +197,52 @@
 			<artifactId>spring-security-config</artifactId>
 			<version>4.1.0.RELEASE</version>
 		</dependency>
+	
+		<!-- 비밀번호 암호화 -->
+		<dependency>
+			<groupId>org.mindrot</groupId>
+			<artifactId>jbcrypt</artifactId>
+			<version>0.4</version>
+		</dependency>
+	
 
-  		<!-- jackson2 -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.7.2</version>
-        </dependency>
-
-
+		<dependency>
+	    	<groupId>com.fasterxml.jackson.core</groupId>
+ 	   		<artifactId>jackson-databind</artifactId>
+		  	<version>2.1.1</version>
+		</dependency>
+	
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>1.2</version>
+		</dependency>
+		<dependency>
+         <groupId>taglibs</groupId>
+         <artifactId>datetime</artifactId>
+         <version>1.0.1</version>
+     </dependency>        
+     <dependency>
+         <groupId>taglibs</groupId>
+         <artifactId>string</artifactId>
+         <version>1.1.0</version>
+     </dependency>        
+     <dependency>
+         <groupId>taglibs</groupId>
+         <artifactId>standard</artifactId>
+         <version>1.1.2</version>
+     </dependency>
+	
+	
+	<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+	<!-- 제이슨 -->
+	<dependency>
+	    <groupId>com.fasterxml.jackson.core</groupId>
+	    <artifactId>jackson-databind</artifactId>
+	    <version>2.9.6</version>
+	</dependency>
+	
 	</dependencies>
 	<build>
 		<plugins>

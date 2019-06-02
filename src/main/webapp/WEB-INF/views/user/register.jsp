@@ -28,7 +28,7 @@
                         <div class="login-form">
 						<h4 style="margin-bottom: 20px;">가입하기</h4>
 						<label style="color: #0000FF; font-size: 10px;">(*)는 필수 입력	사항 입니다.</label>
-						<form action="<%=cp%>/registPost" method="post" id="registForm">
+						<form action="<%=cp%>/register" method="post" id="registForm">
 							<div class="row">
 								<div class="col-lg-6">
 									
@@ -132,6 +132,38 @@
 		//	페이지 로딩 시 실행할 스크립트
 	});
 	
+	function checkUserEmailMethod(){
+		var userEmail = $("#useremail").val();
+		
+		console.log(userEmail)
+		$.ajax({
+			url:'<%=cp%>/checkUserEmail',
+			type:'POST',
+			dataType:'text',
+			data:{ userEmail },
+			success:function(data){
+				if (data == "true") {
+					// 일치하면 통과
+					console.log("중복 Email이 없습니다.");
+					$("#userEmailLabel").css("color","green");
+					$("#userEmailLabel").text("중복체크 완료!");
+					isValidUserEmail = true;
+				} else {
+					$("#userEmailLabel").css("color","red");
+					$("#userEmailLabel").text("중복됨!");
+					isValidUserEmail = false;
+				}
+			},error:function(request, status, error){
+   				alert(request+","+status+","+error);
+				console.log(request+","+status+","+error);
+				$("#userEmailLabel").css("color","red");
+				$("#userEmailLabel").text("중복됨!");
+				isValidUserEmail = false;
+   			}
+		});
+		
+	}
+	
 	//	Email check javascript
 	function check_email(val){
 	    if(!val.match(/\S+@\S+\.\S+/)){ // Jaymon's / Squirtle's solution
@@ -163,10 +195,7 @@
 			else
 				event.target.value = event.target.value.replace(/[^0-9]/g, "");
 		}
-	
-	function checkUserEmailMethod(){
 
-	}
 
 	function checkUserPwdMethod() {
 		// 일단은 8자 이상이면 pass 추후 협의해야됨
@@ -281,6 +310,11 @@
 			return false;
 		}
 		
+		if(!isValidUserEmail){
+			alert("이메일이 중복입니다.");
+			return false;
+		}
+		
 		
 		$("input[name='NO_of_Book_Borrowed']").val(0);
 		$("input[name='User_Status'']").val('대출가능');	
@@ -288,6 +322,7 @@
 		Phone_NO = $("input[name='user_phone1']").val() + "-" + $("input[name='user_phone2']").val() + "-" + $("input[name='user_phone3']").val();
 		$("input[name='Phone_NO']").val(Phone_NO);	
 
+		alert("회원가입이 완료되었습니다. 로그인 해주세요");
 		return true;
 	}
 
@@ -295,21 +330,5 @@
 	
 	
 	</script>
-
-
-	<script src="<%=cp%>/resources/js/jquery-3.2.1.min.js"></script>
-	<script src="<%=cp%>/resources/styles/bootstrap4/popper.js"></script>
-	<script src="<%=cp%>/resources/styles/bootstrap4/bootstrap.min.js"></script>
-	<script src="<%=cp%>/resources/plugins/greensock/TweenMax.min.js"></script>
-	<script src="<%=cp%>/resources/plugins/greensock/TimelineMax.min.js"></script>
-	<script src="<%=cp%>/resources/plugins/scrollmagic/ScrollMagic.min.js"></script>
-	<script src="<%=cp%>/resources/plugins/greensock/animation.gsap.min.js"></script>
-	<script src="<%=cp%>/resources/plugins/greensock/ScrollToPlugin.min.js"></script>
-	<script
-		src="<%=cp%>/resources/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-	<script src="<%=cp%>/resources/plugins/easing/easing.js"></script>
-	<script
-		src="<%=cp%>/resources/plugins/parallax-js-master/parallax.min.js"></script>
-	<script src="<%=cp%>/resources/js/about.js"></script>
 </body>
 </html>

@@ -6,6 +6,9 @@
     
         <typeAliases>
             <typeAlias type="com.lis.dto.MemberVO" alias="memberVO"/>
+            <typeAlias type="com.lis.dto.BookVO" alias="bookVO"/>
+            <typeAlias type="com.lis.dto.BoardVO" alias="boardVO"/>
+            <typeAlias type="com.lis.dto.BorrowedVO" alias="borrowedVO"/>
         </typeAliases>
         
     </configuration>

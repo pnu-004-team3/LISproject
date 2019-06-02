@@ -9,18 +9,20 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
-
 import com.lis.dto.MemberVO;
 
 @Repository
 public class MemberDAOImpl implements MemberDAO {
 	
-	@Inject
+	private static final String Namespace = "com.lis.mapper.memberMapper";
 	private SqlSession sqlSession;
 	
-	private static final String Namespace = "com.lis.mapper.memberMapper";
-
+	@Inject
+	public MemberDAOImpl(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
 	
+
 	@Override
 	public String register(MemberVO member) throws Exception {
 		// TODO Auto-generated method stub
@@ -28,6 +30,17 @@ public class MemberDAOImpl implements MemberDAO {
 		return "true";
 	}
 	
+	@Override
+	public MemberVO emailCheck(String Useremail) throws Exception{
+		
+		return sqlSession.selectOne(Namespace+".checkUserEmail", Useremail);
+	}
+	
+	
+	@Override
+	public MemberVO login(MemberVO member) throws Exception{
+		return sqlSession.selectOne(Namespace+".login", member);
+	}
 	
 	@Override
     public List<MemberVO> selectMember() throws Exception {
@@ -36,11 +49,19 @@ public class MemberDAOImpl implements MemberDAO {
 
     }
 	
+	
+
 	@Override
-	public MemberVO emailCheck(String Useremail) throws Exception{
-		
-		return sqlSession.selectOne(Namespace+".checkUserEmail", Useremail);
+	public int check_id(String user_key) throws Exception{
+		return sqlSession.selectOne(Namespace+".check_id", user_key);
 	}
+	
+	@Override
+	public MemberVO check_pw(String user_PW) throws Exception{
+		return sqlSession.selectOne(Namespace+".check_pw", user_PW);
+	}
+	
+	
 
 
 }

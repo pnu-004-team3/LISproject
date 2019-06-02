@@ -1,9 +1,11 @@
 package com.lis.service;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -16,7 +18,6 @@ public class MemberServiceImpl implements MemberService{
 	
 	@Inject
 	private MemberDAO dao;
-	private PasswordEncoder passwordEncoder;
 
 	
 	@Override
@@ -27,16 +28,40 @@ public class MemberServiceImpl implements MemberService{
 	}
 	
 	 @Override
+	 public MemberVO emailCheck(String Useremail) throws Exception{
+		 
+		 return dao.emailCheck(Useremail);
+	 }
+	
+	@Override
+	public MemberVO login(MemberVO member) throws Exception {
+		return dao.login(member);
+	}
+	
+	
+	
+	 @Override
 	    public List<MemberVO> selectMember() throws Exception {
 	 
 	        return dao.selectMember();
 	 }
 	 
+	
+
 	 @Override
-	 public MemberVO emailCheck(String Useremail) throws Exception{
-		 
-		 return dao.emailCheck(Useremail);
+		public void check_id(String user_key, HttpServletResponse response) throws Exception {
+			PrintWriter out = response.getWriter();
+			out.println(dao.check_id(user_key));
+			out.close();
+		}
+	 
+	 @Override
+	 public MemberVO check_pw(String user_PW) throws Exception{
+		 return dao.check_pw(user_PW);
 	 }
+	 
+	 
+
 
 
 }

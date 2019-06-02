@@ -5,8 +5,8 @@
  
 <mapper namespace="com.lis.mapper.memberMapper">
  
- 	<select id="register" resultType="memberVO">
- 	INSERT INTO USER (User_key, Name, User_PW, User_type, Phone_NO, NO_of_Book_Borrowed, User_Status) VALUES (#{User_key}, #{Name}, password(#{User_PW}), #{User_type}, #{Phone_NO}, #{NO_of_Book_Borrowed}, #{User_Status})
+ 	<select id="register" resultType="memberVO">INSERT INTO USER (User_key, Name, User_PW, User_type, Phone_NO, NO_of_Book_Borrowed, User_Status) VALUES (#{User_key}, #{Name}, #{User_PW}, #{User_type}, #{Phone_NO}, #{NO_of_Book_Borrowed}, #{User_Status})
+ 	
  	<!--
  	INSERT INTO USER  (User_key, Name, Phone_No, NO_of_Book_Borrowed, User_type, City, District, User_Status, User_PW)
  VALUES ( #{userEmail}, #{userName}, #{userPhone}, #{NO_of_Book_Borrowed}, #{userType}, #{userCity}, #{userDistrict}, #{user_Status}, #{userPwd}, #{userRegDate})
@@ -14,13 +14,24 @@
  		
  	</select>
  	
+ 	<select id="checkUserEmail" parameterType="String" resultType="memberVO">
+      	SELECT User_key FROM USER WHERE User_key = #{userEmail}
+	</select>
+	
+ 	<select id="login" resultType="memberVO">select * from USER where User_key = #{User_key}</select>
+ 	
+ 	
+ 	
  	<select id="selectMember" resultType="memberVO">
  		SELECT User_key, Name FROM USER
  	</select>
     
-    <select id="checkUserEmail" parameterType="String" resultType="memberVO">
-      	SELECT User_key FROM USER WHERE User_key = #{User_key}
-	</select>
     
+	
+	
+ 	<select id="check_id" parameterType="String" resultType="int">select count(*) from USER where User_key = #{userKey}</select>
+ 	<select id="check_pw" parameterType="String" resultType="memberVO">select * from USER where User_PW=PASSOWRD('#{userPW}')</select>
+
+
 </mapper>
 

@@ -1,11 +1,32 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<%@ page import =  "isbn_module.parse_isbn"%>
+
 <%
 String cp = request.getContextPath();
 request.setCharacterEncoding("UTF-8");
+
 %>
 
+
 <jsp:include page="/WEB-INF/views/header/manager_header.jsp"></jsp:include>
+
+
+
+<!-- $(document).ready(function(){
+		("#btnsave").click(function(){
+			var title = $("#title").val(); //속성 복붙 ㄱㄱ
+			if(title == ""){
+				alert("제목을 입력하세요");
+				document.form1.title.focus();
+				return ;
+			}
+			// 서버 전송
+			document.form1.submit();
+		});
+	});  -->
+
 
 <body>
 	<jsp:include page="/WEB-INF/views/header/main_nav.jsp"></jsp:include>
@@ -34,7 +55,7 @@ request.setCharacterEncoding("UTF-8");
            </head>
 
 
-           <form>
+           <form name="form1" action="<%=cp%>/bookRegistPost" method="post">
            <table>
                <thead>
                    <colgroup>
@@ -42,12 +63,7 @@ request.setCharacterEncoding("UTF-8");
                        <col width="500" />
                    </colgroup>
                </thead>
-
-
-
-               <!-- ë°ëë¶ -->
                <tbody>
-
                    <tr>
                        <td colspan="2" class="signSubTitle">
                        	필수입력사항
@@ -57,56 +73,94 @@ request.setCharacterEncoding("UTF-8");
                    <tr>
                    	<th>도서 이름 </th>
                        <td>
-                       	<input type="text" name="inName" class="inBorder"/>
+                       	<input type="text" id="title1" name="title1" size="35" class="inBorder"/>
+
+
+						<button id="isbnSearch1" onclick="isbnSearch1_click();">ISBN 검색</button>
+                       	<button id="isbnSearch2" onclick="isbnSearch2_click();">ISBN 입력</button>
+
+						
                         </td>
                    </tr>
                    <!-- ì ì -->
                    <tr>
                    	<th>저자 </th>
                        <td>
-                       	<input type="text" name="inName" class="inBorder"/>
+                       	<input type="text" id="author1" name="author1" size="40" class="inBorder"/>
                         </td>
                    </tr>
                    <!-- ë°íì²ëª -->
                    <tr>
                    	<th>발행처명 </th>
                        <td>
-                       	<input type="text" name="inName" class="inBorder"/>
+                       	<input type="text" id="publisher1" name="publisher1" class="inBorder"/>
+                        </td>
+                   </tr>
+                   <tr>
+                   	<th>발행년도 </th>
+                       <td>
+                       	<input type="text" id="pubyear1" name="pubyear1" class="inBorder"/>
                         </td>
                    </tr>
                    <!-- ISBN ë²í¸ -->
                     <tr>
                    	<th>ISBN 번호 </th>
                        <td>
-                       	<input type="text" name="inJumin1" class="inBorder" />
+                       	<input type="text" id="isbn1" name="isbn1" class="inBorder" />
                            <!-- - <input type="password" name="inJumin2" class="inBorder" /> -->
-                           <div>※ ISBN number만 입력해주세요</div>
+                           <div>※ ISBN이 없을때는 0을 13개 입력해주세요</div>
+                        </td>
+                   </tr>
+                   <tr>
+                   	<th>분류번호 </th>
+                       <td>
+                       	<input type="text" id="CLASSIFY_NO" name="CLASSIFY_NO" class="inBorder"/>
                         </td>
                    </tr>
 
-                   <!-- ìì´ë -->
+            
                    <tr>
-                   	<th>도서 아이디</th>
+                   	<th>국내 / 국외도서</th>
                        <td>
-                       	<input type="text" name="inId" class="inBorder" />
-                        </td>
-                   </tr>
-                   <!-- ë¹ë°ë²í¸ -->
-                   <tr>
-                   	<th>전체 페이지수</th>
-                       <td>
-                       	<input type="password" name="inId" class="inBorder"/>
-                        </td>
+                             <input type="radio" name="BARCODE_STRING" /> 국내(EM)
+                             <input type="radio" name="BARCODE_STRING" /> 국외(EB)
+                             <div>※ 필수로 입력해주세요</div>
+                       </td>
                    </tr>
                    <!-- ë¹ë°ë²í¸íì¸-->
-				<tr>
-                   	<th>인증키</th>
+					<tr>
+                   	<th>바코드 </th>
                        <td>
-                       	<input type="password" name="inIdr" class="inBorder" />
+                       	<input type="text" name="BARCODE" class="inBorder" />
+                       	<div>※ 필수로 입력해주세요</div>
                         </td>
                    </tr>
-                   <!-- 입고날짜 -->
+                   
                    <tr>
+                   	<th>책 종류 구분</th>
+                       <td>
+                             <input type="radio" name="APART_CODE" /> R(사전)
+                             <input type="radio" name="APART_CODE" /> W(영어 원문책)
+                             <input type="radio" name="APART_CODE" /> 기타
+                       </td>
+                   </tr>
+                   
+					<tr>
+                   	<th>저자번호 </th>
+                       <td>
+                       	<input type="text" name="AUTHOR_NO" class="inBorder" />
+                       	<div>※ 저자첫자 + 번호3개 + 책이름 첫글자를 입력해주세요</div>
+                        </td>
+                   </tr>
+                   
+					<tr>
+                   	<th>입력하는 사람 </th>
+                       <td>
+                       	<input type="text" name="INPUT_NAME" class="inBorder" />
+                        </td>
+                   </tr>
+
+<!--                    <tr>
                    	<th>입고날짜</th>
                        <td>
                        	<input type="text" name="inyear" size="5" class="inBorder" />년
@@ -161,7 +215,7 @@ request.setCharacterEncoding("UTF-8");
 
                         </td>
                    </tr>
-                   <!-- 이메일 -->
+                   이메일
                    <tr>
                    	<th>담당자 E-Mail</th>
                        <td>
@@ -176,16 +230,7 @@ request.setCharacterEncoding("UTF-8");
 
                         </td>
                    </tr>
-                      <!-- 이메일 수신여부-->
-                   <tr>
-                   	<th>전자책 발행여부</th>
-                       <td>
-                             <input type="radio" name="emailSend" /> 예
-                             <input type="radio" name="emailSend" /> 아니오
-                       </td>
-                   </tr>
-
-                   <!-- 우편번호-->
+  
                    <tr>
                    	<th>등록하는 도서관 위치</th>
                        <td>
@@ -194,7 +239,7 @@ request.setCharacterEncoding("UTF-8");
                          	<input type="button" value="우편번호찾기" class="inBorder"/>
                         </td>
                    </tr>
-                   <!-- 주소 -->
+                   주소
                     <tr>
                    	<th>주소</th>
                        <td>
@@ -202,7 +247,7 @@ request.setCharacterEncoding("UTF-8");
                            <input type="text" size="70" name="inAddr2" class="inBorder"/>
                         </td>
                    </tr>
-                   <!-- 전화번호 -->
+                   전화번호
                    <tr>
                    	<th>전화번호</th>
                        <td>
@@ -218,7 +263,7 @@ request.setCharacterEncoding("UTF-8");
                         </td>
                    </tr>
 
-                   <!-- 휴대전화번호 -->
+                   휴대전화번호
                    <tr>
                    	<th>핸드폰번호</th>
                        <td>
@@ -233,14 +278,105 @@ request.setCharacterEncoding("UTF-8");
                            <input type="text" size="5" name="inHphone3" class="inBorder" />
                         </td>
                    </tr>
-
+ -->
                    <!-- 선택입력사항 타이틀 -->
                    <tr>
              			<td colspan="2" class="signSubTitle">
                        	선택입력사항
                        </td>
                    </tr>
-                   <!-- 가입경로 -->
+                   
+					<tr>
+                   	<th>연간물  </th>
+                       <td>
+                       	<input type="text" name="VOLUME" class="inBorder" />
+                       	<div>권수, 있을 경우만 입력</div>
+                        </td>
+                   </tr>
+
+					<tr>
+                   	<th>중복책 </th>
+                       <td>
+                       	<input type="text" name="COPY_NO" class="inBorder" />
+                       	<div>중복책 번호, 있을 경우만 입력</div>
+                        </td>
+                   </tr>
+					<tr>
+                   	<th>기부자 </th>
+                       <td>
+                       	<input type="text" name="DONOR_NAME " class="inBorder" />
+                        </td>
+                   </tr>
+                   
+					<tr>
+                   	<th>입력하는 사람 </th>
+                       <td>
+                       	<input type="text" name="INPUT_NAME" class="inBorder" />
+                        </td>
+                   </tr>
+                   
+					<tr>
+                   	<th>갱신하는 사람</th>
+                       <td>
+                       	<input type="text" name="UPDATE_NAME" class="inBorder" />
+                        </td>
+                   </tr>
+                    <tr>
+                   	<th>갱신 날짜</th>
+                       <td>
+                       	<input type="text" name="UPDATE_DATE" size="5" class="inBorder" />년
+                       	<select class="inBorder">
+                           	<option value="1">1
+                             	<option value="2">2
+           			        <option value="3">3
+                         		<option value="4">4
+                             	<option value="5">5
+           			        <option value="6">6
+                               <option value="7">7
+                             	<option value="8">8
+           			        <option value="9">9
+                               <option value="10">10
+                             	<option value="11">11
+           			        <option value="12">12
+                           </select> 월
+                           <select class="inBorder">
+                           	<option value="1">1
+                             	<option value="2">2
+           			        <option value="3">3
+                         		<option value="4">4
+                             	<option value="5">5
+           			        <option value="6">6
+                               <option value="7">7
+                             	<option value="8">8
+           			        <option value="9">9
+                               <option value="10">10
+                             	<option value="11">11
+           			        <option value="12">12
+                             	<option value="13">13
+                             	<option value="14">14
+           			        <option value="15">15
+                         		<option value="16">16
+                             	<option value="17">17
+           			        <option value="18">18
+                               <option value="19">19
+                             	<option value="20">20
+           			        <option value="21">21
+                               <option value="22">22
+                             	<option value="23">23
+           			        <option value="24">24
+                              	<option value="25">25
+                             	<option value="26">26
+           			        <option value="27">27
+                         		<option value="28">28
+                             	<option value="29">29
+           			        <option value="30">30
+                               <option value="31">31
+                           </select> 일
+                           &nbsp;
+
+                        </td>
+                   </tr>
+ <!--            
                     <tr>
                    	<th>들어오게된 경로</th>
                        <td>
@@ -255,7 +391,7 @@ request.setCharacterEncoding("UTF-8");
 
                         </td>
                    </tr>
-                   <!-- 결혼여부 -->
+                   결혼여부
                    <tr>
                    	<th>CIP 신청여부</th>
                        <td>
@@ -264,7 +400,7 @@ request.setCharacterEncoding("UTF-8");
                              <input type="radio" name="marriage" /> 아니오
                        </td>
                    </tr>
-                   <!-- 직업 -->
+                   직업
                      <tr>
                    	<th>직업</th>
                        <td>
@@ -282,7 +418,7 @@ request.setCharacterEncoding("UTF-8");
 
                         </td>
                    </tr>
-
+ -->
 
                </tbody>
 
@@ -292,7 +428,7 @@ request.setCharacterEncoding("UTF-8");
            	<tfoot>
                	<tr>
              			<td colspan="2">
-                       	<input type="button" value="등록" class="inBorder" />
+                       	<input type="button" id="btnsave" value="등록" class="inBorder" />
                            <input type="reset" value="취소" class="inBorder"/>
                        </td>
                    </tr>
@@ -307,6 +443,40 @@ request.setCharacterEncoding("UTF-8");
        </div>
    </section>
 <jsp:include page="/WEB-INF/views/footer/main_footer.jsp"></jsp:include>
+<script>
+
+function isbnSearch1_click() {
+   	<%
+   	request.setCharacterEncoding("UTF-8");
+    String str = request.getParameter("title1");
+    
+    parse_isbn A = new parse_isbn();
+	String title = A.title(str);
+	String author = A.author(str);
+	String publisher = A.publisher(str);
+	String pubyear = A.pubyear(str);
+	String isbn = A.isbn_a(str);
+	%>
+	
+	alert("ISBN을 검색합니다.");
+	
+
+}
+function isbnSearch2_click() {
+	var ti = '<%=title%>';
+	var is = <%=isbn%>;
+	var puby = <%=pubyear%>;
+	var publ = '<%=publisher%>';
+	var au = '<%=author%>';
+
+	$('#title1').val(ti);
+	$('#isbn1').val(is);
+	$('#pubyear1').val(puby);
+	$('#publisher1').val(publ);
+	$('#author1').val(au);
+}
+
+</script>
 </body>
 
 </html>

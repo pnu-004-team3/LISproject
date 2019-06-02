@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="<%=cp%>/resources/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="<%=cp%>/resources/css/owl.carousel.min.css">
 <link rel="stylesheet" href="<%=cp%>/resources/css/styles_search.css">
-<script src="<%=cp%>/resources/js/jquery.min.js"></script>
+<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
 <script src="<%=cp%>/resources/js/bootstrap.min.js"></script>
 <script type="text/javascript"
 	src="<%=cp%>/resources/js/owl.carousel.min.js"></script>
