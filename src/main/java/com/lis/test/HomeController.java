@@ -155,7 +155,7 @@ public class HomeController {
 	public String product_single(Locale locale, Model model) {
 		logger.info("open product_single.jsp", locale);
 		
-		return "product_single";
+		return "search/product_single";
 	}
 	
 	@RequestMapping(value = "/reservation", method = RequestMethod.GET)
@@ -169,7 +169,7 @@ public class HomeController {
 	public String search(Locale locale, Model model) {
 		logger.info("open search.jsp", locale);
 		
-		return "search";
+		return "search/search";
 	}
 	
 	@RequestMapping(value = "/show", method = RequestMethod.GET)

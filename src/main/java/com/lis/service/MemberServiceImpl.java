@@ -35,6 +35,8 @@ public class MemberServiceImpl implements MemberService{
 	
 	@Override
 	public MemberVO login(MemberVO member) throws Exception {
+		System.out.println("login");
+		
 		return dao.login(member);
 	}
 	

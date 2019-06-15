@@ -7,6 +7,7 @@ import com.lis.dto.BookVO;
 
 public interface BookService {
 
-	public List<BookVO> selectBook() throws Exception;
+	public List<BookVO> searchBook(String searchOption, String keyword) throws Exception;
+	public int countBook(String searchOption, String keyword) throws Exception;
 	
 }

@@ -34,14 +34,12 @@ public class UserLoginController {
 		this.service = service;
 	}
 	
-	//로그인 페이지
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String loginGET(@ModelAttribute("member") MemberVO member) {
 		
 		return "user/login";
 	}
 	
-	// 로그인 처리
 	@RequestMapping(value = "/loginPost", method = RequestMethod.POST)
 	public void loginPOST(MemberVO member, HttpSession session, Model model) throws Exception{
 		MemberVO memberVO = service.login(member);

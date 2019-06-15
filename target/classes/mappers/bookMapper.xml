@@ -5,9 +5,37 @@
  
 <mapper namespace="com.lis.mapper.bookMapper">
  
- 	<select id="selectBook" resultType="bookVO">
- 		SELECT TITLE Name FROM Book
+ 	<select id="searchBook" resultType="bookVO">
+ 		SELECT TITLE, AUTHOR, ISBN_ISSN, PUBLISHER  FROM Book
+ 		<include refid="search"></include>
  	</select>
-
+ 	
+ 	<select id="countBook" resultType="int">
+ 		SELECT count(*) FROM Book
+ 		<include refid="search"></include>
+ 	</select>
+ 	
+ 	
+ 	<sql id="search">
+ 		<choose>
+ 			<!-- 검색옵션이 전체 검색일 경우 -->
+ 			<when test="searchOption == 'all'">
+ 				WHERE TITLE like CONCAT('%',#{keyword},'%')
+ 				OR AUTHOR like CONCAT('%',#{keyword},'%')
+ 				OR PUBLISHER like CONCAT('%',#{keyword},'%')
+ 				OR ISBN_ISSN like CONCAT('%',#{keyword},'%')
+ 			</when>
+ 			<otherwise>
+ 				WHERE ${searchOption} like CONCAT('%',#{keyword},'%')
+ 			</otherwise>
+ 		</choose>
+ 	</sql>
+ 
 </mapper>
 
+<!--  
+TITLE - 제목
+AUTHOR - 저자
+PUBLISHER - 출판사
+ISBN_ISSN - ISBN
+-->

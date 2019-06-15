@@ -20,31 +20,20 @@
 					<div class="test">
 						<h1 style="color: white;">LIS PROJECT</h1>
 					</div>
-					<form class="form-inline my-2 my-lg-0 search_book">
+					<form class="form-inline my-2 my-lg-0 search_book" method="post" action="<%=cp%>/booklist.do">
 						<div class="search_form">
-							<select id="select_type" class="search_form_select">
-								<option value="0">통합검색</option>
-								<option value="1">제목</option>
-								<option value="2">저자</option>
-								<option value="3">출판사</option>
-								<option value="4">ISBN</option>
-							</select> <input class="form-control" id="search_input" type="text"
+							<select name="searchOption" class="search_form_select">
+								<option value="all">통합검색</option>
+								<option value="TITLE">제목</option>
+								<option value="AUTHOR">저자</option>
+								<option value="PUBLISHER">출판사</option>
+								<option value="ISBN_ISSN">ISBN</option>
+							</select> 
+							
+							<input class="form-control" name="keyword" value="${map.keyword}"
 								style="height: 50px; border: none; width: 55%;"
 								placeholder="Search here..." aria-label="Search">
-							<button type="button" class="fa fa-search search_button"
-								onclick="search_click();"></button>
-							<script>
-								function search_click() {
-									var sh = document
-											.getElementById("select_type");
-									var tt = document
-											.getElementById("search_input");
-									sh.value = sh.options[sh.selectedIndex].value;
-
-									location.href = ("search?type:"
-											+ sh.value + "&input:" + tt.value);
-								}
-							</script>
+							<button type="submit" value="search" class="fa fa-search search_button"></button>
 						</div>
 					</form>
 				</div>

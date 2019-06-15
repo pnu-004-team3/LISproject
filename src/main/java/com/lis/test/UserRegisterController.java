@@ -32,9 +32,7 @@ public class UserRegisterController {
 	private MemberService service;
 	
 	
-	//회원가입 Controller 시작
-	
-	//회원가입 JSP 맵핑
+
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public String registerGET(Locale locale, Model model)throws Exception {
 		logger.info("open register.jsp", locale);
@@ -42,7 +40,6 @@ public class UserRegisterController {
 	}
 		
 	
-	//회원가입 sql실행
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public String registerPOST(MemberVO member) throws Exception {
 		
@@ -53,7 +50,6 @@ public class UserRegisterController {
 		return "redirect:login";
 	}
 	
-	//이메일 중복 체크
 	@RequestMapping(value = "/checkUserEmail", method = RequestMethod.POST)
 	public void checkUserEmail(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		String userEmail = request.getParameter("userEmail");
@@ -63,16 +59,13 @@ public class UserRegisterController {
 		PrintWriter out = response.getWriter();
 		String output = "";
 		if (service.emailCheck(userEmail) != null) {
-			// 이건 값이 있으면 false
 			output = "false";
 		} else {
-			// 이건 값이 없으면 true
 			output = "true";
 		}
 		out.print(output);
 		out.flush();
 		out.close();
 	}
-	//회원가입 Controller 끝
 	
 }
