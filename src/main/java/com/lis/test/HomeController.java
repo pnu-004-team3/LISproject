@@ -219,6 +219,11 @@ public class HomeController {
 		return "UserInfo_manage";
 	}
 
-
+	@RequestMapping(value = "/ocr", method = RequestMethod.GET)
+	public String ocr(Locale locale, Model model) {
+		logger.info("open ocr.jsp", locale);
+		
+		return "ocr/ocr";
+	}
 		
 }
