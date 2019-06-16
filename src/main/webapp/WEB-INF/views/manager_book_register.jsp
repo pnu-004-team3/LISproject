@@ -29,7 +29,7 @@ function KeyCheck(){
 		success:function(data){
 			if (data == "true") {
 				// 일치하면 통과
-				console.log("중복 Email이 없습니다.");
+				console.log("중복 Email이 습니다.");
 				$("#userEmailLabel").css("color","green");
 				$("#userEmailLabel").text("중복체크 완료!");
 				isValidUserEmail = true;
