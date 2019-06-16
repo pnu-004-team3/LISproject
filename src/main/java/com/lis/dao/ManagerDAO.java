@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.lis.dto.BookVO;
+import com.lis.dto.ManagerVO;
 import com.lis.dto.MemberVO;
 
 public interface ManagerDAO {
-	public String bookRegister(BookVO manager) throws Exception;
-//	public List<MemberVO> selectMember() throws Exception;
-//	public MemberVO emailCheck(String Useremail) throws Exception;
+	public String bookRegister(ManagerVO manager) throws Exception;
+	public ManagerVO KeyCheck(String BARCODE) throws Exception;
 
 }

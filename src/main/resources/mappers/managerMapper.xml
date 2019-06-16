@@ -5,7 +5,7 @@
  
 <mapper namespace="com.lis.mapper.managerMapper">
  
- 	<select id="bookRegister" resultType="bookVO">
+ 	<insert id="bookRegister" parameterType="ManagerVO">
  	INSERT INTO Book (
  	ISBN_ISSN, 
 	SCHOOL_CODE, 
@@ -19,7 +19,7 @@
 	TITLE, 
 	AUTHOR, 
 	PUBLISHER, 
-	PUBBLISHER_YEAR, 
+	PUBLISH_YEAR, 
 	CALL_NO, 
 	APART_CODE, 
 	CLASSIFY_NO, 
@@ -42,19 +42,19 @@
 	VOLUME_TITLE, 
 	BOOK_STATUS)
 	VALUES (
-	#{isbn1},
+	#{ISBN_ISSN},
 	null,
 	null,
 	null,
 	null,
-	#{BARCODE_STRING},
-	#{BARCODE_NUMBER},
-	null,
-	null,
-	#{TITLE1},
-	#{AUTHOR1},
-	#{PUBLISHER1},
-	#{PUBBLISHER_YEAR1},
+	#{BARCODE},
+	#{BARCODE},
+	#{BARCODE},
+	#{BARCODE},
+	#{TITLE},
+	#{AUTHOR},
+	#{PUBLISHER},
+	#{PUBLISH_YEAR},
 	null,
 	#{APART_CODE},
 	#{CLASSIFY_NO},
@@ -68,16 +68,15 @@
 	null,
 	#{DONOR_NAME},
 	null,
-	now(),
+	null,
 	#{INPUT_NAME},
-	now(),
+	null,
 	#{UPDATE_NAME},
 	null,
 	null,
 	null,
 	null)
-
- 	</select>
+ 	</insert>
 
 </mapper>
 

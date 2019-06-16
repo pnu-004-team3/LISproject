@@ -19,7 +19,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import com.lis.dto.BookVO;
+import com.lis.dto.ManagerVO;
 import com.lis.dto.MemberVO;
+import com.lis.service.ManagerService;
+import com.lis.service.ManagerServiceImpl;
 import com.lis.service.MemberService;
 
 /**
@@ -33,6 +37,8 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
+	@Inject
+	private ManagerService service;
 	
 	/* URL ���� */
 	
@@ -107,6 +113,33 @@ public class HomeController {
 		logger.info("open manager_book_register.jsp", locale);
 		
 		return "manager_book_register";
+	}
+	
+	@RequestMapping(value = "/manager_book_register", method = RequestMethod.POST)
+	public String manager_book_register(HttpServletRequest request) throws Exception {
+		ManagerVO manager = new ManagerVO();
+		
+		manager.setISBN_ISSN((String) request.getParameter("isbn1"));
+		manager.setBARCODE_STRING((String) request.getParameter("BARCODE_STRING"));
+		manager.setBARCODE_NUMBER((String) request.getParameter("BARCODE_STRING"));
+		manager.setBARCODE((String) request.getParameter("BARCODE"));
+		manager.setPRINT_BARCODE((String) request.getParameter("BARCODE"));
+		manager.setTITLE((String) request.getParameter("title1"));
+		manager.setAUTHOR((String) request.getParameter("author1"));
+		manager.setPUBLISHER((String) request.getParameter("publisher1"));
+		manager.setPUBLISH_YEAR((String) request.getParameter("pubyear1"));
+		manager.setAPART_CODE((String) request.getParameter("APART_CODE"));
+		manager.setCLASSIFY_NO((String) request.getParameter("CLASSIFY_NO"));
+		manager.setAUTHOR_NO((String) request.getParameter("AUTHOR_NO"));
+		manager.setVOLUME((String) request.getParameter("VOLUME"));
+		manager.setCOPY_NO((String) request.getParameter("COPY_NO"));
+		manager.setDONOR_NAME((String) request.getParameter("DONOR_NAME"));
+		manager.setINPUT_NAME((String) request.getParameter("INPUT_NAME"));
+		manager.setUPDATE_NAME((String) request.getParameter("UPDATE_NAME"));
+
+		service.bookRegister(manager);
+		
+		return "managerMain";
 	}
 	
 	@RequestMapping(value = "/manager_booklist", method = RequestMethod.GET)

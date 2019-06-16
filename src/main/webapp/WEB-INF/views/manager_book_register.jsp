@@ -13,19 +13,42 @@ request.setCharacterEncoding("UTF-8");
 <jsp:include page="/WEB-INF/views/header/manager_header.jsp"></jsp:include>
 
 
-
-<!-- $(document).ready(function(){
-		("#btnsave").click(function(){
-			var title = $("#title").val(); //속성 복붙 ㄱㄱ
-			if(title == ""){
-				alert("제목을 입력하세요");
-				document.form1.title.focus();
-				return ;
+<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+	
+<script> 
+function KeyCheck(){
+	var isValidUserEmail = false;  
+	var BARCODE = $("#BARCODE").val();
+	
+	console.log(BARCODE)
+	$.ajax({
+		url:'<%=cp%>/KeyCheck',
+		type:'POST',
+		dataType:'text',
+		
+		success:function(data){
+			if (data == "true") {
+				// 일치하면 통과
+				console.log("중복 Email이 없습니다.");
+				$("#userEmailLabel").css("color","green");
+				$("#userEmailLabel").text("중복체크 완료!");
+				isValidUserEmail = true;
+			} else {
+				$("#userEmailLabel").css("color","red");
+				$("#userEmailLabel").text("중복됨!");
+				isValidUserEmail = false;
 			}
-			// 서버 전송
-			document.form1.submit();
-		});
-	});  -->
+		},error:function(request, status, error){
+				alert(request+","+status+","+error);
+			console.log(request+","+status+","+error);
+			$("#userEmailLabel").css("color","red");
+			$("#userEmailLabel").text("중복됨!");
+			isValidUserEmail = false;
+			}
+	});
+	
+}
+</script>
 
 
 <body>
@@ -35,7 +58,7 @@ request.setCharacterEncoding("UTF-8");
    <div class="breadcrumb">
        <div class="container">
            <a class="breadcrumb-item" href="<%=cp%>/index">Home</a>
-           <span class="breadcrumb-item active">Login</span>
+           <span class="breadcrumb-item active">manager book register</span>
        </div>
    </div>
 
@@ -45,17 +68,18 @@ request.setCharacterEncoding("UTF-8");
    <section class="static about-sec">
        <div class="container">
            <h1>신규도서 등록</h1>
-           <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-           <html xmlns="http://www.w3.org/1999/xhtml">
+          
+           
            <head>
            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
            <title>회원가입창</title>
-
            <link href="<%=cp%>/manager_styles.css" rel="stylesheet" type="text/css" />
+           
+           
            </head>
 
 
-           <form name="form1" action="<%=cp%>/bookRegistPost" method="post">
+           <form action="<%=cp%>/manager_book_register" method="post" >
            <table>
                <thead>
                    <colgroup>
@@ -122,26 +146,30 @@ request.setCharacterEncoding("UTF-8");
                    <tr>
                    	<th>국내 / 국외도서</th>
                        <td>
-                             <input type="radio" name="BARCODE_STRING" /> 국내(EM)
-                             <input type="radio" name="BARCODE_STRING" /> 국외(EB)
-                             <div>※ 필수로 입력해주세요</div>
+                             <input type="radio" name="BARCODE_STRING" value="0"/> 국내(EM)
+                             <input type="radio" name="BARCODE_STRING" value="1"/> 국외(EB)
+                             
                        </td>
                    </tr>
                    <!-- ë¹ë°ë²í¸íì¸-->
 					<tr>
                    	<th>바코드 </th>
                        <td>
-                       	<input type="text" name="BARCODE" class="inBorder" />
-                       	<div>※ 필수로 입력해주세요</div>
+                        <label id="userEmailLabel" style="float: right;"></label> 
+                       	<input type="text" name="BARCODE" id="BARCODE" class="KeyCheck"" />
+                       	<button type="button" class="keyCheck">바코드 중복확인</button>
+                       	<p class="result">
+                       		<span class="msg">바코드를 확인해주세요</span>
+                       	</p>
                         </td>
                    </tr>
                    
                    <tr>
                    	<th>책 종류 구분</th>
                        <td>
-                             <input type="radio" name="APART_CODE" /> R(사전)
-                             <input type="radio" name="APART_CODE" /> W(영어 원문책)
-                             <input type="radio" name="APART_CODE" /> 기타
+                             <input type="radio" name="APART_CODE" value="0"/> R(사전)
+                             <input type="radio" name="APART_CODE" value="1"/> W(영어 원문책)
+                             <input type="radio" name="APART_CODE" value="2"/> 기타
                        </td>
                    </tr>
                    
@@ -428,8 +456,8 @@ request.setCharacterEncoding("UTF-8");
            	<tfoot>
                	<tr>
              			<td colspan="2">
-                       	<input type="button" id="btnsave" value="등록" class="inBorder" />
-                           <input type="reset" value="취소" class="inBorder"/>
+                       	<button tabindex="0" type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30 signupbtn">등록</button>
+                        <button tabindex="0" class="btn btn-primary btn-flat m-b-30 m-t-30 signupbtn">취소</button>
                        </td>
                    </tr>
                </tfoot>
@@ -438,7 +466,7 @@ request.setCharacterEncoding("UTF-8");
 
            <body>
            </body>
-           </html>
+           
 
        </div>
    </section>
@@ -457,6 +485,7 @@ function isbnSearch1_click() {
 	String pubyear = A.pubyear(str);
 	String isbn = A.isbn_a(str);
 	%>
+	var is = '<%=isbn%>';
 	
 	alert("ISBN을 검색합니다.");
 	
