@@ -112,7 +112,7 @@ public class HomeController {
 	public String manager_book_register(Locale locale, Model model) {
 		logger.info("open manager_book_register.jsp", locale);
 		
-		return "manager_book_register";
+		return "admin/manager_book_register";
 	}
 	
 	@RequestMapping(value = "/manager_book_register", method = RequestMethod.POST)
@@ -146,21 +146,21 @@ public class HomeController {
 	public String manager_booklist(Locale locale, Model model) {
 		logger.info("open manager_booklist.jsp", locale);
 		
-		return "manager_booklist";
+		return "admin/manager_booklist";
 	}
 	
 	@RequestMapping(value = "/manager_monitoring", method = RequestMethod.GET)
 	public String manager_monitoring(Locale locale, Model model) {
 		logger.info("open manager_monitoring.jsp", locale);
 		
-		return "manager_monitoring";
+		return "admin/manager_monitoring";
 	}
 	
 	@RequestMapping(value = "/manager_rent_return", method = RequestMethod.GET)
 	public String manager_rent_return(Locale locale, Model model) {
 		logger.info("open manager_rent_return.jsp", locale);
 		
-		return "manager_rent_return";
+		return "admin/manager_rent_return";
 	}
 	
 	@RequestMapping(value = "/managerMain", method = RequestMethod.GET)
@@ -174,14 +174,14 @@ public class HomeController {
 	public String ModifyAdmin(Locale locale, Model model) {
 		logger.info("open ModifyAdmin.jsp", locale);
 		
-		return "ModifyAdmin";
+		return "admin/ModifyAdmin";
 	}
 	
 	@RequestMapping(value = "/ModifyUser", method = RequestMethod.GET)
 	public String ModifyUser(Locale locale, Model model) {
 		logger.info("open ModifyUser.jsp", locale);
 		
-		return "ModifyUser";
+		return "admin/ModifyUser";
 	}
 	
 	@RequestMapping(value = "/product_single", method = RequestMethod.GET)
@@ -209,7 +209,7 @@ public class HomeController {
 	public String show(Locale locale, Model model) {
 		logger.info("open show.jsp", locale);
 		
-		return "show";
+		return "admin/show";
 	}
 	
 	@RequestMapping(value = "/UserInfo_manage", method = RequestMethod.GET)
