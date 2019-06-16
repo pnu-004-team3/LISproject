@@ -67,7 +67,7 @@ public class HomeController {
 	public String AdminUser(Locale locale, Model model) {
 		logger.info("open AdminUser.jsp", locale);
 		
-		return "AdminUser";
+		return "admin/AdminUser";
 	}
 	
 	@RequestMapping(value = "/late_fee", method = RequestMethod.GET)
