@@ -31,7 +31,39 @@
 	
  	<select id="check_id" parameterType="String" resultType="int">select count(*) from USER where User_key = #{userKey}</select>
  	<select id="check_pw" parameterType="String" resultType="memberVO">select * from USER where User_PW=PASSOWRD('#{userPW}')</select>
-
+	
+	
+	<select id="searchMember" resultType="memberVO">
+ 		SELECT User_key, Name, Phone_NO, NO_of_Book_Borrowed, User_type, City, District, User_Status, USER_regist_date  FROM USER
+ 		<include refid="search"></include>
+ 	</select>
+ 	
+ 	<select id="countMember" resultType="int">
+ 		SELECT count(*) FROM USER
+ 		<include refid="search"></include>
+ 	</select>
+ 
+ 	
+ 	
+ 	<sql id="search">
+ 		<choose>
+ 			<!-- 검색옵션이 전체 검색일 경우 -->
+ 			<when test="searchOption == 'all'">
+ 				WHERE User_key like CONCAT('%',#{keyword},'%')
+ 				OR Name like CONCAT('%',#{keyword},'%')
+ 				OR Phone_NO like CONCAT('%',#{keyword},'%')
+ 				OR NO_of_Book_Borrowed like CONCAT('%',#{keyword},'%')
+ 				OR User_type like CONCAT('%',#{keyword},'%')
+ 				OR City like CONCAT('%',#{keyword},'%')
+ 				OR District like CONCAT('%',#{keyword},'%')
+ 				OR User_Status like CONCAT('%',#{keyword},'%')
+ 				OR USER_regist_date like CONCAT('%',#{keyword},'%')
+ 			</when>
+ 			<otherwise>
+ 				WHERE ${searchOption} like CONCAT('%',#{keyword},'%')
+ 			</otherwise>
+ 		</choose>
+ 	</sql>
 
 </mapper>
 

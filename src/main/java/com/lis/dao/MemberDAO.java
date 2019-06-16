@@ -12,8 +12,8 @@ public interface MemberDAO {
 	
 	public MemberVO login(MemberVO member) throws Exception;
 	
-	public List<BookVO> searchMember(String searchOption, String keyword) throws Exception; 
-	public List<BookVO> countMember(String searchOption, String keyword) throws Exception; 
+	public List<MemberVO> searchMember(String searchOption, String keyword) throws Exception; 
+	public int countMember(String searchOption, String keyword) throws Exception; 
 	
 	public List<MemberVO> selectMember() throws Exception;
 	public int check_id(String user_key) throws Exception;

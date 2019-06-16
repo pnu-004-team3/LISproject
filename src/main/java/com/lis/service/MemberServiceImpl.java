@@ -42,7 +42,7 @@ public class MemberServiceImpl implements MemberService{
 	}
 	
 	@Override
-	public List<BookVO> searchMember(String searchOption, String keyword) throws Exception{
+	public List<MemberVO> searchMember(String searchOption, String keyword) throws Exception{
 		
 		return dao.searchMember(searchOption, keyword);
 	}

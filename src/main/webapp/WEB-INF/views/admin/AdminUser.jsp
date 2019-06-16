@@ -20,7 +20,7 @@
 	</div>
 
 	<div class="container">
-		<form class="form-inline my-2 my-lg-0 search_book" method="post" action="<%=cp%>/booklist.do">
+		<form class="form-inline my-2 my-lg-0 search_book" method="post" action="<%=cp%>/AdminUser/list.do">
 			<div class="search_form">
 				<select name="searchOption" class="search_form_select">
 					<option value="all" <c:out value="${map.searchOption =='all'?'selected':'' }"/> >통합검색</option>
@@ -45,16 +45,13 @@
 
 			<c:forEach var="row" items="${map.list}">
 			<ul>
-				<a href="<%=cp%>/product_single">
-					<div class="book_image">
-						<img src="<%=cp%>/resources/images/product1.jpg">
-					</div>
-				</a>
 					<div class="book_info">
-						<li class="item">유저번호 : ${ row.User_key }</li>
-						<li class="item">휴대폰번호 : ${ row.Phone_NO}</li>
+					
+						<li class="item">유저번호 : ${ row.user_key }</li>
+						<li class="item">휴대폰번호 : ${ row.phone_NO}</li>
 						<li class="item">대여여뷰 : ${ row.NO_of_Book_Borrowed }</li>
-						<li class="item">도시 : ${ row.City }</li>
+						<li class="item">도시 : ${ row.city }</li>
+						
 					</div>
 				
 			</ul>

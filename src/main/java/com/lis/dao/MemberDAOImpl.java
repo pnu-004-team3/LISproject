@@ -64,21 +64,21 @@ public class MemberDAOImpl implements MemberDAO {
 	}
 	
 	
-	public List<MemberVO> searchBook(String searchOption, String keyword) throws Exception{
+	public List<MemberVO> searchMember(String searchOption, String keyword) throws Exception{
 		 Map<String, String> map = new HashMap<String, String>();
 		 map.put("searchOption", searchOption);
 		 map.put("keyword", keyword);
 		 
-		 return sqlSession.selectList(Namespace+".searchBook", map);
+		 return sqlSession.selectList(Namespace+".searchMember", map);
 	 }
 
 	 
-	 public int countBook(String searchOption, String keyword) throws Exception{
+	 public int countMember(String searchOption, String keyword) throws Exception{
 		 Map<String, String> map = new HashMap<String, String>();
 		 map.put("searchOption", searchOption);
 		 map.put("keyword", keyword);
 		 
-		 return sqlSession.selectOne(Namespace + ".countBook", map);
+		 return sqlSession.selectOne(Namespace + ".countMember", map);
 	 }
 	
 
