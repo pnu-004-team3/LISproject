@@ -87,7 +87,7 @@ public class MemberController {
 	      map.put("keyword", keyword);
 	      
 	      mav.addObject("map", map);
-	      mav.setViewName("search/search");
+	      //mav.setViewName("search/search");
 	      
 	      return mav;
 		

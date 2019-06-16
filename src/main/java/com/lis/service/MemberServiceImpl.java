@@ -11,6 +11,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.lis.dao.MemberDAO;
+import com.lis.dto.BookVO;
 import com.lis.dto.MemberVO;
 
 @Service
@@ -38,6 +39,17 @@ public class MemberServiceImpl implements MemberService{
 		System.out.println("login");
 		
 		return dao.login(member);
+	}
+	
+	@Override
+	public List<BookVO> searchMember(String searchOption, String keyword) throws Exception{
+		
+		return dao.searchMember(searchOption, keyword);
+	}
+	
+	@Override
+	public int countMember(String searchOption, String keyword) throws Exception{
+		return dao.countBook(searchOption, keyword);
 	}
 	
 	

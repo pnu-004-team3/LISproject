@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.lis.dto.BookVO;
 import com.lis.dto.MemberVO;
 
 public interface MemberService {
@@ -13,7 +14,9 @@ public interface MemberService {
 	public MemberVO emailCheck(String Useremail) throws Exception;
 
 	public MemberVO login(MemberVO member) throws Exception;
-
+	
+	public List<BookVO> searchMember(String searchOption, String keyword) throws Exception; 
+	public List<BookVO> countMember(String searchOption, String keyword) throws Exception; 
 	
 	public List<MemberVO> selectMember() throws Exception;
 	public void check_id(String user_key, HttpServletResponse response) throws Exception;
