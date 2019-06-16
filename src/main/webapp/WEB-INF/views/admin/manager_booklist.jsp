@@ -21,6 +21,9 @@ request.setCharacterEncoding("UTF-8");
 
 <!-- 도서등록 페이지 -->
 
+asdasd
+
+
 <section class="static about-sec">
 	<div class="container">
 		<div class="relative1">

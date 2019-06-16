@@ -3,6 +3,7 @@ package com.lis.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.lis.dto.BookVO;
 import com.lis.dto.MemberVO;
 
 public interface MemberDAO {
@@ -10,6 +11,9 @@ public interface MemberDAO {
 	public MemberVO emailCheck(String Useremail) throws Exception;
 	
 	public MemberVO login(MemberVO member) throws Exception;
+	
+	public List<BookVO> searchMember(String searchOption, String keyword) throws Exception; 
+	public List<BookVO> countMember(String searchOption, String keyword) throws Exception; 
 	
 	public List<MemberVO> selectMember() throws Exception;
 	public int check_id(String user_key) throws Exception;

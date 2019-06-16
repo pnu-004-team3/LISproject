@@ -49,7 +49,7 @@ public class MemberServiceImpl implements MemberService{
 	
 	@Override
 	public int countMember(String searchOption, String keyword) throws Exception{
-		return dao.countBook(searchOption, keyword);
+		return dao.countMember(searchOption, keyword);
 	}
 	
 	

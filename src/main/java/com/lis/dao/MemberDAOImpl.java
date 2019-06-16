@@ -3,12 +3,14 @@ package com.lis.dao;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import com.lis.dto.BookVO;
 import com.lis.dto.MemberVO;
 
 @Repository
@@ -61,6 +63,23 @@ public class MemberDAOImpl implements MemberDAO {
 		return sqlSession.selectOne(Namespace+".check_pw", user_PW);
 	}
 	
+	
+	public List<MemberVO> searchBook(String searchOption, String keyword) throws Exception{
+		 Map<String, String> map = new HashMap<String, String>();
+		 map.put("searchOption", searchOption);
+		 map.put("keyword", keyword);
+		 
+		 return sqlSession.selectList(Namespace+".searchBook", map);
+	 }
+
+	 
+	 public int countBook(String searchOption, String keyword) throws Exception{
+		 Map<String, String> map = new HashMap<String, String>();
+		 map.put("searchOption", searchOption);
+		 map.put("keyword", keyword);
+		 
+		 return sqlSession.selectOne(Namespace + ".countBook", map);
+	 }
 	
 
 

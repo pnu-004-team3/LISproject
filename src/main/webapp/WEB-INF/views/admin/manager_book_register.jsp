@@ -72,7 +72,7 @@ function KeyCheck(){
            
            <head>
            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-           <title>회원가입창</title>
+           <title>회원가입 창</title>
            <link href="<%=cp%>/manager_styles.css" rel="stylesheet" type="text/css" />
            
            
