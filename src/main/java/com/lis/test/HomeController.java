@@ -167,7 +167,7 @@ public class HomeController {
 	public String managerMain(Locale locale, Model model) {
 		logger.info("open managerMain.jsp", locale);
 		
-		return "managerMain";
+		return "admin/managerMain";
 	}
 	
 	@RequestMapping(value = "/ModifyAdmin", method = RequestMethod.GET)
