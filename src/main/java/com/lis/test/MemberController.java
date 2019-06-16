@@ -19,17 +19,18 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.lis.dto.MemberVO;
 import com.lis.service.MemberService;
 
 @Controller
-public class UserRegisterController {
+public class MemberController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@Inject
-	private MemberService service;
+	private MemberService memberservice;
 	
 	
 
@@ -45,7 +46,7 @@ public class UserRegisterController {
 		
 		String hashedPw = BCrypt.hashpw(member.getUser_PW(), BCrypt.gensalt());
 		member.setUser_PW(hashedPw);
-		service.register(member);
+		memberservice.register(member);
 		
 		return "redirect:login";
 	}
@@ -58,7 +59,7 @@ public class UserRegisterController {
 		
 		PrintWriter out = response.getWriter();
 		String output = "";
-		if (service.emailCheck(userEmail) != null) {
+		if (memberservice.emailCheck(userEmail) != null) {
 			output = "false";
 		} else {
 			output = "true";
@@ -67,5 +68,32 @@ public class UserRegisterController {
 		out.flush();
 		out.close();
 	}
+	
+	@RequestMapping(value = "/AdminUser/list.do")
+	public ModelAndView memberList(@RequestParam(defaultValue="title") String searchOption, 
+    		@RequestParam(defaultValue="") String keyword) throws Exception{
+		
+		// 레코드의 갯수
+	     List<MemberVO> list = memberservice.searchMember(searchOption, keyword);
+	     int count = memberservice.countMember(searchOption, keyword);
+	      
+	      ModelAndView mav = new ModelAndView();
+	      //데이터를 맵에 저장
+	        
+	      Map<String, Object> map = new HashMap<String, Object>();
+	      map.put("count", count);
+	      map.put("list", list);
+	      map.put("searchOption", searchOption);
+	      map.put("keyword", keyword);
+	      
+	      mav.addObject("map", map);
+	      mav.setViewName("search/search");
+	      
+	      return mav;
+		
+	}
+		
+	
+	
 	
 }

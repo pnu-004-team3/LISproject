@@ -23,11 +23,11 @@
 		<form class="form-inline my-2 my-lg-0 search_book" method="post" action="<%=cp%>/booklist.do">
 			<div class="search_form">
 				<select name="searchOption" class="search_form_select">
-					<option value="all">통합검색</option>
-					<option value="TITLE">제목</option>
-					<option value="AUTHOR">저자</option>
-					<option value="PUBLISHER">출판사</option>
-					<option value="ISBN_ISSN">ISBN</option>
+					<option value="all" <c:out value="${map.searchOption =='all'?'selected':'' }"/> >통합검색</option>
+					<option value="TITLE" <c:out value="${map.searchOption =='TITLE'?'selected':'' }"/>>제목</option>
+					<option value="AUTHOR" <c:out value="${map.searchOption =='AUTHOR'?'selected':'' }"/>>저자</option>
+					<option value="PUBLISHER" <c:out value="${map.searchOption =='PUBLISHER'?'selected':'' }"/>>출판사</option>
+					<option value="ISBN_ISSN" <c:out value="${map.searchOption =='ISBN_ISSN'?'selected':'' }"/>>ISBN</option>
 				</select> 
 				
 				<input class="form-control" name="keyword" value="${map.keyword}"
@@ -41,7 +41,7 @@
 	<div class="container">
 		<div class="result_container result_book">
 			<!--List...-->
-			${map.count}개의 게시물이 있습니다.
+			<span> ${map.count}개의 검색결과가 있습니다.</span>
 
 			<c:forEach var="row" items="${map.list}">
 			<ul>
