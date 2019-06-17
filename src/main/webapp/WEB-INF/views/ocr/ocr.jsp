@@ -84,7 +84,10 @@
             </blockquote>
             <button class="btn btn-lg btn-default" id="go-back">Go back</button>
             <button class="btn btn-lg btn-default" id="start-over">Start over</button>
-            <button class="btn btn-lg btn-default" id="go-search">search</button>
+            
+            <form method="post" action="<%=cp%>/booklist.do">
+          		<button type="submit" class="btn btn-lg btn-default" id="go-search">search</button>
+            </form>
             
         </div>
     </div>

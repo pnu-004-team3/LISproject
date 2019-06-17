@@ -269,7 +269,9 @@
     });
     
     $('#go-search').click(function () {
-    	var text = $('#result').val()
+    	${map.searchOption} = "all"
+    	${map.keyword}  = $('#result').val()
+    	
     	alert(text);
     });
     $('.nav').on('click', 'a', function () {
