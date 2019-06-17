@@ -167,6 +167,7 @@
             })
             //show output from glfx.js
             .attr('src', fxCanvas.toDataURL());
+        
     }
 
     function step3() {
@@ -253,6 +254,7 @@
     $('#takePicture').click(function () {
         step2();
         changeStep(2);
+        
     });
 
     $('#adjust').click(function () {
@@ -268,12 +270,7 @@
         changeStep(1);
     });
     
-    $('#go-search').click(function () {
-    	${map.searchOption} = "all"
-    	${map.keyword}  = $('#result').val()
-    	
-    	alert(text);
-    });
+   
     $('.nav').on('click', 'a', function () {
         if (!$(this).parent().is('.disabled')) {
             var step = $(this).data('step');

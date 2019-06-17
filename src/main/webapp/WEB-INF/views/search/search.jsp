@@ -33,7 +33,7 @@
 				<input class="form-control" name="keyword" value="${map.keyword}"
 					style="height: 50px; border: none; width: 55%;"
 					placeholder="Search here..." aria-label="Search">
-				<button type="submit" value="search" class="fa fa-search search_button"></button>
+				<button type="submit" value="search" class="fa fa-search search_button" ></button>
 			</div>
 		</form>
 	</div>

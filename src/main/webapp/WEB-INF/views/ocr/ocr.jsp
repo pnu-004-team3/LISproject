@@ -83,11 +83,21 @@
                 <footer></footer>
             </blockquote>
             <button class="btn btn-lg btn-default" id="go-back">Go back</button>
-            <button class="btn btn-lg btn-default" id="start-over">Start over</button>
-            
-            <form method="post" action="<%=cp%>/booklist.do">
-          		<button type="submit" class="btn btn-lg btn-default" id="go-search">search</button>
-            </form>
+            <button class="btn btn-lg btn-default" id="start-over">Start over</button>  
+          	<form class="form-inline my-2 my-lg-0 search_book" method="post" action="<%=cp%>/booklist.do">
+			<div class="search_form">
+				<select style="display:none" name="searchOption" class="search_form_select">
+					<option  value="all" selected >통합검색</option>
+				
+				</select> 
+				
+				<input style="display:none" class="form-control" name="keyword" value="${map.keyword}"
+					style="height: 50px; border: none; width: 55%;"
+					placeholder="Search here..." aria-label="Search">
+				<button value="search" class="btn btn-lg btn-default" id="go-search" onclick="return setdata()">search</button>
+			</div>
+		</form>
+        
             
         </div>
     </div>
@@ -178,6 +188,16 @@
 <script src="<%=cp%>/resources/OCR/js/vendor/glfx.min.js"></script>
 
 <script src="<%=cp%>/resources/OCR/js/main.js"></script>
+
+
+<script type="text/javascript">
+
+	function setdata(){
+		var text = $("#result").text()
+		 $("input[name=keyword]").val(text)
+	}
+
+</script>
 
 <!-- Social -->
 <script>!function (d, s, id) {
