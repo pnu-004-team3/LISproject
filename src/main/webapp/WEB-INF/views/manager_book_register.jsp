@@ -157,10 +157,7 @@ function KeyCheck(){
                        <td>
                         <label id="userEmailLabel" style="float: right;"></label> 
                        	<input type="text" name="BARCODE" id="BARCODE" class="KeyCheck"" />
-                       	<button type="button" class="keyCheck">바코드 중복확인</button>
-                       	<p class="result">
-                       		<span class="msg">바코드를 확인해주세요</span>
-                       	</p>
+                       
                         </td>
                    </tr>
                    

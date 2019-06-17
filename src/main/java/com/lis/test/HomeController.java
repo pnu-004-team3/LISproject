@@ -139,7 +139,7 @@ public class HomeController {
 
 		service.bookRegister(manager);
 		
-		return "managerMain";
+		return "admin/managerMain";
 	}
 	
 	@RequestMapping(value = "/manager_booklist", method = RequestMethod.GET)
