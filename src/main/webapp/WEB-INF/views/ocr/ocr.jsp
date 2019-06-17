@@ -82,9 +82,10 @@
                 <p id="result"></p>
                 <footer></footer>
             </blockquote>
-
             <button class="btn btn-lg btn-default" id="go-back">Go back</button>
             <button class="btn btn-lg btn-default" id="start-over">Start over</button>
+            <button class="btn btn-lg btn-default" id="go-search">search</button>
+            
         </div>
     </div>
 

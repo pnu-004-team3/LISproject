@@ -267,7 +267,11 @@
     $('#start-over').click(function () {
         changeStep(1);
     });
-
+    
+    $('#go-search').click(function () {
+    	var text = $('#result').val()
+    	alert(text);
+    });
     $('.nav').on('click', 'a', function () {
         if (!$(this).parent().is('.disabled')) {
             var step = $(this).data('step');
