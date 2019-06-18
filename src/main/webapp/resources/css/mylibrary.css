@@ -84,6 +84,9 @@ tr {
   vertical-align: inherit;
   border-color: inherit;
 }
+td {
+	float:left;
+}
 
 table.rd-table {
   position: relative;
@@ -424,7 +427,7 @@ table.rd-table.gray::before {
 ------------------------------------ */
 #tblBackground {
   /*
-				 *  �솕硫댁뿉 蹂댁뿬�빞 �븷 Table�쓽 媛�濡쒗겕湲곕�� �옟�븘以띾땲�떎.
+				 *  占쎌넅筌롫똻肉� 癰귣똻肉э옙鍮� 占쎈막 Table占쎌벥 揶쏉옙嚥≪뮉寃뺞묾怨뺧옙占� 占쎌삜占쎈툡餓λ씭�빍占쎈뼄.
 				 */
   width: 900px;
   table-layout: fixed;
@@ -432,19 +435,20 @@ table.rd-table.gray::before {
 
 #divHeadScroll {
   /*
-				 *  �븞�쓽 �궡�슜�씠 790蹂대떎 湲멸쾶 �쟻�슜�씠 �릺誘�濡� overflow-x, overflow-y瑜� hidden�쓣 嫄몄뼱以섏꽌 �꽕�젙�븳 媛�濡쒕꼫鍮꾨쭔�겮留� �솕硫댁뿉 蹂댁씠�룄濡� �옟�븘以띾땲�떎.
+				 *  占쎈툧占쎌벥 占쎄땀占쎌뒠占쎌뵠 790癰귣��뼄 疫뀀㈇苡� 占쎌읅占쎌뒠占쎌뵠 占쎈┷沃섓옙嚥∽옙 overflow-x, overflow-y�몴占� hidden占쎌뱽 椰꾨챷堉긴빳�꼷苑� 占쎄퐬占쎌젟占쎈립 揶쏉옙嚥≪뮆瑗ラ뜮袁⑥춸占쎄껍筌랃옙 占쎌넅筌롫똻肉� 癰귣똻�뵠占쎈즲嚥∽옙 占쎌삜占쎈툡餓λ씭�빍占쎈뼄.
 				 */
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
   border-top: 2px solid #d0d0d0;
+  float:left;
 }
 
 #tblHead {
   /*
-				 *  Table�쓽 �븘�뱶紐낆쓽 �꼫鍮꾨�� �뿬湲곗뿉�꽌 吏��젙�빀�땲�떎.
-				 *  �븘�뱶紐낆쓣 蹂댁뿬以� �뀒�씠釉붿� body蹂대떎 �븯�굹�쓽 td瑜� �뜑 媛�吏�硫� 留덉�留� td�뒗 �븘臾닿쾬�룄 �엯�젰�븯吏� �븡怨� �겕湲곕쭔 �옟�븘以띾땲�떎.
-				 *  �씠�젃寃� �븯�뒗 �씠�쑀�뒗 �뜲�씠�꽣瑜� 蹂댁뿬二쇰뒗 �뀒�씠釉붿� �꽭濡� �뒪�겕濡ㅼ쓽 媛�濡쒕몢猿섎쭔�겮 �뜑 �씠�룞�븯湲� �븣臾몄엯�땲�떎.
+				 *  Table占쎌벥 占쎈툡占쎈굡筌뤿굞�벥 占쎄섐�뜮袁⑨옙占� 占쎈연疫꿸퀣肉됵옙苑� 筌욑옙占쎌젟占쎈�占쎈빍占쎈뼄.
+				 *  占쎈툡占쎈굡筌뤿굞�뱽 癰귣똻肉т빳占� 占쎈�믭옙�뵠�뇡遺울옙 body癰귣��뼄 占쎈릭占쎄돌占쎌벥 td�몴占� 占쎈쐭 揶쏉옙筌욑옙筌롳옙 筌띾뜆占쏙쭕占� td占쎈뮉 占쎈툡�눧�떯苡э옙猷� 占쎌뿯占쎌젾占쎈릭筌욑옙 占쎈륫�⑨옙 占쎄쾿疫꿸퀡彛� 占쎌삜占쎈툡餓λ씭�빍占쎈뼄.
+				 *  占쎌뵠占쎌쟽野껓옙 占쎈릭占쎈뮉 占쎌뵠占쎌�占쎈뮉 占쎈쑓占쎌뵠占쎄숲�몴占� 癰귣똻肉т틠�눖�뮉 占쎈�믭옙�뵠�뇡遺울옙 占쎄쉭嚥∽옙 占쎈뮞占쎄쾿嚥▲끉�벥 揶쏉옙嚥≪뮆紐®뙼�꼶彛뷂옙寃� 占쎈쐭 占쎌뵠占쎈짗占쎈릭疫뀐옙 占쎈르�눧紐꾩뿯占쎈빍占쎈뼄.
 				 */
   table-layout: fixed;
   background-color: #efefef;
@@ -456,9 +460,9 @@ table.rd-table.gray::before {
 
 #divBodyScroll {
   /*
-				 *  overflow-x, overflow-y�뒗 scroll濡� 吏��젙�븯怨�,
-				 *  height�뒗 �뀒�씠釉붿쓽 �뜲�씠�꽣媛� �굹�삱 湲곕낯 �겕湲곕�� �옟�븘以띾땲�떎.
-				 *  �꽭濡쒓만�씠瑜� �옟�븘二쇱� �븡�쑝硫� overflow-y媛� 嫄몃━吏� �븡�뒿�땲�떎.
+				 *  overflow-x, overflow-y占쎈뮉 scroll嚥∽옙 筌욑옙占쎌젟占쎈릭�⑨옙,
+				 *  height占쎈뮉 占쎈�믭옙�뵠�뇡遺우벥 占쎈쑓占쎌뵠占쎄숲揶쏉옙 占쎄돌占쎌궞 疫꿸퀡�궚 占쎄쾿疫꿸퀡占쏙옙 占쎌삜占쎈툡餓λ씭�빍占쎈뼄.
+				 *  占쎄쉭嚥≪뮄留뚳옙�뵠�몴占� 占쎌삜占쎈툡雅뚯눘占� 占쎈륫占쎌몵筌롳옙 overflow-y揶쏉옙 椰꾨챶�봺筌욑옙 占쎈륫占쎈뮸占쎈빍占쎈뼄.
 				 */
   width: 100%;
   height: 350px;
@@ -469,7 +473,7 @@ table.rd-table.gray::before {
 
 #tblBody {
   /*
-				 * tblBody�쓽 �뜲�씠�꽣�뒗 �븘�슂�븳 �뿴�쓽 �닔留뚰겮留� 留뚮뱶�떆怨� �뿤�뜑�� col�쓽 width�뒗 �룞�씪�빐�빞 �빀�땲�떎.
+				 * tblBody占쎌벥 占쎈쑓占쎌뵠占쎄숲占쎈뮉 占쎈툡占쎌뒄占쎈립 占쎈였占쎌벥 占쎈땾筌띾슦寃�筌랃옙 筌띾슢諭띰옙�뻻�⑨옙 占쎈엘占쎈쐭占쏙옙 col占쎌벥 width占쎈뮉 占쎈짗占쎌뵬占쎈퉸占쎈튊 占쎈�占쎈빍占쎈뼄.
 				 */
   width: 1100px;
   table-layout: fixed;
@@ -477,7 +481,7 @@ table.rd-table.gray::before {
   border-collapse: collapse;
 }
 
-/* �뀒�씠釉� �뒪���씪�슜 */
+/* 占쎈�믭옙�뵠�뇡占� 占쎈뮞占쏙옙占쎌뵬占쎌뒠 */
 .title {
   text-align: center;
   font-weight: bold;
@@ -507,7 +511,7 @@ table, th, td {
   margin-right: auto;
 }
 
-/*�꽌釉뚰��씠��*/
+/*占쎄퐣�뇡�슦占쏙옙�뵠占쏙옙*/
 .signSubTitle {
   color: #96C;
   background-color: #FC9;
@@ -516,7 +520,7 @@ table, th, td {
   font-size: 12px
 }
 
-/*�뿤�뱶遺� */
+/*占쎈엘占쎈굡�겫占� */
 caption {
   font-size: 18px;
   font-weight: bold;
@@ -525,7 +529,7 @@ caption {
 }
 
 thead,
-/*諛붾뵒遺�*/
+/*獄쏅뗀逾믧겫占�*/
 .toNo, .tdDate, .tdCount {
   text-align: center;
 }
@@ -534,7 +538,7 @@ thead,
   border: solid 1px #CCCCCC;
 }
 
-/*踰꾪�遺�*/
+/*甕곌쑵占썽겫占�*/
 tfoot {
   text-align: center;
 }
@@ -547,14 +551,14 @@ tbody a {
 
 tbody a:link {
   font-size: 12px;
-  font-family: 援대┝;
+  font-family: �뤃���뵝;
   text-decoration: none;
 }
 
 tbody a:visited {
   font-size: 12px;
   color: #333;
-  font-family: 援대┝;
+  font-family: �뤃���뵝;
   text-decoration: none;
 }
 
@@ -564,7 +568,7 @@ tbody a:hover {
 
 tbody a:active {
   font-size: 13px;
-  font-family: 沅곸꽌;
+  font-family: 亦낃낯苑�;
 }
 
 /*tfoot*/
@@ -574,13 +578,13 @@ tfoot a {
 
 tfoot a:link {
   font-size: 10pt;
-  font-family: 援대┝;
+  font-family: �뤃���뵝;
   text-decoration: none;
 }
 
 tfoot a:visited {
   font-size: 12px;
-  font-family: 援대┝;
+  font-family: �뤃���뵝;
   text-decoration: none;
 }
 
@@ -590,7 +594,7 @@ tfoot a:hover {
 
 tfoot a:active {
   font-size: 13px;
-  font-family: 沅곸꽌;
+  font-family: 亦낃낯苑�;
 }
 
 /* ------------------------------------
@@ -763,7 +767,7 @@ section {
 }
 
 /* ------------------------------------
-          �썝�옒 style.css �떆�옉
+          占쎌뜚占쎌삋 style.css 占쎈뻻占쎌삂
 ------------------------------------ */
 body {
   margin: 0px;
