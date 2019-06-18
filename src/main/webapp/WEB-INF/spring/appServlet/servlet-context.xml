@@ -22,9 +22,22 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	 <!-- 인터셉터 객체 생성 -->
+    <beans:bean id="authenticationInterceptor" class="com.lis.interceptor.AuthenticationInterceptor">
+    </beans:bean>
+    <!-- Interceptor 설정 -->
+    <interceptors>
+        <interceptor>
+            <mapping path="/managerMain"/>
+            <mapping path="/main_MyLib"/>
+            <beans:ref bean="authenticationInterceptor"/>
+        </interceptor>
+    </interceptors>
+
+
+	
 	<context:component-scan base-package="com.lis.test" />
 	
-
 
 
 

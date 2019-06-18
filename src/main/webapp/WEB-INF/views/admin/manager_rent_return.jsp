@@ -4,13 +4,13 @@
 	String cp = request.getContextPath();
 	request.setCharacterEncoding("UTF-8");
 %>
-<link href="<%=cp %>/barcode/resources/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="<%=cp %>/barcode/resources/css/font-awesome.min.css">
-<link href="<%=cp %>/barcode/resources/css/theme.css" rel="stylesheet">
+<link href="<%=cp %>/resources/barcode/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="<%=cp %>/resources/barcode/css/font-awesome.min.css">
+<link href="<%=cp %>/resources/barcode/css/theme.css" rel="stylesheet">
 
-<script src="<%=cp %>/barcode/resources/js/jquery.min.js"></script>
-<script src="<%=cp %>/barcode/resources/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<%=cp %>/barcode/resources/js/quagga.min.js"></script>
+<script src="<%=cp %>/resources/barcode/js/jquery.min.js"></script>
+<script src="<%=cp %>/resources/barcode/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<%=cp %>/resources/barcode/js/quagga.min.js"></script>
 		
 <jsp:include page="/WEB-INF/views/header/manager_header.jsp"></jsp:include>
 <body>
@@ -51,18 +51,19 @@
                         									<button type="submit" class="fa fa-search search_button"></button>
                         								</div>
                         						    </form>
-                        						    
-                        						   <div class="row">
+         <br><br>						    
+      <div class="row">
 		<div class="col-lg-6">
 			<div class="input-group">
 				<input id="scanner_input" class="form-control" placeholder="Click the button to scan an EAN..." type="text"> 
-				<span class="input-group-btn"> 
+			</div><!-- /input-group -->
+			
+		</div><!-- /.col-lg-6 -->
+		<span class="input-group-btn"> 
 					<button class="btn btn-default" type="button" data-toggle="modal" data-target="#livestream_scanner">
 						Barcode
 					</button> 
 				</span>
-			</div><!-- /input-group -->
-		</div><!-- /.col-lg-6 -->
 	</div><!-- /.row -->
 										
 	<div class="modal" id="livestream_scanner" aria-hidden="true" style="display: none;">

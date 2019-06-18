@@ -41,7 +41,7 @@ public class UserLoginController {
 	}
 	
 	@RequestMapping(value = "/loginPost", method = RequestMethod.POST)
-	public String loginPOST(MemberVO member, HttpSession session, Model model) throws Exception{
+	public String loginPOST(MemberVO member, HttpSession session,  HttpServletResponse response,  Model model) throws Exception{
 		String returnURL = "";
 		if(session.getAttribute("login") != null ) {
 			//기존 세션에 로그인 값 존재하면
@@ -61,6 +61,7 @@ public class UserLoginController {
 		}else {
 			//로그인 실패시 login 페이지로 이동
 			returnURL="redirect:/login";
+			
 		}
 	
 		return returnURL;
