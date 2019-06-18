@@ -56,6 +56,7 @@ public class UserLoginController {
 		if(memberVO != null) {
 			//로그인 성공시 세션에 login이름으로 memberVO넣기
 			session.setAttribute("login", memberVO);
+			session.setAttribute("userKey", memberVO.getUser_key());
 			returnURL="redirect:/";
 		}else {
 			//로그인 실패시 login 페이지로 이동
