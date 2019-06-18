@@ -41,19 +41,39 @@ public class UserLoginController {
 	}
 	
 	@RequestMapping(value = "/loginPost", method = RequestMethod.POST)
-	public void loginPOST(MemberVO member, HttpSession session, Model model) throws Exception{
-		MemberVO memberVO = service.login(member);
+	public String loginPOST(MemberVO member, HttpSession session, Model model) throws Exception{
 		String returnURL = "";
-		if(session.getAttribute("login") !=null) {
+		if(session.getAttribute("login") != null ) {
+			//기존 세션에 로그인 값 존재하면
+			//기존값을 제거한다.
 			session.removeAttribute("login");
 		}
-		if(memberVO == null || !BCrypt.checkpw(member.getUser_PW(), memberVO.getUser_PW())) {
-			return;
+		
+		//로그인 성공시 memberVO 객체를 반환함.
+		MemberVO memberVO = service.login(member);
+		
+		//로그인 성공시
+		if(memberVO != null) {
+			//로그인 성공시 세션에 login이름으로 memberVO넣기
+			session.setAttribute("login", memberVO);
+			returnURL="redirect:/";
+		}else {
+			//로그인 실패시 login 페이지로 이동
+			returnURL="redirect:/login";
 		}
 	
-		model.addAttribute("user", memberVO);
+		return returnURL;
 	}
 	
+
+	@RequestMapping(value="/logout", method = RequestMethod.GET)
+	public String logout(MemberVO member, HttpSession session, Model model) throws Exception{
+		//세션 초기화
+		session.invalidate();
+		
+		return "redirect:/login";
+		
+	}
 	
 	
 	@RequestMapping(value = "/check_id", method = RequestMethod.POST)

@@ -30,7 +30,7 @@
 	
 	
  	<select id="check_id" parameterType="String" resultType="int">select count(*) from USER where User_key = #{userKey}</select>
- 	<select id="check_pw" parameterType="String" resultType="memberVO">select * from USER where User_PW=PASSOWRD('#{userPW}')</select>
+ 	<select id="check_login" parameterType="String" resultType="memberVO">select * from USER where User_key = #{userKey} and User_PW=PASSOWRD('#{userPW}')</select>
 	
 	
 	<select id="searchMember" resultType="memberVO">

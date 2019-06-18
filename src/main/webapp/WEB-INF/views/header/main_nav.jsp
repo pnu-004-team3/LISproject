@@ -3,6 +3,14 @@
 <%
 	String cp = request.getContextPath();
 	request.setCharacterEncoding("UTF-8");
+	
+	String loginState = null;
+	
+	if(session.getAttribute("login") != null){
+		loginState = "success";
+	}else{
+		loginState = null;
+	}
 %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
@@ -28,11 +36,11 @@
 								<li class="navbar-item active"><a href="<%=cp%>/"
 									class="nav-link">Home</a></li>
 								<li class="navbar-item">
-								<c:if test="${empty member}">
+								<c:if test="${ login == null }">
 									<a href="<%=cp%>/login"	class="nav-link">로그인</a>
 								</c:if>
-								<c:if test="${not empty member }">
-									<a href="<%=cp%>/login"	class="nav-link">로그아웃</a>
+								<c:if test="${ login != null}">
+									<a href="<%=cp%>/logout" class="nav-link">로그아웃</a>
 								</c:if>
 								</li>
 								
