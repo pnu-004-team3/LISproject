@@ -35,6 +35,13 @@
 					placeholder="Search here..." aria-label="Search">
 				<button type="submit" value="search" class="fa fa-search search_button" ></button>
 			</div>
+			<script>
+				function press(f){
+					if(f.keyCode == 13){
+						keyword.submit();
+					}
+				}
+			</script>
 		</form>
 	</div>
 
@@ -66,7 +73,7 @@
 					// 그 엘리먼트가 존재한다면
 					if(main.length>0) {
 					     var id = main[0].innerText.substr(7,10); // ISBN(10자리)부분을 잘라내서 얻습니다 (16칸부터 10개만큼의 문자 얻기)
-					     var url = "http://www.aladin.co.kr/ttb/api/ItemLookUp.aspx?ttbkey=ttbsay002000040111001&cover=big&ItemId=" + id + "&output=js&callback=bookDisplay";
+					     var url = "https://www.aladin.co.kr/ttb/api/ItemLookUp.aspx?ttbkey=ttbsay002000040111001&cover=big&ItemId=" + id + "&output=js&callback=bookDisplay";
 					     // 콜백 함수입니다.
 					     $.ajax({
 					        url: url,

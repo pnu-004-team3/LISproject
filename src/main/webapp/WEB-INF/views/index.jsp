@@ -38,6 +38,13 @@
 					</form>
 				</div>
 			</div>
+			<script>
+				function press(f){
+					if(f.keyCode == 13){
+						keyword.submit();
+					}
+				}
+			</script>
 			<img src="<%=cp%>/resources/images/slide1.jpg">
 		</div>
 	</div>
